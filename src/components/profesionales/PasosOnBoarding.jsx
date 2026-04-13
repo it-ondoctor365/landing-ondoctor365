@@ -1,4 +1,5 @@
 import { UserCircle, ShieldCheck, Users, CreditCard } from "lucide-react";
+import { AnimatedSection, StaggerContainer, StaggerItem } from "../ui/AnimatedSection";
 
 const PASOS = [
   {
@@ -36,7 +37,7 @@ export default function PasosOnboarding() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <div className="text-center mb-14">
+        <AnimatedSection variant="fadeInUp" className="text-center mb-14">
           <span className="text-accent text-xs font-semibold tracking-widest uppercase">
             ONBOARDING
           </span>
@@ -49,12 +50,12 @@ export default function PasosOnboarding() {
           <p className="text-gray-500 mt-3 max-w-lg mx-auto">
             Proceso de alta simple y guiado para que nada te frene.
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Pasos grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {PASOS.map(({ id, icon: Icon, titulo, descripcion }) => (
-            <div
+            <StaggerItem
               key={id}
               className="bg-light-bg rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md transition-shadow duration-200"
             >
@@ -67,9 +68,9 @@ export default function PasosOnboarding() {
                   {descripcion}
                 </p>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

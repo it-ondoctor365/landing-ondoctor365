@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { AnimatedSection, StaggerContainer, StaggerItem } from "../ui/AnimatedSection";
 
 const FAQS_DEFAULT = [
   {
@@ -68,19 +69,21 @@ export default function FAQSection({
   return (
     <section className="py-20 bg-white">
       <div className="max-w-3xl mx-auto px-6">
-        <div className="text-center mb-12">
+        <AnimatedSection variant="fadeInUp" className="text-center mb-12">
           <span className="text-accent text-xs font-semibold tracking-widest uppercase">
             {badge}
           </span>
           <h2 className="text-3xl md:text-4xl font-fraunces font-extrabold text-primary mt-2">
             {titulo} <span className="text-accent italic">{tituloAccent}</span>
           </h2>
-        </div>
-        <div className="bg-light-bg rounded-2xl px-6 divide-y divide-gray-100">
+        </AnimatedSection>
+        <StaggerContainer className="bg-light-bg rounded-2xl px-6 divide-y divide-gray-100">
           {faqs.map(({ id, pregunta, respuesta }) => (
-            <FAQItem key={id} pregunta={pregunta} respuesta={respuesta} />
+            <StaggerItem key={id}>
+              <FAQItem pregunta={pregunta} respuesta={respuesta} />
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

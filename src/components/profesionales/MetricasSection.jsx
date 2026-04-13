@@ -1,3 +1,5 @@
+import { AnimatedSection, StaggerContainer, StaggerItem } from "../ui/AnimatedSection";
+
 const METRICAS = [
   {
     valor: "3x",
@@ -23,7 +25,7 @@ export default function MetricasSection() {
   return (
     <section className="py-20 bg-primary">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
+        <AnimatedSection variant="fadeInUp" className="text-center mb-14">
           <span className="text-accent text-xs font-semibold tracking-widest uppercase">
             IMPACTO
           </span>
@@ -33,11 +35,11 @@ export default function MetricasSection() {
           <p className="text-white/60 mt-3 max-w-lg mx-auto">
             Profesionales como vos que están creciendo con OnDoctor365.
           </p>
-        </div>
+        </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {METRICAS.map(({ valor, titulo, descripcion }) => (
-            <div
+            <StaggerItem
               key={valor}
               className="bg-white/10 rounded-2xl p-8 text-center hover:bg-white/15 transition-colors duration-200"
             >
@@ -48,9 +50,9 @@ export default function MetricasSection() {
               <p className="text-white/60 text-sm leading-relaxed">
                 {descripcion}
               </p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

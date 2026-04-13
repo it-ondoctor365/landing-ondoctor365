@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <button
-          onClick={() => navigate("/pacientes")}
+          onClick={() => { navigate("/pacientes"); window.scrollTo(0, 0); }}
           className="flex items-center gap-1"
         >
           <img src="logo.svg"></img>
@@ -26,6 +26,7 @@ export default function Navbar() {
             <NavLink
               key={path}
               to={path}
+              onClick={() => window.scrollTo(0, 0)}
               className={({ isActive }) =>
                 `px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200
                 ${

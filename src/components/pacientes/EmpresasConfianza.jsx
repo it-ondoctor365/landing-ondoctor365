@@ -1,3 +1,5 @@
+import { AnimatedSection, StaggerContainer, StaggerItem } from "../ui/AnimatedSection";
+
 const EMPRESAS = [
   { id: "osak", nombre: "OSAK", subtitulo: "Obra Social" },
   { id: "samak", nombre: "SAMAK", subtitulo: "Salud Preventiva" },
@@ -9,6 +11,7 @@ export default function EmpresasConfianza() {
     <section className="py-16 bg-light-bg">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
+        <AnimatedSection variant="fadeInUp">
         <p className="text-center text-primary font-semibold text-lg md:text-xl max-w-2xl mx-auto leading-snug mb-12">
           Con la <span className="text-accent font-extrabold">confianza</span>{" "}
           de organizaciones de salud y profesionales que apuestan por una{" "}
@@ -16,11 +19,12 @@ export default function EmpresasConfianza() {
             atención médica más eficiente.
           </span>
         </p>
+        </AnimatedSection>
 
         {/* Logos */}
-        <div className="flex flex-wrap justify-center items-center gap-10">
+        <StaggerContainer className="flex flex-wrap justify-center items-center gap-10">
           {EMPRESAS.map(({ id, nombre, subtitulo }) => (
-            <div
+            <StaggerItem
               key={id}
               className="flex flex-col items-center gap-1 opacity-70 hover:opacity-100 transition-opacity duration-200"
             >
@@ -31,9 +35,9 @@ export default function EmpresasConfianza() {
                 </span>
               </div>
               <span className="text-gray-400 text-xs">{subtitulo}</span>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

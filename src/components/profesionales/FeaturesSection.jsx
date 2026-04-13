@@ -1,4 +1,5 @@
 import { Calendar, FileText, ClipboardList, BarChart2 } from "lucide-react";
+import { AnimatedSection, StaggerContainer, StaggerItem } from "../ui/AnimatedSection";
 
 const FEATURES = [
   {
@@ -33,7 +34,7 @@ export default function FeaturesSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           {/* Left */}
-          <div className="flex-1">
+          <AnimatedSection variant="fadeInLeft" className="flex-1">
             <span className="text-accent text-xs font-semibold tracking-widest uppercase">
               PLATAFORMA
             </span>
@@ -48,9 +49,9 @@ export default function FeaturesSection() {
               alcance a todo el país.
             </p>
 
-            <ul className="space-y-5">
+            <StaggerContainer className="space-y-5">
               {FEATURES.map(({ icon: Icon, titulo, descripcion }) => (
-                <li key={titulo} className="flex items-start gap-4">
+                <StaggerItem key={titulo} className="flex items-start gap-4">
                   <span className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shrink-0 mt-0.5">
                     <Icon size={18} className="text-accent" />
                   </span>
@@ -62,19 +63,19 @@ export default function FeaturesSection() {
                       {descripcion}
                     </p>
                   </div>
-                </li>
+                </StaggerItem>
               ))}
-            </ul>
-          </div>
+            </StaggerContainer>
+          </AnimatedSection>
 
           {/* Right — placeholder */}
-          <div className="w-full md:w-2/5 shrink-0">
+          <AnimatedSection variant="fadeInRight" className="w-full md:w-2/5 shrink-0">
             <div className="rounded-2xl bg-white w-full h-80 flex items-center justify-center shadow-sm">
               <span className="text-gray-300 text-sm">
                 [ Imagen plataforma ]
               </span>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

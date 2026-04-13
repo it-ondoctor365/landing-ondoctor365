@@ -1,3 +1,5 @@
+import { AnimatedSection, StaggerContainer, StaggerItem } from "../ui/AnimatedSection";
+
 const PROFESIONALES = [
   {
     id: 1,
@@ -56,7 +58,7 @@ export default function ProfesionalesDestacados() {
     <section className="py-20 bg-[#EEF1FA]">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <div className="text-center mb-14">
+        <AnimatedSection variant="fadeInUp" className="text-center mb-14">
           <span className="text-accent text-xs font-semibold tracking-widest uppercase">
             PROFESIONALES
           </span>
@@ -65,10 +67,10 @@ export default function ProfesionalesDestacados() {
             <span className="text-accent">comprometidos</span> con una atención{" "}
             <span className="text-accent">cercana y de calidad</span>
           </h2>
-        </div>
+        </AnimatedSection>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {PROFESIONALES.map(
             ({
               id,
@@ -80,7 +82,7 @@ export default function ProfesionalesDestacados() {
               avatar,
               descripcion,
             }) => (
-              <div
+              <StaggerItem
                 key={id}
                 className="bg-light-bg rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md transition-shadow duration-200"
               >
@@ -107,10 +109,10 @@ export default function ProfesionalesDestacados() {
                 <p className="text-gray-600 text-sm leading-relaxed italic">
                   "{descripcion}"
                 </p>
-              </div>
+              </StaggerItem>
             ),
           )}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

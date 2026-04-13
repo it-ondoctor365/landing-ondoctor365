@@ -1,3 +1,5 @@
+import { AnimatedSection, StaggerContainer, StaggerItem } from "../ui/AnimatedSection";
+
 const ACREDITACIONES = ["BARDA", "UCSF", "CHIME", "Health 2.0"];
 
 const SENSORES = [

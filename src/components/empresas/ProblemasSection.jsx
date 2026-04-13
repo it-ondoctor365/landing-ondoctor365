@@ -1,4 +1,5 @@
 import { Clock, DollarSign, MapPin, Check } from "lucide-react";
+import { AnimatedSection, StaggerContainer, StaggerItem } from "../ui/AnimatedSection";
 
 const PROBLEMAS = [
   {
@@ -35,14 +36,14 @@ export default function ProblemaSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row gap-8 items-stretch">
           {/* Left — problema */}
-          <div className="flex-1">
+          <AnimatedSection variant="fadeInLeft" className="flex-1">
             <h2 className="font-fraunces text-2xl md:text-3xl font-extrabold text-black mb-8 leading-tight">
               Los equipos pierden días por falta de{" "}
               <span className="text-accent italic">acceso médico.</span>
             </h2>
-            <div className="grid grid-cols-1 gap-4">
+            <StaggerContainer className="grid grid-cols-1 gap-4">
               {PROBLEMAS.map(({ icon: Icon, titulo, texto }) => (
-                <div
+                <StaggerItem
                   key={titulo}
                   className="bg-light-bg rounded-2xl p-5 flex items-start gap-4 border-2 rounded-6xl"
                 >
@@ -57,14 +58,14 @@ export default function ProblemaSection() {
                       {texto}
                     </p>
                   </div>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
-          </div>
+            </StaggerContainer>
+          </AnimatedSection>
 
           {/* Right — solución con fondo degradado */}
-          <div
-            className="w-full md:w-2/5 rounded-2xl p-8 text-white flex flex-col justify-between relative overflow-hidden"
+          <AnimatedSection variant="fadeInRight" className="w-full md:w-2/5 self-start"><div
+            className="w-full rounded-2xl p-8 text-white flex flex-col relative overflow-hidden"
             style={{
               background:
                 "linear-gradient(135deg, #1B2D6B 0%, #0d1f4f 50%, #00BFA5 150%)",
@@ -98,6 +99,7 @@ export default function ProblemaSection() {
               </ul>
             </div>
           </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

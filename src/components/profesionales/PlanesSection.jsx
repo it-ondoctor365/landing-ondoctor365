@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { AnimatedSection, StaggerContainer, StaggerItem } from "../ui/AnimatedSection";
 
 const PLANES = [
   {
@@ -66,7 +67,7 @@ export default function PlanesSection() {
   return (
     <section className="py-20 bg-light-bg">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
+        <AnimatedSection variant="fadeInUp" className="text-center mb-14">
           <span className="text-accent text-xs font-semibold tracking-widest uppercase">
             PLANES
           </span>
@@ -78,9 +79,9 @@ export default function PlanesSection() {
             Sin comisiones por consulta. Elegí el plan que mejor se adapte a tu
             práctica.
           </p>
-        </div>
+        </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {PLANES.map(
             ({
               id,
@@ -94,9 +95,9 @@ export default function PlanesSection() {
               ctaStyle,
               highlight,
             }) => (
+              <StaggerItem key={id}>
               <div
-                key={id}
-                className={`relative rounded-2xl p-8 flex flex-col gap-6 transition-shadow duration-200
+                className={`relative rounded-2xl p-8 flex flex-col gap-6 transition-shadow duration-200 h-full
                 ${
                   highlight
                     ? "bg-primary font-fraunces text-white shadow-xl scale-[1.02]"
@@ -160,9 +161,10 @@ export default function PlanesSection() {
                   {cta}
                 </button>
               </div>
+              </StaggerItem>
             ),
           )}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
