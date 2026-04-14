@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { AnimatedSection, StaggerContainer, StaggerItem } from "../ui/AnimatedSection";
 
 const TESTIMONIOS_DEFAULT = [
   {
@@ -57,7 +56,7 @@ export default function TestimoniosSection({
   return (
     <section className="py-20 bg-[#EEF1FA]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
+        <AnimatedSection variant="fadeInUp" className="text-center mb-14">
           <span className="text-accent text-xs font-semibold tracking-widest uppercase">
             {badge}
           </span>
@@ -67,13 +66,13 @@ export default function TestimoniosSection({
               {tituloAccent}
             </span>
           </h2>
-        </div>
+        </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonios.map(
             ({ id, nombre, ubicacion, rating, avatar, texto }) => (
+              <StaggerItem key={id}>
               <div
-                key={id}
                 className="bg-white rounded-2xl p-6 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow duration-200"
               >
                 <StarRating rating={rating} />
@@ -94,9 +93,10 @@ export default function TestimoniosSection({
                   </div>
                 </div>
               </div>
+              </StaggerItem>
             ),
           )}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

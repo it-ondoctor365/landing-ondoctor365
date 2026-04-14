@@ -72,7 +72,7 @@ export default function HeroProfesionales() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="flex gap-8 mt-12"
+            className="flex flex-wrap gap-x-6 gap-y-4 mt-10"
           >
             {STATS.map(({ value, label }) => (
               <div key={value}>

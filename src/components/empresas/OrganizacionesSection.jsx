@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { AnimatedSection } from "../ui/AnimatedSection";
 
 const ORGANIZACIONES = [
   {
@@ -48,14 +50,14 @@ export default function OrganizacionesSection() {
   const org = ORGANIZACIONES.find((o) => o.id === active);
 
   return (
-    <section className="py-20 bg-light-bg">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <AnimatedSection variant="fadeInUp" className="text-center mb-12">
           <span className="text-accent text-xs font-semibold tracking-widest uppercase">
             SOLUCIONES
           </span>
-          <h2 className="font-fraunces text-3xl md:text-4xl font-extrabold text-black mt-2">
+          <h2 className="font-fraunces text-3xl md:text-4xl font-extrabold text-primary mt-2">
             OnDoctor365 se adapta a{" "}
             <span className="text-accent italic">
               cada tipo de organización.
@@ -64,10 +66,14 @@ export default function OrganizacionesSection() {
           <p className="text-gray-500 mt-3 max-w-lg mx-auto text-sm">
             Casos de uso diseñados para tu sector.
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
+        <AnimatedSection
+          variant="fadeInUp"
+          delay={0.1}
+          className="flex flex-wrap justify-center gap-2 mb-10"
+        >
           {ORGANIZACIONES.map(({ id, label }) => (
             <button
               key={id}
@@ -82,42 +88,48 @@ export default function OrganizacionesSection() {
               {label}
             </button>
           ))}
-        </div>
+        </AnimatedSection>
 
         {/* Content */}
-        <div className="flex flex-col md:flex-row gap-6 items-stretch">
-          {/* Left — copy */}
-          <div className="flex-1 bg-white rounded-2xl p-8 flex flex-col justify-between shadow-sm">
-            <div>
-              <h3 className="font-fraunces text-2xl font-extrabold text-primary mb-3 leading-snug whitespace-pre-line">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -16 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col md:flex-row gap-8 items-center"
+          >
+            {/* Left — copy */}
+            <div className="flex-1 flex flex-col justify-center gap-4 py-8">
+              <h3 className="font-fraunces text-2xl font-extrabold text-primary leading-snug whitespace-pre-line">
                 {org.titulo}
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed max-w-md">
                 {org.descripcion}
               </p>
+              <button className="text-accent font-semibold text-sm hover:underline w-fit mt-2">
+                {org.cta}
+              </button>
             </div>
-            <button className="mt-8 text-accent font-semibold text-sm hover:underline w-fit">
-              {org.cta}
-            </button>
-          </div>
 
-          {/* Right — imagen + métrica */}
-          <div className="w-full md:w-2/5 flex flex-col gap-4">
-            {/* Placeholder imagen */}
-            <div className="flex-1 bg-gray-200 rounded-2xl flex items-center justify-center min-h-[350px]">
-              <span className="text-gray-400 text-sm">
-                [ Imagen {org.label} ]
-              </span>
-              {/* Métrica */}
-              <div className="bg-white rounded-2xl p-5 text-white flex items-center gap-2 max-h-[30px] relative left-[5%] top-[35%]">
-                <p className="font-fraunces text-3xl font-extrabold text-accent">
+            {/* Right — imagen + métrica superpuesta */}
+            <div className="w-full md:w-2/5 relative">
+              <div className="bg-gray-200 rounded-2xl w-full min-h-[380px] flex items-center justify-center">
+                <span className="text-gray-400 text-sm">
+                  [ Imagen {org.label} ]
+                </span>
+              </div>
+              {/* Métrica flotante */}
+              <div className="absolute bottom-4 right-4 bg-white rounded-2xl shadow-lg px-5 py-3 flex items-center gap-3">
+                <p className="font-fraunces text-2xl font-extrabold text-accent">
                   {org.metrica}
                 </p>
-                <p className="text-black/70 text-sm">{org.metricaLabel}</p>
+                <p className="text-gray-600 text-sm">{org.metricaLabel}</p>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

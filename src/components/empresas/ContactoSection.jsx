@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Globe } from "lucide-react";
+import { AnimatedSection } from "../ui/AnimatedSection";
 
 const CONTACTO_INFO = [
   { icon: Phone, texto: "+54 11 0000-0000" },
@@ -11,7 +12,7 @@ export default function ContactoSection() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row gap-12 items-start">
+        <AnimatedSection variant="fadeInLeft" className="flex flex-col md:flex-row gap-12 items-start">
           {/* Left — copy */}
           <div className="flex-1">
             <span className="text-accent text-xs font-semibold tracking-widest uppercase">
@@ -123,7 +124,7 @@ export default function ContactoSection() {
               Enviar solicitud →
             </button>
           </div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );
