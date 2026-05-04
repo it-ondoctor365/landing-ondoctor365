@@ -1,8 +1,11 @@
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+
+const ACCENT = "#32b9cc";
 
 const STATS = [
   { value: "30+", label: "Años de experiencia médica" },
-  { value: "-32%", label: "Reduccion de ausentismo" },
+  { value: "-32%", label: "Reducción de ausentismo" },
   { value: "24/7", label: "Cobertura continua" },
 ];
 
@@ -17,13 +20,54 @@ const fadeUp = {
 
 export default function HeroEmpresas() {
   return (
-    <section className="bg-primary text-white min-h-[580px] relative overflow-hidden">
+    <section
+      className="relative min-h-[580px] overflow-hidden text-white"
+      style={{ background: "#2d418e" }}
+    >
+      {/* Orbs */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div
+          className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full blur-[140px]"
+          style={{ background: ACCENT, opacity: 0.12 }}
+        />
+        <div
+          className="absolute bottom-0 left-1/3 w-[400px] h-[400px] rounded-full blur-[120px]"
+          style={{ background: "#1a2860", opacity: 0.8 }}
+        />
+      </div>
+
+      {/* Dot grid */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, #ffffff0a 1px, transparent 1px)",
+          backgroundSize: "32px 32px",
+        }}
+      />
+
       <div className="max-w-7xl mx-auto px-6 h-full flex items-center">
         {/* Left — copy */}
         <div className="relative z-10 max-w-xl py-20">
-          <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible">
-            <span className="inline-block bg-accent/20 text-[#6EE7E7] text-xs tracking-widest uppercase px-4 py-2 rounded-full mb-6 border-2 border-[#6EE7E7] border-opacity-20">
-              ● Salud corporativa ● B2B
+          <motion.div
+            custom={0}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+          >
+            <span
+              className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.18em] uppercase px-4 py-1.5 rounded-full border mb-6"
+              style={{
+                color: ACCENT,
+                borderColor: ACCENT + "50",
+                background: ACCENT + "18",
+              }}
+            >
+              <span
+                className="w-1.5 h-1.5 rounded-full"
+                style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
+              />
+              Salud corporativa · B2B
             </span>
           </motion.div>
 
@@ -35,7 +79,7 @@ export default function HeroEmpresas() {
             className="text-4xl md:text-6xl font-fraunces font-bold leading-tight mb-4"
           >
             El ecosistema de salud{" "}
-            <span className="text-accent font-fraunces italic">
+            <span className="font-fraunces italic" style={{ color: ACCENT }}>
               para tu empresa.
             </span>
           </motion.h1>
@@ -45,7 +89,7 @@ export default function HeroEmpresas() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="text-white/70 text-s mb-8 max-w-full"
+            className="text-white/70 text-sm mb-8 max-w-full leading-relaxed"
           >
             Telemedicina, tótems de atención presencial e IA médica integrados
             en un solo sistema. Para empresas, prestadores y aseguradoras.
@@ -58,12 +102,28 @@ export default function HeroEmpresas() {
             animate="visible"
             className="flex flex-wrap gap-3"
           >
-            <button className="bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3 rounded-full transition-colors duration-200">
+            <motion.button
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              className="flex items-center gap-2 font-bold px-6 py-3 rounded-2xl text-sm"
+              style={{
+                background: ACCENT,
+                color: "#07111f",
+                boxShadow: `0 10px 36px ${ACCENT}55`,
+              }}
+            >
               Solicitar una demo
-            </button>
-            <button className="border border-white/40 hover:border-white text-white font-semibold px-6 py-3 rounded-full transition-colors duration-200">
+              <ArrowRight size={14} />
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              className="font-semibold px-6 py-3 rounded-2xl text-sm text-white/85"
+              style={{ border: "1px solid rgba(255,255,255,0.25)" }}
+            >
               Ver productos
-            </button>
+            </motion.button>
           </motion.div>
 
           <motion.div

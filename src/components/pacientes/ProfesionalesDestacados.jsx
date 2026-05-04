@@ -1,4 +1,7 @@
-import { AnimatedSection, StaggerContainer, StaggerItem } from "../ui/AnimatedSection";
+import { motion } from "framer-motion";
+import { AnimatedSection } from "../ui/AnimatedSection";
+
+const ACCENT = "#32b9cc";
 
 const PROFESIONALES = [
   {
@@ -55,43 +58,88 @@ function StarRating({ rating }) {
 
 export default function ProfesionalesDestacados() {
   return (
-    <section className="py-20 bg-[#EEF1FA]">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Heading */}
+    <section className="relative py-24 overflow-hidden bg-white">
+      {/* Orbs */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div
+          className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full blur-[140px]"
+          style={{ background: ACCENT, opacity: 0.07 }}
+        />
+        <div
+          className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full blur-[120px]"
+          style={{ background: "#2d418e", opacity: 0.06 }}
+        />
+      </div>
+
+      {/* Dot grid */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, #2d418e18 1px, transparent 1px)",
+          backgroundSize: "32px 32px",
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto px-6">
         <AnimatedSection variant="fadeInUp" className="text-center mb-14">
-          <span className="text-accent text-xs font-semibold tracking-widest uppercase">
+          <motion.span
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.18em] uppercase px-4 py-1.5 rounded-full border mb-5"
+            style={{
+              color: ACCENT,
+              borderColor: ACCENT + "40",
+              background: ACCENT + "12",
+            }}
+          >
+            <span
+              className="w-1.5 h-1.5 rounded-full"
+              style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
+            />
             PROFESIONALES
-          </span>
-          <h2 className="text-3xl md:text-5xl font-fraunces font-extrabold text-primary mt-2">
+          </motion.span>
+
+          <h2 className="text-3xl md:text-5xl font-fraunces font-extrabold text-primary mt-2 leading-tight">
             Una red de profesionales{" "}
-            <span className="text-accent">comprometidos</span> con una atención{" "}
-            <span className="text-accent">cercana y de calidad</span>
+            <span style={{ color: ACCENT }}>comprometidos</span> con una
+            atención <span style={{ color: ACCENT }}>cercana y de calidad</span>
           </h2>
         </AnimatedSection>
 
-        {/* Cards */}
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {PROFESIONALES.map(
-            ({
-              id,
-              nombre,
-              especialidad,
-              ubicacion,
-              rating,
-              reviews,
-              avatar,
-              descripcion,
-            }) => (
-              <StaggerItem
+            (
+              { id, nombre, especialidad, ubicacion, rating, reviews, avatar, descripcion },
+              i
+            ) => (
+              <motion.div
                 key={id}
-                className="bg-light-bg rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md transition-shadow duration-200"
+                initial={{ opacity: 0, y: 22 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{
+                  delay: i * 0.1,
+                  duration: 0.42,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="rounded-3xl p-6 flex flex-col gap-4 relative overflow-hidden"
+                style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}
               >
-                {/* Header */}
-                <div className="flex items-center gap-4">
+                {/* Corner glow */}
+                <div
+                  className="absolute -top-8 -right-8 w-32 h-32 rounded-full blur-[60px] pointer-events-none"
+                  style={{ background: ACCENT, opacity: 0.1 }}
+                />
+
+                <div className="flex items-center gap-4 relative">
                   <img
                     src={avatar}
                     alt={nombre}
                     className="w-14 h-14 rounded-full object-cover"
+                    style={{ border: `2px solid ${ACCENT}30` }}
                   />
                   <div>
                     <p className="text-primary font-bold text-sm">{nombre}</p>
@@ -105,14 +153,20 @@ export default function ProfesionalesDestacados() {
                   </div>
                 </div>
 
-                {/* Descripcion */}
-                <p className="text-gray-600 text-sm leading-relaxed italic">
+                <div
+                  className="h-px"
+                  style={{
+                    background: `linear-gradient(90deg, ${ACCENT}40, transparent)`,
+                  }}
+                />
+
+                <p className="text-gray-600 text-sm leading-relaxed italic relative">
                   "{descripcion}"
                 </p>
-              </StaggerItem>
-            ),
+              </motion.div>
+            )
           )}
-        </StaggerContainer>
+        </div>
       </div>
     </section>
   );
