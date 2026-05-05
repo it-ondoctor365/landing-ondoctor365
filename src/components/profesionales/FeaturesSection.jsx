@@ -129,15 +129,8 @@ export default function FeaturesSection() {
             variant="fadeInRight"
             className="w-full md:w-2/5 shrink-0"
           >
-            <div
-              className="rounded-3xl w-full h-full flex items-center justify-center relative overflow-hidden"
-              style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}
-            >
-              <div
-                className="absolute -top-10 -right-10 w-44 h-44 rounded-full blur-[60px] pointer-events-none"
-                style={{ background: ACCENT, opacity: 0.1 }}
-              />
-              <img src="ImagenMedica.png"></img>
+            <div className="rounded-3xl w-full h-full flex items-center justify-center relative overflow-hidden">
+              <div className="absolute -top-10 -right-10 w-44 h-44 rounded-full blur-[60px] pointer-events-none" />
             </div>
           </AnimatedSection>
         </div>
