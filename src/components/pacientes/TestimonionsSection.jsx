@@ -1,36 +1,13 @@
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
+import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
 
-const TESTIMONIOS_DEFAULT = [
-  {
-    id: 1,
-    nombre: "Laura G.",
-    ubicacion: "Buenos Aires",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?img=32",
-    texto:
-      "No tenía que salir de casa con mi hijo enfermo. En 5 minutos estaba hablando con un médico. La receta me llegó al instante.",
-  },
-  {
-    id: 2,
-    nombre: "Rodrigo P.",
-    ubicacion: "Mendoza",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?img=52",
-    texto:
-      "Increíble la rapidez. Siempre que lo necesité tuve un médico disponible. La historia clínica digital es un diferencial enorme.",
-  },
-  {
-    id: 3,
-    nombre: "Vanesa S.",
-    ubicacion: "Rosario",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?img=48",
-    texto:
-      "Lo uso para toda la familia. Los profesionales son muy atentos y el sistema es súper fácil. Lo recomiendo a todos.",
-  },
+const AVATARS = [
+  "https://i.pravatar.cc/150?img=32",
+  "https://i.pravatar.cc/150?img=52",
+  "https://i.pravatar.cc/150?img=48",
 ];
 
 function StarRating({ rating }) {
@@ -50,12 +27,14 @@ function StarRating({ rating }) {
   );
 }
 
-export default function TestimoniosSection({
-  badge = "TESTIMONIOS",
-  titulo = "Lo que dicen",
-  tituloAccent = "nuestros pacientes",
-  testimonios = TESTIMONIOS_DEFAULT,
-}) {
+export default function TestimoniosSection({ badge, titulo, tituloAccent, testimonios: testimoniosProp }) {
+  const { t } = useTranslation();
+
+  const resolvedBadge = badge ?? t("testimonios.badge");
+  const resolvedTitulo = titulo ?? t("testimonios.titulo");
+  const resolvedTituloAccent = tituloAccent ?? t("testimonios.titulo_accent");
+  const testimonios = testimoniosProp ?? t("testimonios.items", { returnObjects: true });
+
   return (
     <section className="relative py-24 overflow-hidden bg-white">
       {/* Orbs */}
@@ -98,24 +77,24 @@ export default function TestimoniosSection({
               className="w-1.5 h-1.5 rounded-full"
               style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
             />
-            {badge}
+            {resolvedBadge}
           </motion.span>
 
           <h2 className="text-3xl md:text-4xl font-fraunces font-extrabold text-primary mt-2">
-            {titulo}{" "}
+            {resolvedTitulo}{" "}
             <span
               className="font-fraunces italic"
               style={{ color: ACCENT }}
             >
-              {tituloAccent}
+              {resolvedTituloAccent}
             </span>
           </h2>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {testimonios.map(({ id, nombre, ubicacion, rating, avatar, texto }, i) => (
+          {testimonios.map(({ nombre, ubicacion, texto }, i) => (
             <motion.div
-              key={id}
+              key={i}
               initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -133,7 +112,7 @@ export default function TestimoniosSection({
                 style={{ background: ACCENT, opacity: 0.1 }}
               />
 
-              <StarRating rating={rating} />
+              <StarRating rating={5} />
 
               <p className="text-gray-600 text-sm leading-relaxed flex-1 relative">
                 "{texto}"
@@ -148,7 +127,7 @@ export default function TestimoniosSection({
 
               <div className="flex items-center gap-3">
                 <img
-                  src={avatar}
+                  src={AVATARS[i]}
                   alt={nombre}
                   className="w-10 h-10 rounded-full object-cover"
                   style={{ border: `2px solid ${ACCENT}30` }}

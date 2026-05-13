@@ -1,20 +1,30 @@
-import { Mail, Phone, MapPin, Globe, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
+import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
 
 const CONTACTO_INFO = [
   { icon: Phone, texto: "+54 11 0000-0000" },
-  { icon: Mail, texto: "empresas@ondoctor365.com" },
-  { icon: MapPin, texto: "Buenos Aires, Argentina" },
-  { icon: Globe, texto: "www.ondoctor365.com" },
+  { icon: Mail, texto: "info@ondoctor365.com" },
+  { icon: MapPin, texto: "Mar del Plata, Buenos Aires, Argentina" },
+];
+
+const CAMPOS = [
+  { key: "nombre", type: "text" },
+  { key: "apellido", type: "text" },
+  { key: "empresa", type: "text" },
+  { key: "cargo", type: "text" },
+  { key: "email", type: "email" },
+  { key: "telefono", type: "tel" },
 ];
 
 export default function ContactoSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative py-24 overflow-hidden bg-white">
-      {/* Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full blur-[140px]"
@@ -26,7 +36,6 @@ export default function ContactoSection() {
         />
       </div>
 
-      {/* Dot grid */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -41,7 +50,6 @@ export default function ContactoSection() {
           variant="fadeInLeft"
           className="flex flex-col md:flex-row gap-12 items-start"
         >
-          {/* Left — copy */}
           <div className="flex-1">
             <motion.span
               initial={{ opacity: 0, scale: 0.9 }}
@@ -59,18 +67,17 @@ export default function ContactoSection() {
                 className="w-1.5 h-1.5 rounded-full"
                 style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
               />
-              CONTACTO
+              {t("contacto.badge")}
             </motion.span>
 
             <h2 className="font-fraunces text-3xl md:text-4xl font-extrabold text-primary mt-2 mb-3 leading-tight">
-              Hablemos de{" "}
+              {t("contacto.titulo")}{" "}
               <span className="italic" style={{ color: ACCENT }}>
-                tu empresa
+                {t("contacto.titulo_accent")}
               </span>
             </h2>
             <p className="text-gray-400 text-sm mb-8 max-w-sm leading-relaxed">
-              Completá el formulario y un especialista se pondrá en contacto
-              para diseñar la solución ideal para tu organización.
+              {t("contacto.subtitulo")}
             </p>
 
             <ul className="space-y-3">
@@ -95,37 +102,28 @@ export default function ContactoSection() {
             </ul>
           </div>
 
-          {/* Right — formulario */}
           <div
             className="w-full md:w-3/5 rounded-3xl p-8 relative overflow-hidden"
             style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}
           >
-            {/* Corner glow */}
             <div
               className="absolute -top-10 -right-10 w-44 h-44 rounded-full blur-[60px] pointer-events-none"
               style={{ background: ACCENT, opacity: 0.1 }}
             />
 
             <h3 className="font-fraunces text-xl font-extrabold text-primary mb-6 relative">
-              Solicitar una demo
+              {t("contacto.form_titulo")}
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 relative">
-              {[
-                { label: "Nombre", placeholder: "Tu nombre", type: "text" },
-                { label: "Apellido", placeholder: "Tu apellido", type: "text" },
-                { label: "Empresa", placeholder: "Nombre de tu empresa", type: "text" },
-                { label: "Cargo", placeholder: "Tu cargo", type: "text" },
-                { label: "Email corporativo", placeholder: "email@empresa.com", type: "email" },
-                { label: "Teléfono", placeholder: "+54 11 0000-0000", type: "tel" },
-              ].map(({ label, placeholder, type }) => (
-                <div key={label} className="flex flex-col gap-1.5">
+              {CAMPOS.map(({ key, type }) => (
+                <div key={key} className="flex flex-col gap-1.5">
                   <label className="text-xs font-semibold text-gray-600">
-                    {label}
+                    {t(`contacto.campos.${key}_label`)}
                   </label>
                   <input
                     type={type}
-                    placeholder={placeholder}
+                    placeholder={t(`contacto.campos.${key}_placeholder`)}
                     className="bg-white border border-[#e2e8f0] rounded-2xl px-4 py-3 text-sm text-gray-700 outline-none focus:border-accent transition-colors"
                   />
                 </div>
@@ -133,10 +131,10 @@ export default function ContactoSection() {
 
               <div className="flex flex-col gap-1.5 sm:col-span-2">
                 <label className="text-xs font-semibold text-gray-600">
-                  Mensaje (opcional)
+                  {t("contacto.campos.mensaje_label")}
                 </label>
                 <textarea
-                  placeholder="Contanos sobre tu organización y qué necesitás..."
+                  placeholder={t("contacto.campos.mensaje_placeholder")}
                   rows={3}
                   className="bg-white border border-[#e2e8f0] rounded-2xl px-4 py-3 text-sm text-gray-700 outline-none focus:border-accent transition-colors resize-none"
                 />
@@ -153,7 +151,7 @@ export default function ContactoSection() {
                 boxShadow: `0 10px 36px ${ACCENT}55`,
               }}
             >
-              Enviar solicitud
+              {t("contacto.cta")}
               <ArrowRight size={15} />
             </motion.button>
           </div>

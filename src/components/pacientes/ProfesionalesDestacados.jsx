@@ -1,43 +1,17 @@
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
+import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
 
-const PROFESIONALES = [
-  {
-    id: 1,
-    nombre: "Dr. Martín López",
-    especialidad: "Médico Clínico",
-    ubicacion: "Buenos Aires",
-    rating: 5,
-    reviews: 128,
-    avatar: "https://i.pravatar.cc/150?img=11",
-    descripcion:
-      "Lo que más valoro es poder atender a mis pacientes desde cualquier lugar. La plataforma simplifica todo el proceso.",
-  },
-  {
-    id: 2,
-    nombre: "Lic. Sofía Ramírez",
-    especialidad: "Psicóloga",
-    ubicacion: "Córdoba",
-    rating: 5,
-    reviews: 94,
-    avatar: "https://i.pravatar.cc/150?img=47",
-    descripcion:
-      "Puedo conectarme con mis pacientes de forma segura y mantener un seguimiento continuo sin complicaciones.",
-  },
-  {
-    id: 3,
-    nombre: "Lic. Valeria Torres",
-    especialidad: "Nutricionista",
-    ubicacion: "Rosario",
-    rating: 4,
-    reviews: 76,
-    avatar: "https://i.pravatar.cc/150?img=45",
-    descripcion:
-      "Mis pacientes tienen todo en un solo lugar: turnos, planes alimentarios y seguimiento. Es muy fácil de usar.",
-  },
+const AVATARS = [
+  "https://i.pravatar.cc/150?img=11",
+  "https://i.pravatar.cc/150?img=47",
+  "https://i.pravatar.cc/150?img=45",
 ];
+
+const RATINGS = [5, 5, 4];
+const REVIEWS = [128, 94, 76];
 
 function StarRating({ rating }) {
   return (
@@ -57,6 +31,9 @@ function StarRating({ rating }) {
 }
 
 export default function ProfesionalesDestacados() {
+  const { t } = useTranslation();
+  const profesionales = t("profesionalesDestacados.items", { returnObjects: true });
+
   return (
     <section className="relative py-24 overflow-hidden bg-white">
       {/* Orbs */}
@@ -99,73 +76,69 @@ export default function ProfesionalesDestacados() {
               className="w-1.5 h-1.5 rounded-full"
               style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
             />
-            PROFESIONALES
+            {t("profesionalesDestacados.badge")}
           </motion.span>
 
           <h2 className="text-3xl md:text-5xl font-fraunces font-extrabold text-primary mt-2 leading-tight">
-            Una red de profesionales{" "}
-            <span style={{ color: ACCENT }}>comprometidos</span> con una
-            atención <span style={{ color: ACCENT }}>cercana y de calidad</span>
+            {t("profesionalesDestacados.titulo")}{" "}
+            <span style={{ color: ACCENT }}>{t("profesionalesDestacados.titulo_accent1")}</span>{" "}
+            {t("profesionalesDestacados.titulo_middle")}{" "}
+            <span style={{ color: ACCENT }}>{t("profesionalesDestacados.titulo_accent2")}</span>
           </h2>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {PROFESIONALES.map(
-            (
-              { id, nombre, especialidad, ubicacion, rating, reviews, avatar, descripcion },
-              i
-            ) => (
-              <motion.div
-                key={id}
-                initial={{ opacity: 0, y: 22 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{
-                  delay: i * 0.1,
-                  duration: 0.42,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="rounded-3xl p-6 flex flex-col gap-4 relative overflow-hidden"
-                style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}
-              >
-                {/* Corner glow */}
-                <div
-                  className="absolute -top-8 -right-8 w-32 h-32 rounded-full blur-[60px] pointer-events-none"
-                  style={{ background: ACCENT, opacity: 0.1 }}
-                />
+          {profesionales.map(({ nombre, especialidad, ubicacion, descripcion }, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{
+                delay: i * 0.1,
+                duration: 0.42,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="rounded-3xl p-6 flex flex-col gap-4 relative overflow-hidden"
+              style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}
+            >
+              {/* Corner glow */}
+              <div
+                className="absolute -top-8 -right-8 w-32 h-32 rounded-full blur-[60px] pointer-events-none"
+                style={{ background: ACCENT, opacity: 0.1 }}
+              />
 
-                <div className="flex items-center gap-4 relative">
-                  <img
-                    src={avatar}
-                    alt={nombre}
-                    className="w-14 h-14 rounded-full object-cover"
-                    style={{ border: `2px solid ${ACCENT}30` }}
-                  />
-                  <div>
-                    <p className="text-primary font-bold text-sm">{nombre}</p>
-                    <p className="text-gray-500 text-xs">
-                      {especialidad} · {ubicacion}
-                    </p>
-                    <div className="flex items-center gap-1.5 mt-1">
-                      <StarRating rating={rating} />
-                      <span className="text-gray-400 text-xs">({reviews})</span>
-                    </div>
+              <div className="flex items-center gap-4 relative">
+                <img
+                  src={AVATARS[i]}
+                  alt={nombre}
+                  className="w-14 h-14 rounded-full object-cover"
+                  style={{ border: `2px solid ${ACCENT}30` }}
+                />
+                <div>
+                  <p className="text-primary font-bold text-sm">{nombre}</p>
+                  <p className="text-gray-500 text-xs">
+                    {especialidad} · {ubicacion}
+                  </p>
+                  <div className="flex items-center gap-1.5 mt-1">
+                    <StarRating rating={RATINGS[i]} />
+                    <span className="text-gray-400 text-xs">({REVIEWS[i]})</span>
                   </div>
                 </div>
+              </div>
 
-                <div
-                  className="h-px"
-                  style={{
-                    background: `linear-gradient(90deg, ${ACCENT}40, transparent)`,
-                  }}
-                />
+              <div
+                className="h-px"
+                style={{
+                  background: `linear-gradient(90deg, ${ACCENT}40, transparent)`,
+                }}
+              />
 
-                <p className="text-gray-600 text-sm leading-relaxed italic relative">
-                  "{descripcion}"
-                </p>
-              </motion.div>
-            )
-          )}
+              <p className="text-gray-600 text-sm leading-relaxed italic relative">
+                "{descripcion}"
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

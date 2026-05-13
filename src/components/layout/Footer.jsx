@@ -1,15 +1,17 @@
 import { useNavigate } from "react-router-dom";
-
-const LINKS = [
-  { label: "Política de Privacidad", href: "#" },
-  { label: "Nosotros", href: "#" },
-  { label: "Contacto", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "LinkedIn", href: "#" },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
+  const LINKS = [
+    { label: t("footer.privacidad"), href: "#" },
+    { label: t("footer.nosotros"), href: "#" },
+    { label: t("footer.contacto"), href: "#" },
+    { label: "Instagram", href: "#" },
+    { label: "LinkedIn", href: "#" },
+  ];
 
   return (
     <footer className="bg-white text-black">
@@ -19,7 +21,7 @@ export default function Footer() {
           onClick={() => navigate("/pacientes")}
           className="text-black font-bold text-lg tracking-tight"
         >
-          <img src="logo.svg"></img>
+          <img src="/logo.svg"></img>
         </button>
 
         {/* Links */}

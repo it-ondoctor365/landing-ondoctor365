@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
+import { useTranslation, Trans } from "react-i18next";
 
 const ACCENT = "#32b9cc";
 
@@ -10,6 +11,8 @@ const EMPRESAS = [
 ];
 
 export default function EmpresasConfianza() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative py-20 overflow-hidden bg-white">
       {/* Orbs */}
@@ -33,14 +36,14 @@ export default function EmpresasConfianza() {
       <div className="relative max-w-7xl mx-auto px-6">
         <AnimatedSection variant="fadeInUp">
           <p className="text-center text-primary font-semibold text-lg md:text-xl max-w-2xl mx-auto leading-snug mb-12">
-            Con la{" "}
-            <span className="font-extrabold" style={{ color: ACCENT }}>
-              confianza
-            </span>{" "}
-            de organizaciones de salud y profesionales que apuestan por una{" "}
-            <span className="font-extrabold" style={{ color: ACCENT }}>
-              atención médica más eficiente.
-            </span>
+            <Trans
+              i18nKey="empresasConfianza.texto"
+              components={{
+                accent: (
+                  <span className="font-extrabold" style={{ color: ACCENT }} />
+                ),
+              }}
+            />
           </p>
         </AnimatedSection>
 

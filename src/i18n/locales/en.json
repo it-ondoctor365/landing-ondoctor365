@@ -1,0 +1,667 @@
+{
+  "navbar": {
+    "pacientes": "Patients",
+    "profesionales": "Professionals",
+    "empresas": "Companies",
+    "login": "Log in",
+    "cta_pacientes": "Book appointment →",
+    "cta_profesionales": "Create my profile →",
+    "cta_empresas": "Request demo →",
+    "menu_aria": "Menu"
+  },
+  "heroPacientes": {
+    "badge": "Available 24/7 · 365 days",
+    "titulo": "Online medical care when",
+    "titulo_accent": "you need it most.",
+    "subtitulo": "Doctors, psychologists and specialists available in minutes. No queues, no travel. From your phone or computer.",
+    "cta_primary": "Book appointment",
+    "cta_secondary": "Find a specialist",
+    "stats": {
+      "pacientes_value": "+15K",
+      "pacientes_label": "Patients served",
+      "rating_value": "4.9★",
+      "rating_label": "Average rating",
+      "espera_value": "3 min",
+      "espera_label": "Wait time"
+    },
+    "card": {
+      "badge": "Doctor available now",
+      "nombre": "Dr. Martínez",
+      "especialidad": "General practitioner · 12 years of experience"
+    }
+  },
+  "beneficios": {
+    "badge": "WHY CHOOSE ONDOCTOR365",
+    "titulo": "Medical care",
+    "titulo_accent": "without the wait",
+    "titulo2": "you're used to",
+    "subtitulo": "A new way to take care of your health: accessible, immediate and hassle-free.",
+    "items": {
+      "espera_titulo": "No waiting room",
+      "espera_desc": "Your appointment is at the time you chose. No 40-minute wait in a hallway or commuting.",
+      "especialistas_titulo": "Specialists nationwide",
+      "especialistas_desc": "Access professionals who may not be in your city. The best care no matter where you are.",
+      "resenas_titulo": "Real verified reviews",
+      "resenas_desc": "All reviews are from patients who actually consulted. Choose with real information.",
+      "privacidad_titulo": "Full privacy",
+      "privacidad_desc": "Your medical information is encrypted under the highest security standards."
+    }
+  },
+  "pasos": {
+    "badge": "HOW IT WORKS",
+    "titulo": "From search to consultation",
+    "titulo_accent": "in 3 steps",
+    "items": {
+      "paso1_titulo": "Choose your specialty",
+      "paso1_desc": "Find the specialist you need. Filter by specialty, availability and ratings.",
+      "paso2_titulo": "Book your appointment",
+      "paso2_desc": "Select the time that works best for you, confirm your appointment and pay securely.",
+      "paso3_titulo": "Consult and follow up",
+      "paso3_desc": "Connect with your doctor via video call. Receive your prescription or diagnosis instantly."
+    }
+  },
+  "consultasTabs": {
+    "badge": "SPECIALTIES",
+    "titulo": "What type of consultation",
+    "titulo_accent": "do you need?",
+    "subtitulo": "Choose your specialty and find professionals available in minutes.",
+    "precio_label": "Price per consultation",
+    "periodo": "per consultation",
+    "reservar": "Book appointment",
+    "trust": {
+      "item1": "No health insurance required",
+      "item2": "Available 24/7",
+      "item3": "Certified professionals"
+    },
+    "especialidades": {
+      "clinico_label": "General Practitioner",
+      "clinico_desc": "General consultations, diagnoses, health follow-up and more.",
+      "clinico_f1": "Unlimited digital prescriptions",
+      "clinico_f2": "Digital medical record",
+      "clinico_f3": "HD video consultation",
+      "clinico_f4": "Lab test orders",
+      "psicologia_label": "Psychology",
+      "psicologia_desc": "Psychological care with certified professionals.",
+      "psicologia_f1": "Individual sessions",
+      "psicologia_f2": "Continuous follow-up",
+      "psicologia_f3": "HD video consultation",
+      "psicologia_f4": "Session notes",
+      "nutricion_label": "Nutrition",
+      "nutricion_desc": "Personalized meal plans with nutritionists.",
+      "nutricion_f1": "Digital meal plan",
+      "nutricion_f2": "Weight tracking",
+      "nutricion_f3": "HD video consultation",
+      "nutricion_f4": "Shopping list",
+      "guardia_label": "Emergency ENT",
+      "guardia_desc": "24/7 emergency care with on-call doctors.",
+      "guardia_f1": "Immediate attention",
+      "guardia_f2": "Referral if necessary",
+      "guardia_f3": "HD video consultation",
+      "guardia_f4": "Emergency prescriptions"
+    }
+  },
+  "testimonios": {
+    "badge": "TESTIMONIALS",
+    "titulo": "What",
+    "titulo_accent": "our patients say",
+    "items": [
+      {
+        "nombre": "Laura G.",
+        "ubicacion": "Buenos Aires",
+        "texto": "I didn't have to leave home with my sick child. Within 5 minutes I was talking to a doctor. The prescription arrived instantly."
+      },
+      {
+        "nombre": "Rodrigo P.",
+        "ubicacion": "Mendoza",
+        "texto": "Incredible speed. Whenever I needed it I had a doctor available. The digital medical record is a huge differentiator."
+      },
+      {
+        "nombre": "Vanesa S.",
+        "ubicacion": "Rosario",
+        "texto": "I use it for the whole family. The professionals are very attentive and the system is super easy. I recommend it to everyone."
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FREQUENTLY ASKED QUESTIONS",
+    "titulo": "Your most",
+    "titulo_accent": "common questions",
+    "items": [
+      {
+        "pregunta": "Do I need to download an app?",
+        "respuesta": "No, OnDoctor365 works directly from your browser. You only need an internet connection and a camera."
+      },
+      {
+        "pregunta": "Can minors use the service?",
+        "respuesta": "Yes, minors can be attended with the presence and authorization of a responsible adult."
+      },
+      {
+        "pregunta": "Are digital prescriptions legally valid?",
+        "respuesta": "Yes, all prescriptions have certified digital signatures and are legally valid nationwide."
+      },
+      {
+        "pregunta": "What if the doctor can't attend me immediately?",
+        "respuesta": "You can book a scheduled appointment or join the waiting list. We'll notify you when there's availability."
+      },
+      {
+        "pregunta": "Is my medical data safe?",
+        "respuesta": "Yes, all your information is encrypted. Only you and your doctor have access to your records."
+      }
+    ]
+  },
+  "ctaFinal": {
+    "badge": "Ready to join?",
+    "titulo": "Your health,",
+    "titulo_accent": "one click",
+    "titulo2": "away",
+    "subtitulo": "Sign up for free and access the best health professionals in minutes.",
+    "cta_primary": "Start your appointment now",
+    "cta_secondary": "Find a professional"
+  },
+  "empresasConfianza": {
+    "texto": "With the <accent>trust</accent> of health organizations and professionals committed to <accent>more efficient medical care.</accent>"
+  },
+  "profesionalesDestacados": {
+    "badge": "PROFESSIONALS",
+    "titulo": "A network of professionals",
+    "titulo_accent1": "committed",
+    "titulo_middle": "to",
+    "titulo_accent2": "close, quality care",
+    "items": [
+      {
+        "nombre": "Dr. Martín López",
+        "especialidad": "General Practitioner",
+        "ubicacion": "Buenos Aires",
+        "descripcion": "What I value most is being able to attend my patients from anywhere. The platform simplifies the entire process."
+      },
+      {
+        "nombre": "Lic. Sofía Ramírez",
+        "especialidad": "Psychologist",
+        "ubicacion": "Córdoba",
+        "descripcion": "I can connect with my patients securely and maintain continuous follow-up without complications."
+      },
+      {
+        "nombre": "Lic. Valeria Torres",
+        "especialidad": "Nutritionist",
+        "ubicacion": "Rosario",
+        "descripcion": "My patients have everything in one place: appointments, meal plans and follow-up. It's very easy to use."
+      }
+    ]
+  },
+  "heroEmpresas": {
+    "badge": "Corporate Health · B2B",
+    "titulo": "The health ecosystem",
+    "titulo_accent": "for your company.",
+    "subtitulo": "Telemedicine, on-site care kiosks and medical AI integrated into a single system. For companies, providers and insurers.",
+    "cta_primary": "Request a demo",
+    "cta_secondary": "View products",
+    "stats": [
+      { "value": "30+", "label": "Years of medical experience" },
+      { "value": "-32%", "label": "Absenteeism reduction" },
+      { "value": "24/7", "label": "Continuous coverage" }
+    ]
+  },
+  "problemas": {
+    "titulo": "Teams lose days due to lack of",
+    "titulo_accent": "medical access.",
+    "items": [
+      {
+        "titulo": "Wait times",
+        "texto": "Employees lose hours in waiting rooms or coordinating appointments with specialists."
+      },
+      {
+        "titulo": "Real indirect costs",
+        "texto": "Absenteeism and low productivity have an invisible but enormous cost for the company."
+      },
+      {
+        "titulo": "Out-of-reach specialists",
+        "texto": "In many areas, accessing a specialist can take weeks."
+      }
+    ],
+    "solucion": {
+      "badge": "SOLUTION",
+      "titulo": "Health without limits",
+      "desc": "OnDoctor365 eliminates medical access barriers for your team, no matter where they are.",
+      "items": [
+        "Employee management: no more queues",
+        "Unlimited digital prescriptions",
+        "Integrated digital medical records",
+        "Real-time digital reports",
+        "Integration with HIS, HR and existing systems"
+      ]
+    }
+  },
+  "organizaciones": {
+    "badge": "SOLUTIONS",
+    "titulo": "OnDoctor365 adapts to",
+    "titulo_accent": "every type of organization.",
+    "subtitulo": "Use cases designed for your sector.",
+    "items": [
+      {
+        "id": "empresa",
+        "label": "Retail Company",
+        "metrica": "-32%",
+        "metricaLabel": "Absenteeism",
+        "titulo": "Less absenteeism,\nMore productivity",
+        "descripcion": "Your employees access immediate medical care without leaving work. Fewer lost days, more energy and commitment in the team.",
+        "cta": "Learn more"
+      },
+      {
+        "id": "clinica",
+        "label": "Clinic / Hospital",
+        "metrica": "-45%",
+        "metricaLabel": "Wait times",
+        "titulo": "Smart admission,\nfewer bottlenecks",
+        "descripcion": "Optimize triage and hospital admission with AI. Reduce wait times and improve patient experience from first contact.",
+        "cta": "Learn more"
+      },
+      {
+        "id": "obraSocial",
+        "label": "Health Insurance",
+        "metrica": "+60%",
+        "metricaLabel": "Preventive use",
+        "titulo": "More active members,\nlower hospitalization costs",
+        "descripcion": "Promote preventive health use among your members. Reduce avoidable hospitalizations and improve your insurer's indicators.",
+        "cta": "Learn more"
+      },
+      {
+        "id": "sindicato",
+        "label": "Union / Guild",
+        "metrica": "24/7",
+        "metricaLabel": "Availability",
+        "titulo": "A real benefit\nfor your members",
+        "descripcion": "Offer online medical care as a differential benefit. No queues, no travel, available anytime and from anywhere.",
+        "cta": "Learn more"
+      }
+    ]
+  },
+  "contacto": {
+    "badge": "CONTACT",
+    "titulo": "Let's talk about",
+    "titulo_accent": "your company",
+    "subtitulo": "Fill out the form and a specialist will get in touch to design the ideal solution for your organization.",
+    "form_titulo": "Request a demo",
+    "campos": {
+      "nombre_label": "First name",
+      "nombre_placeholder": "Your first name",
+      "apellido_label": "Last name",
+      "apellido_placeholder": "Your last name",
+      "empresa_label": "Company",
+      "empresa_placeholder": "Your company name",
+      "cargo_label": "Position",
+      "cargo_placeholder": "Your position",
+      "email_label": "Corporate email",
+      "email_placeholder": "email@company.com",
+      "telefono_label": "Phone",
+      "telefono_placeholder": "+1 000 000-0000",
+      "mensaje_label": "Message (optional)",
+      "mensaje_placeholder": "Tell us about your organization and what you need..."
+    },
+    "cta": "Send request"
+  },
+  "ecosistema": {
+    "badge": "PRODUCTS",
+    "titulo": "A complete ecosystem of",
+    "titulo_accent": "digital health",
+    "subtitulo": "From remote care to physical presence with technology. Four solutions that complement each other.",
+    "sensores": ["ECG", "SpO2", "Blood pressure", "Temperature", "Digital otoscope", "Video consultation"],
+    "acreditaciones": ["BARDA", "UCSF", "CHIME", "Health 2.0"],
+    "totem": {
+      "badge": "On-site + AI",
+      "titulo": "Telemedicine Kiosk",
+      "desc": "Virtual medical care room for installation at your company. Integrated sensors, real-time video consultation and electronic prescriptions. No doctor on site."
+    },
+    "reconocimiento": {
+      "badge": "Global recognition",
+      "desc": "international awards and accreditations in innovation"
+    },
+    "maletin": {
+      "badge": "Field / Critical",
+      "titulo": "FDA Medical Kit",
+      "desc": "For critical environments: vessels, aviation, field and desert. Medical grade with 5G connectivity."
+    },
+    "guardia": {
+      "badge": "Clinics / Hospitals",
+      "titulo": "Smart Emergency",
+      "desc": "AI-powered triage for hospital admission. Reduces wait times, simplifies admission and improves diagnostic accuracy before the medical consultation."
+    },
+    "plataforma": {
+      "badge": "100% Digital",
+      "titulo": "Digital Platform",
+      "desc": "App and web for 24/7 consultations. Smart scheduling, unified medical records and corporate health dashboard.",
+      "features": [
+        "Video consultations from any device",
+        "Unified digital medical records",
+        "Corporate health and absenteeism dashboard",
+        "Electronic prescriptions and orders"
+      ]
+    }
+  },
+  "heroProfesionales": {
+    "badge": "For healthcare professionals",
+    "titulo": "Expand your practice",
+    "titulo_accent": "without limits.",
+    "subtitulo": "Join the leading telemedicine platform. Online scheduling, digital medical records, video consultations and automatic payments. All in one place.",
+    "cta_primary": "Create my profile",
+    "cta_secondary": "See how it works",
+    "stats": [
+      { "value": "+15K", "label": "Patients served" },
+      { "value": "4.9★", "label": "Average rating" },
+      { "value": "3 min", "label": "Wait time" }
+    ]
+  },
+  "metricas": {
+    "badge": "IMPACT",
+    "titulo": "Your numbers,",
+    "titulo_accent": "your success",
+    "subtitulo": "Professionals like you growing with OnDoctor365.",
+    "items": [
+      {
+        "valor": "3x",
+        "titulo": "More consultations in 60 days",
+        "descripcion": "Professionals using OnDoctor365 triple their number of consultations in the first two months."
+      },
+      {
+        "valor": "$0",
+        "titulo": "No hidden fees",
+        "descripcion": "You keep 100% of each consultation. No surprises, no deductions, no fine print."
+      },
+      {
+        "valor": "+40hrs",
+        "titulo": "Less administrative work",
+        "descripcion": "Save time on scheduling, payments and documentation per month to focus more on your patients."
+      }
+    ]
+  },
+  "pasosOnboarding": {
+    "badge": "ONBOARDING",
+    "titulo": "Start seeing patients",
+    "titulo_accent": "in 24 hours",
+    "subtitulo": "Simple, guided activation process so nothing holds you back.",
+    "items": [
+      {
+        "num": "01",
+        "titulo": "Create your profile",
+        "descripcion": "Complete your professional information, specialties, academic background and available hours."
+      },
+      {
+        "num": "02",
+        "titulo": "Verification in 24hrs",
+        "descripcion": "Our team validates your license and activates your public profile on the platform."
+      },
+      {
+        "num": "03",
+        "titulo": "Receive patients",
+        "descripcion": "Your profile appears in search results. Patients book and pay online."
+      },
+      {
+        "num": "04",
+        "titulo": "Automatic payments",
+        "descripcion": "You receive payment for each consultation in the first business days of each week. No commissions."
+      }
+    ]
+  },
+  "planes": {
+    "badge": "PLANS",
+    "titulo": "Start free,",
+    "titulo_accent": "grow without limits",
+    "subtitulo": "No per-consultation fees. Choose the plan that best suits your practice.",
+    "items": [
+      {
+        "id": "especial",
+        "nombre": "Special",
+        "badge": "",
+        "precio": "$0",
+        "periodo": "free forever",
+        "descripcion": "Ideal for starting to see patients and getting to know the platform.",
+        "features": [
+          "Public profile on OnDoctor365",
+          "Up to 15 consultations per month",
+          "Video consultation included",
+          "Digital prescriptions"
+        ],
+        "cta": "Create free account"
+      },
+      {
+        "id": "pro",
+        "nombre": "Pro",
+        "badge": "MOST POPULAR",
+        "precio": "$9.990",
+        "periodo": "per month",
+        "descripcion": "For professionals who want to grow their practice.",
+        "features": [
+          "Everything in Special plan",
+          "Unlimited consultations",
+          "Digital medical records",
+          "Video consultation schedule",
+          "Advanced metrics dashboard",
+          "Digital study orders",
+          "Priority support"
+        ],
+        "cta": "Try 30 days free"
+      },
+      {
+        "id": "clinica",
+        "nombre": "Clinic / Team",
+        "badge": "",
+        "precio": "Custom",
+        "periodo": "corporate edition",
+        "descripcion": "For clinics and medical teams that need a scalable, integrated solution.",
+        "features": [
+          "Everything in Pro plan",
+          "Multiple professionals",
+          "Integrated care system",
+          "HIS integration and onboarding",
+          "Custom branding",
+          "Dedicated account executive"
+        ],
+        "cta": "Talk to sales"
+      }
+    ]
+  },
+  "featuresProfesionales": {
+    "badge": "PLATFORM",
+    "titulo": "Everything you need",
+    "titulo_accent": "to grow",
+    "subtitulo": "A complete platform that simplifies your practice and extends your reach nationwide.",
+    "items": [
+      {
+        "titulo": "Smart scheduling",
+        "descripcion": "Automatic appointment management. Patients book with you without you having to do anything."
+      },
+      {
+        "titulo": "Digital medical records",
+        "descripcion": "Load diagnoses and follow-up for each patient, organized and accessible from any device."
+      },
+      {
+        "titulo": "Digital prescriptions and orders",
+        "descripcion": "Issue prescriptions with certified digital signature. Valid nationwide."
+      },
+      {
+        "titulo": "Metrics dashboard",
+        "descripcion": "Track your consultations, income, notifications and more. Data to make better decisions."
+      }
+    ]
+  },
+  "testimoniosProfesionales": {
+    "titulo_accent": "our professionals say",
+    "items": [
+      {
+        "nombre": "Dr. Sofía Leal",
+        "ubicacion": "General Practitioner · Santa Cruz",
+        "texto": "In three months I tripled my consultations. What I value most is the automatic scheduling — no more wasting time coordinating."
+      },
+      {
+        "nombre": "Lic. Jimena Paredes",
+        "ubicacion": "Psychologist · Córdoba",
+        "texto": "Being able to follow up with my patients changes my practice. The metrics dashboard is incredible."
+      },
+      {
+        "nombre": "Dr. Matías Ruiz",
+        "ubicacion": "Surgeon · Tucumán",
+        "texto": "Less time on administrative work, more time with my patients. The HIS integration was seamless."
+      }
+    ]
+  },
+  "ctaFinalProfesionales": {
+    "badge": "Ready to join?",
+    "titulo": "Start",
+    "titulo_accent": "today,",
+    "titulo2": "at no cost",
+    "subtitulo": "Create your profile in minutes and start seeing patients from across the country.",
+    "cta_primary": "Create my free profile",
+    "cta_secondary": "Talk to the team"
+  },
+  "faqProfesionales": {
+    "items": [
+      {
+        "pregunta": "Do I need prior experience with telemedicine?",
+        "respuesta": "No, the platform is intuitive and we guide you through every step of onboarding."
+      },
+      {
+        "pregunta": "How are payments managed?",
+        "respuesta": "Payments are automatically credited to your bank account in the first business days of each week."
+      },
+      {
+        "pregunta": "Can I see patients without health insurance?",
+        "respuesta": "Yes, you can see private patients without needing to be affiliated with any health insurer."
+      },
+      {
+        "pregunta": "Can I combine it with my in-person practice?",
+        "respuesta": "Yes, the smart scheduler lets you manage both online and in-person appointments from one place."
+      },
+      {
+        "pregunta": "What if there are technical issues during a consultation?",
+        "respuesta": "We have real-time technical support and a contingency protocol to reschedule at no cost."
+      }
+    ]
+  },
+  "testimoniosEmpresas": {
+    "titulo_accent": "our clients say",
+    "items": [
+      {
+        "nombre": "Gonzalo M.",
+        "ubicacion": "HR Director · Retail",
+        "texto": "We implemented OnDoctor365 and in the first quarter reduced absenteeism by 28%. The team adopted it immediately — it's very intuitive."
+      },
+      {
+        "nombre": "Analía F.",
+        "ubicacion": "Benefits Manager · Fintech",
+        "texto": "For our company it was one of the best decisions of the year. Employees really value having medical access without leaving home."
+      },
+      {
+        "nombre": "Carlos M.",
+        "ubicacion": "CEO · Logistics",
+        "texto": "Integration was seamless and support was excellent. In 48hs we were already operational. The usage reports are very comprehensive."
+      }
+    ]
+  },
+  "ctaFinalEmpresas": {
+    "badge": "JOIN THE FUTURE",
+    "titulo": "Join the future of",
+    "titulo_accent": "corporate health",
+    "titulo2": "",
+    "subtitulo": "Over 200 companies already trust OnDoctor365 to take care of their teams' health.",
+    "cta_primary": "Request your demo",
+    "cta_secondary": "View products"
+  },
+  "faqEmpresas": {
+    "badge": "FREQUENTLY ASKED QUESTIONS",
+    "titulo": "Everything you need",
+    "titulo_accent": "to know",
+    "items": [
+      {
+        "pregunta": "How can I register my company?",
+        "respuesta": "Fill out the contact form and a specialist will guide you through the onboarding process in less than 48hs."
+      },
+      {
+        "pregunta": "How long does implementation take?",
+        "respuesta": "The digital platform is activated within 48hs. The Telemedicine Kiosk requires physical installation, which we coordinate with your team."
+      },
+      {
+        "pregunta": "Is the service compatible with ISO or HIS regulations?",
+        "respuesta": "Yes, we comply with the main healthcare regulations and have native integrations with the most widely used HIS systems."
+      },
+      {
+        "pregunta": "Does OnDoctor365 integrate with health insurers?",
+        "respuesta": "Yes, we integrate with the main health insurers to facilitate consultation coverage."
+      },
+      {
+        "pregunta": "Can internal medical reports be generated?",
+        "respuesta": "Yes, the corporate dashboard generates usage reports, consultations by specialty, absenteeism and overall team wellbeing."
+      }
+    ]
+  },
+  "footer": {
+    "privacidad": "Privacy Policy",
+    "nosotros": "About Us",
+    "contacto": "Contact"
+  },
+  "psicologia": {
+    "hero": {
+      "badge": "Psychology · Online Mental Health",
+      "titulo": "Online psychology,",
+      "titulo_accent": "without limits.",
+      "subtitulo": "Connect with certified psychologists in minutes. Or expand your practice with tools built for mental health.",
+      "cta_paciente": "Find my psychologist",
+      "cta_profesional": "Join as a professional",
+      "label_paciente": "I'm a patient",
+      "label_profesional": "I'm a professional",
+      "stats": [
+        { "value": "+500", "label": "Sessions per week" },
+        { "value": "4.9★", "label": "Average rating" },
+        { "value": "24/7", "label": "Availability" }
+      ]
+    },
+    "beneficios": {
+      "badge": "BENEFITS",
+      "titulo": "Designed for",
+      "titulo_accent": "every role",
+      "tab_pacientes": "For patients",
+      "tab_profesionales": "For psychologists",
+      "pacientes": [
+        { "titulo": "No waiting room", "desc": "Consult from anywhere, whenever you need it, without delays." },
+        { "titulo": "Guaranteed privacy", "desc": "Your sessions are confidential. Your medical information is encrypted and protected." },
+        { "titulo": "Continuous follow-up", "desc": "Your psychologist knows your history in every session, without starting over." },
+        { "titulo": "No health insurance required", "desc": "Access psychological care without medical coverage or prior paperwork." }
+      ],
+      "profesionales": [
+        { "titulo": "Automatic scheduling", "desc": "Patients book and pay on their own. You just show up to deliver the session." },
+        { "titulo": "Session notes", "desc": "Record diagnoses, progress and observations for each patient in an organized way." },
+        { "titulo": "Frictionless payments", "desc": "Receive payment for each session automatically, with no manual management or commissions." },
+        { "titulo": "Growth metrics", "desc": "Track your consultations, income and patient progress from a centralized dashboard." }
+      ]
+    },
+    "herramientas": {
+      "badge": "PLATFORM",
+      "titulo": "Tools designed for",
+      "titulo_accent": "mental health",
+      "subtitulo": "Everything you need to provide the best psychological care, without administrative friction.",
+      "items": [
+        { "titulo": "Private HD video consultation", "desc": "Secure virtual room with professional image and audio quality for every session." },
+        { "titulo": "Digital session notes", "desc": "Record progress, diagnoses and observations with organized clinical structure." },
+        { "titulo": "Psychological medical records", "desc": "Complete patient history, accessible from any device at any time." },
+        { "titulo": "Smart scheduling", "desc": "Patients book according to your availability. No manual coordination needed." },
+        { "titulo": "Automatic payments", "desc": "Payment is credited to your account every week. No commissions, no surprises." },
+        { "titulo": "Metrics dashboard", "desc": "Consultations, income, patient retention and more. Data to grow intentionally." }
+      ]
+    },
+    "testimonios": {
+      "titulo_accent": "say about online psychology",
+      "items": [
+        { "nombre": "Valeria M.", "ubicacion": "Buenos Aires", "texto": "I started out of necessity and wouldn't trade it for anything. In 5 minutes I was talking to an incredible psychologist. I recommend it to everyone." },
+        { "nombre": "Lic. Camila Reyes", "ubicacion": "Psychologist · Mendoza", "texto": "I tripled my sessions in two months. Automatic scheduling freed me from hours of coordination. Now I focus only on my patients." },
+        { "nombre": "Santiago P.", "ubicacion": "Córdoba", "texto": "I was hesitant about online therapy but the private space and video quality made me forget it wasn't in person." }
+      ]
+    },
+    "ctaFinal": {
+      "badge": "ONLINE PSYCHOLOGY",
+      "titulo": "Your mental wellbeing,",
+      "titulo_accent": "one click",
+      "titulo2": "away",
+      "subtitulo": "Find your psychologist or join as a professional. All in one place.",
+      "cta_primary": "Find my psychologist",
+      "cta_secondary": "Join as a professional"
+    }
+  }
+}

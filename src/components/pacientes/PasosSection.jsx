@@ -1,34 +1,34 @@
 import { Search, Calendar, Video } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
+import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
 
-const PASOS = [
-  {
-    numero: "01",
-    icon: Search,
-    titulo: "Elegí tu especialidad",
-    descripcion:
-      "Encontrá el especialista que necesitás. Filtrá por especialidad, disponibilidad y calificaciones.",
-  },
-  {
-    numero: "02",
-    icon: Calendar,
-    titulo: "Reservá tu turno",
-    descripcion:
-      "Seleccioná el horario que mejor te quede, confirmá tu turno y realizá el pago de forma segura.",
-  },
-  {
-    numero: "03",
-    icon: Video,
-    titulo: "Consultá y seguí",
-    descripcion:
-      "Conectate con tu médico por videollamada. Recibí tu receta o diagnóstico al instante.",
-  },
-];
-
 export default function PasosSection() {
+  const { t } = useTranslation();
+
+  const PASOS = [
+    {
+      numero: "01",
+      icon: Search,
+      titulo: t("pasos.items.paso1_titulo"),
+      descripcion: t("pasos.items.paso1_desc"),
+    },
+    {
+      numero: "02",
+      icon: Calendar,
+      titulo: t("pasos.items.paso2_titulo"),
+      descripcion: t("pasos.items.paso2_desc"),
+    },
+    {
+      numero: "03",
+      icon: Video,
+      titulo: t("pasos.items.paso3_titulo"),
+      descripcion: t("pasos.items.paso3_desc"),
+    },
+  ];
+
   return (
     <section className="relative py-24 overflow-hidden bg-white">
       {/* Orbs */}
@@ -71,12 +71,12 @@ export default function PasosSection() {
               className="w-1.5 h-1.5 rounded-full"
               style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
             />
-            CÓMO FUNCIONA
+            {t("pasos.badge")}
           </motion.span>
 
           <h2 className="text-3xl md:text-4xl font-fraunces italic font-extrabold text-primary mt-2">
-            De la búsqueda a la consulta{" "}
-            <span style={{ color: ACCENT }}>en 3 pasos</span>
+            {t("pasos.titulo")}{" "}
+            <span style={{ color: ACCENT }}>{t("pasos.titulo_accent")}</span>
           </h2>
         </AnimatedSection>
 

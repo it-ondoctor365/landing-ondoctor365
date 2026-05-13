@@ -1,0 +1,667 @@
+{
+  "navbar": {
+    "pacientes": "Pacientes",
+    "profesionales": "Profesionales",
+    "empresas": "Empresas",
+    "login": "Iniciar sesión",
+    "cta_pacientes": "Solicitar turno →",
+    "cta_profesionales": "Crear mi perfil →",
+    "cta_empresas": "Solicitar demo →",
+    "menu_aria": "Menú"
+  },
+  "heroPacientes": {
+    "badge": "Disponible 24/7 · 365 días",
+    "titulo": "Atención médica online cuando",
+    "titulo_accent": "más lo necesitás.",
+    "subtitulo": "Médicos, psicólogos y especialistas disponibles en minutos. Sin filas, sin traslados. Desde tu celular o computadora.",
+    "cta_primary": "Solicitar turno",
+    "cta_secondary": "Buscar especialista",
+    "stats": {
+      "pacientes_value": "+15K",
+      "pacientes_label": "Pacientes atendidos",
+      "rating_value": "4.9★",
+      "rating_label": "Calificación promedio",
+      "espera_value": "3 min",
+      "espera_label": "Tiempo de espera"
+    },
+    "card": {
+      "badge": "Médico disponible ahora",
+      "nombre": "Dr. Martínez",
+      "especialidad": "Médico clínico · 12 años de experiencia"
+    }
+  },
+  "beneficios": {
+    "badge": "POR QUÉ ELEGIR ONDOCTOR365",
+    "titulo": "Atención médica",
+    "titulo_accent": "sin las esperas",
+    "titulo2": "de siempre",
+    "subtitulo": "Una nueva forma de cuidar tu salud: accesible, inmediata y sin complicaciones.",
+    "items": {
+      "espera_titulo": "Sin sala de espera",
+      "espera_desc": "Tu turno es a la hora que elegiste. Sin esperar 40 minutos en un pasillo ni trasladarte.",
+      "especialistas_titulo": "Especialistas de todo el país",
+      "especialistas_desc": "Accedé a profesionales que quizás no están en tu ciudad. La mejor atención sin importar dónde estés.",
+      "resenas_titulo": "Reseñas reales y verificadas",
+      "resenas_desc": "Todas las opiniones son de pacientes que realmente consultaron. Elegí con información real.",
+      "privacidad_titulo": "Total privacidad",
+      "privacidad_desc": "Tu información médica está encriptada bajo los más altos estándares de seguridad."
+    }
+  },
+  "pasos": {
+    "badge": "CÓMO FUNCIONA",
+    "titulo": "De la búsqueda a la consulta",
+    "titulo_accent": "en 3 pasos",
+    "items": {
+      "paso1_titulo": "Elegí tu especialidad",
+      "paso1_desc": "Encontrá el especialista que necesitás. Filtrá por especialidad, disponibilidad y calificaciones.",
+      "paso2_titulo": "Reservá tu turno",
+      "paso2_desc": "Seleccioná el horario que mejor te quede, confirmá tu turno y realizá el pago de forma segura.",
+      "paso3_titulo": "Consultá y seguí",
+      "paso3_desc": "Conectate con tu médico por videollamada. Recibí tu receta o diagnóstico al instante."
+    }
+  },
+  "consultasTabs": {
+    "badge": "ESPECIALIDADES",
+    "titulo": "¿Qué tipo de consulta",
+    "titulo_accent": "necesitás?",
+    "subtitulo": "Elegí tu especialidad y encontrá profesionales disponibles en minutos.",
+    "precio_label": "Precio por consulta",
+    "periodo": "por consulta",
+    "reservar": "Reservar turno",
+    "trust": {
+      "item1": "Sin obra social requerida",
+      "item2": "Disponible las 24hs",
+      "item3": "Profesionales certificados"
+    },
+    "especialidades": {
+      "clinico_label": "Médico Clínico",
+      "clinico_desc": "Consultas generales, diagnósticos, seguimiento de salud y más.",
+      "clinico_f1": "Recetas digitales ilimitadas",
+      "clinico_f2": "Historia clínica digital",
+      "clinico_f3": "Videoconsulta HD",
+      "clinico_f4": "Órdenes de estudios",
+      "psicologia_label": "Psicología",
+      "psicologia_desc": "Atención psicológica con profesionales certificados.",
+      "psicologia_f1": "Sesiones individuales",
+      "psicologia_f2": "Seguimiento continuo",
+      "psicologia_f3": "Videoconsulta HD",
+      "psicologia_f4": "Notas de sesión",
+      "nutricion_label": "Nutrición",
+      "nutricion_desc": "Planes alimentarios personalizados con nutricionistas.",
+      "nutricion_f1": "Plan alimentario digital",
+      "nutricion_f2": "Seguimiento de peso",
+      "nutricion_f3": "Videoconsulta HD",
+      "nutricion_f4": "Lista de compras",
+      "guardia_label": "Guardia ENT",
+      "guardia_desc": "Atención de urgencias las 24hs con médicos de guardia.",
+      "guardia_f1": "Atención inmediata",
+      "guardia_f2": "Derivación si es necesario",
+      "guardia_f3": "Videoconsulta HD",
+      "guardia_f4": "Recetas de urgencia"
+    }
+  },
+  "testimonios": {
+    "badge": "TESTIMONIOS",
+    "titulo": "Lo que dicen",
+    "titulo_accent": "nuestros pacientes",
+    "items": [
+      {
+        "nombre": "Laura G.",
+        "ubicacion": "Buenos Aires",
+        "texto": "No tenía que salir de casa con mi hijo enfermo. En 5 minutos estaba hablando con un médico. La receta me llegó al instante."
+      },
+      {
+        "nombre": "Rodrigo P.",
+        "ubicacion": "Mendoza",
+        "texto": "Increíble la rapidez. Siempre que lo necesité tuve un médico disponible. La historia clínica digital es un diferencial enorme."
+      },
+      {
+        "nombre": "Vanesa S.",
+        "ubicacion": "Rosario",
+        "texto": "Lo uso para toda la familia. Los profesionales son muy atentos y el sistema es súper fácil. Lo recomiendo a todos."
+      }
+    ]
+  },
+  "faq": {
+    "badge": "PREGUNTAS FRECUENTES",
+    "titulo": "Tus dudas más",
+    "titulo_accent": "comunes",
+    "items": [
+      {
+        "pregunta": "¿Necesito descargar alguna aplicación?",
+        "respuesta": "No, OnDoctor365 funciona directamente desde tu navegador. Solo necesitás una conexión a internet y una cámara."
+      },
+      {
+        "pregunta": "¿Puedo usar el servicio si soy menor de edad?",
+        "respuesta": "Sí, los menores pueden ser atendidos con la presencia y autorización de un adulto responsable."
+      },
+      {
+        "pregunta": "¿Las recetas digitales tienen validez legal?",
+        "respuesta": "Sí, todas las recetas tienen firma digital certificada y validez legal en todo el territorio nacional."
+      },
+      {
+        "pregunta": "¿Qué pasa si el médico no puede atenderme al instante?",
+        "respuesta": "Podés reservar un turno programado o unirte a la lista de espera. Te avisamos cuando haya disponibilidad."
+      },
+      {
+        "pregunta": "¿Mis datos médicos están seguros?",
+        "respuesta": "Sí, toda tu información está encriptada. Solo vos y tu médico tienen acceso a tu historial."
+      }
+    ]
+  },
+  "ctaFinal": {
+    "badge": "¿Listo para sumarte?",
+    "titulo": "Tu salud,",
+    "titulo_accent": "a un clic",
+    "titulo2": "de distancia",
+    "subtitulo": "Registrate gratis y accedé a los mejores profesionales de salud del país en minutos.",
+    "cta_primary": "Iniciá tu turno ahora",
+    "cta_secondary": "Buscar profesional"
+  },
+  "empresasConfianza": {
+    "texto": "Con la <accent>confianza</accent> de organizaciones de salud y profesionales que apuestan por una <accent>atención médica más eficiente.</accent>"
+  },
+  "profesionalesDestacados": {
+    "badge": "PROFESIONALES",
+    "titulo": "Una red de profesionales",
+    "titulo_accent1": "comprometidos",
+    "titulo_middle": "con una atención",
+    "titulo_accent2": "cercana y de calidad",
+    "items": [
+      {
+        "nombre": "Dr. Martín López",
+        "especialidad": "Médico Clínico",
+        "ubicacion": "Buenos Aires",
+        "descripcion": "Lo que más valoro es poder atender a mis pacientes desde cualquier lugar. La plataforma simplifica todo el proceso."
+      },
+      {
+        "nombre": "Lic. Sofía Ramírez",
+        "especialidad": "Psicóloga",
+        "ubicacion": "Córdoba",
+        "descripcion": "Puedo conectarme con mis pacientes de forma segura y mantener un seguimiento continuo sin complicaciones."
+      },
+      {
+        "nombre": "Lic. Valeria Torres",
+        "especialidad": "Nutricionista",
+        "ubicacion": "Rosario",
+        "descripcion": "Mis pacientes tienen todo en un solo lugar: turnos, planes alimentarios y seguimiento. Es muy fácil de usar."
+      }
+    ]
+  },
+  "heroEmpresas": {
+    "badge": "Salud corporativa · B2B",
+    "titulo": "El ecosistema de salud",
+    "titulo_accent": "para tu empresa.",
+    "subtitulo": "Telemedicina, tótems de atención presencial e IA médica integrados en un solo sistema. Para empresas, prestadores y aseguradoras.",
+    "cta_primary": "Solicitar una demo",
+    "cta_secondary": "Ver productos",
+    "stats": [
+      { "value": "30+", "label": "Años de experiencia médica" },
+      { "value": "-32%", "label": "Reducción de ausentismo" },
+      { "value": "24/7", "label": "Cobertura continua" }
+    ]
+  },
+  "problemas": {
+    "titulo": "Los equipos pierden días por falta de",
+    "titulo_accent": "acceso médico.",
+    "items": [
+      {
+        "titulo": "Tiempo de espera",
+        "texto": "Los empleados pierden horas en salas de espera o coordinando turnos con especialistas."
+      },
+      {
+        "titulo": "Costos indirectos reales",
+        "texto": "El ausentismo y la baja productividad tienen un costo invisible pero enorme para la empresa."
+      },
+      {
+        "titulo": "Especialistas fuera de alcance",
+        "texto": "En muchas zonas del país acceder a un especialista puede llevar semanas."
+      }
+    ],
+    "solucion": {
+      "badge": "SOLUCIÓN",
+      "titulo": "Salud sin límites",
+      "desc": "OnDoctor365 elimina las barreras de acceso médico para tu equipo, sin importar dónde estén.",
+      "items": [
+        "Control de empleados: turnos sin colas",
+        "Recetas digitales ilimitadas",
+        "Historia clínica digital integrada",
+        "Reportes digitales en tiempo real",
+        "Integración con HIS, RRHH y sistemas existentes"
+      ]
+    }
+  },
+  "organizaciones": {
+    "badge": "SOLUCIONES",
+    "titulo": "OnDoctor365 se adapta a",
+    "titulo_accent": "cada tipo de organización.",
+    "subtitulo": "Casos de uso diseñados para tu sector.",
+    "items": [
+      {
+        "id": "empresa",
+        "label": "Empresa de Retail",
+        "metrica": "-32%",
+        "metricaLabel": "Ausentismo",
+        "titulo": "Menos ausentismo,\nMás productividad",
+        "descripcion": "Tus empleados acceden a atención médica inmediata sin salir del trabajo. Menos días perdidos, más energía y compromiso en el equipo.",
+        "cta": "Saber más"
+      },
+      {
+        "id": "clinica",
+        "label": "Clínica / Hospital",
+        "metrica": "-45%",
+        "metricaLabel": "Tiempos de espera",
+        "titulo": "Admisión inteligente,\nmenos cuellos de botella",
+        "descripcion": "Optimizá el triage y la admisión hospitalaria con IA. Reducí los tiempos de espera y mejorá la experiencia del paciente desde el primer contacto.",
+        "cta": "Saber más"
+      },
+      {
+        "id": "obraSocial",
+        "label": "Obra Social",
+        "metrica": "+60%",
+        "metricaLabel": "Uso preventivo",
+        "titulo": "Más afiliados activos,\nmenos costos de internación",
+        "descripcion": "Promové el uso preventivo de la salud entre tus afiliados. Reducí internaciones evitables y mejorá los indicadores de tu obra social.",
+        "cta": "Saber más"
+      },
+      {
+        "id": "sindicato",
+        "label": "Sindicato / Gremio",
+        "metrica": "24/7",
+        "metricaLabel": "Disponibilidad",
+        "titulo": "Un beneficio real\npara tus afiliados",
+        "descripcion": "Ofrecé atención médica online como beneficio diferencial. Sin filas, sin traslados, disponible en cualquier momento y desde cualquier lugar.",
+        "cta": "Saber más"
+      }
+    ]
+  },
+  "contacto": {
+    "badge": "CONTACTO",
+    "titulo": "Hablemos de",
+    "titulo_accent": "tu empresa",
+    "subtitulo": "Completá el formulario y un especialista se pondrá en contacto para diseñar la solución ideal para tu organización.",
+    "form_titulo": "Solicitar una demo",
+    "campos": {
+      "nombre_label": "Nombre",
+      "nombre_placeholder": "Tu nombre",
+      "apellido_label": "Apellido",
+      "apellido_placeholder": "Tu apellido",
+      "empresa_label": "Empresa",
+      "empresa_placeholder": "Nombre de tu empresa",
+      "cargo_label": "Cargo",
+      "cargo_placeholder": "Tu cargo",
+      "email_label": "Email corporativo",
+      "email_placeholder": "email@empresa.com",
+      "telefono_label": "Teléfono",
+      "telefono_placeholder": "+54 11 0000-0000",
+      "mensaje_label": "Mensaje (opcional)",
+      "mensaje_placeholder": "Contanos sobre tu organización y qué necesitás..."
+    },
+    "cta": "Enviar solicitud"
+  },
+  "ecosistema": {
+    "badge": "PRODUCTOS",
+    "titulo": "Un ecosistema completo de",
+    "titulo_accent": "salud digital",
+    "subtitulo": "Desde la atención remota hasta la presencia física con tecnología. Cuatro soluciones que se complementan entre sí.",
+    "sensores": ["ECG", "SpO2", "Presión arterial", "Temperatura", "Otoscopio digital", "Videoconsulta"],
+    "acreditaciones": ["BARDA", "UCSF", "CHIME", "Health 2.0"],
+    "totem": {
+      "badge": "Presencial + IA",
+      "titulo": "Tótem de Telemedicina",
+      "desc": "Sala virtual de atención médica para instalar en tu empresa. Sensores integrados, videoconsulta en tiempo real y prescripciones electrónicas. Sin médico en el lugar."
+    },
+    "reconocimiento": {
+      "badge": "Reconocimiento global",
+      "desc": "premios y acreditaciones internacionales en innovación"
+    },
+    "maletin": {
+      "badge": "Campo / Crítico",
+      "titulo": "Maletín FDA",
+      "desc": "Para entornos críticos: embarcaciones, aeronáutico, campo y desierto. Grado médico con conectividad 5G."
+    },
+    "guardia": {
+      "badge": "Clínicas / Hospitales",
+      "titulo": "Guardia Inteligente",
+      "desc": "Triage con IA para admisión hospitalaria. Reduce los tiempos de espera, simplifica la admisión y mejora la precisión diagnóstica antes de la consulta médica."
+    },
+    "plataforma": {
+      "badge": "100% Digital",
+      "titulo": "Plataforma Digital",
+      "desc": "App y web para consultas 24/7. Agenda inteligente, historia clínica unificada y panel corporativo de salud.",
+      "features": [
+        "Videoconsultas desde cualquier dispositivo",
+        "Historia clínica digital unificada",
+        "Panel de salud corporativo y ausentismo",
+        "Recetas y órdenes electrónicas"
+      ]
+    }
+  },
+  "heroProfesionales": {
+    "badge": "Para profesionales de la salud",
+    "titulo": "Expandí tu práctica",
+    "titulo_accent": "sin límites.",
+    "subtitulo": "Sumáte a la plataforma de telemedicina líder. Agenda online, historia clínica digital, videoconsultas y cobros automáticos. Todo en un lugar.",
+    "cta_primary": "Crear mi perfil",
+    "cta_secondary": "Ver cómo funciona",
+    "stats": [
+      { "value": "+15K", "label": "Pacientes atendidos" },
+      { "value": "4.9★", "label": "Calificación promedio" },
+      { "value": "3 min", "label": "Tiempo de espera" }
+    ]
+  },
+  "metricas": {
+    "badge": "IMPACTO",
+    "titulo": "Tus números,",
+    "titulo_accent": "tu éxito",
+    "subtitulo": "Profesionales como vos que están creciendo con OnDoctor365.",
+    "items": [
+      {
+        "valor": "3x",
+        "titulo": "Más consultas en 60 días",
+        "descripcion": "Los profesionales que usan OnDoctor365 triplican su cantidad de consultas en los primeros dos meses."
+      },
+      {
+        "valor": "$0",
+        "titulo": "Sin comisiones ocultas",
+        "descripcion": "Cobrás el 100% de cada consulta. Sin sorpresas, sin retenciones, sin letra chica."
+      },
+      {
+        "valor": "+40hs",
+        "titulo": "Menos trabajo administrativo",
+        "descripcion": "Ahorrás tiempo en agenda, cobros y documentación al mes para dedicarle más a tus pacientes."
+      }
+    ]
+  },
+  "pasosOnboarding": {
+    "badge": "ONBOARDING",
+    "titulo": "Empezás a atender",
+    "titulo_accent": "en 24 horas",
+    "subtitulo": "Proceso de alta simple y guiado para que nada te frene.",
+    "items": [
+      {
+        "num": "01",
+        "titulo": "Creá tu perfil",
+        "descripcion": "Completá tu información profesional, especialidades, formación académica y horarios disponibles."
+      },
+      {
+        "num": "02",
+        "titulo": "Verificación en 24hs",
+        "descripcion": "Nuestro equipo valida tu matrícula y activa tu perfil público en la plataforma."
+      },
+      {
+        "num": "03",
+        "titulo": "Recibís pacientes",
+        "descripcion": "Tu perfil aparece en los resultados de búsqueda. Los pacientes reservan y pagan online."
+      },
+      {
+        "num": "04",
+        "titulo": "Cobros automáticos",
+        "descripcion": "Recibís el pago de cada consulta en los primeros días hábiles de cada semana. Sin comisiones."
+      }
+    ]
+  },
+  "planes": {
+    "badge": "PLANES",
+    "titulo": "Empezá gratis,",
+    "titulo_accent": "crecé sin límites",
+    "subtitulo": "Sin comisiones por consulta. Elegí el plan que mejor se adapte a tu práctica.",
+    "items": [
+      {
+        "id": "especial",
+        "nombre": "Especial",
+        "badge": "",
+        "precio": "$0",
+        "periodo": "gratis por siempre",
+        "descripcion": "Ideal para comenzar a atender y conocer la plataforma.",
+        "features": [
+          "Perfil público en OnDoctor365",
+          "Hasta 15 consultas por mes",
+          "Videoconsulta incluida",
+          "Recetas digitales"
+        ],
+        "cta": "Crear cuenta gratuita"
+      },
+      {
+        "id": "pro",
+        "nombre": "Pro",
+        "badge": "MÁS POPULAR",
+        "precio": "$9.990",
+        "periodo": "por mes",
+        "descripcion": "Para profesionales que quieren hacer crecer su práctica.",
+        "features": [
+          "Todo lo del plan Especial",
+          "Consultas ilimitadas",
+          "Historia clínica digital",
+          "Agenda de videoconsultas",
+          "Panel de métricas avanzado",
+          "Órdenes de estudios digitales",
+          "Soporte prioritario"
+        ],
+        "cta": "Probar 30 días gratis"
+      },
+      {
+        "id": "clinica",
+        "nombre": "Clínica / Equipo",
+        "badge": "",
+        "precio": "A medida",
+        "periodo": "edición corporativa",
+        "descripcion": "Para clínicas y equipos médicos que necesitan una solución escalable e integrada.",
+        "features": [
+          "Todo lo del plan Pro",
+          "Múltiples profesionales",
+          "Sistema de atención integrado",
+          "Alta e integración con HIS",
+          "Branding personalizado",
+          "Ejecutivo de cuenta dedicado"
+        ],
+        "cta": "Hablar con ventas"
+      }
+    ]
+  },
+  "featuresProfesionales": {
+    "badge": "PLATAFORMA",
+    "titulo": "Todo lo que necesitás",
+    "titulo_accent": "para crecer",
+    "subtitulo": "Una plataforma completa que simplifica tu práctica y amplía tu alcance a todo el país.",
+    "items": [
+      {
+        "titulo": "Agenda inteligente",
+        "descripcion": "Gestión automática de turnos. Los pacientes reservan con vos que tengas nada que hacer."
+      },
+      {
+        "titulo": "Historia clínica digital",
+        "descripcion": "Cargá diagnósticos y seguimiento de cada paciente, organizado y accesible desde cualquier dispositivo."
+      },
+      {
+        "titulo": "Recetas y órdenes digitales",
+        "descripcion": "Emití recetas con firma digital certificada. Válidas en todo el territorio nacional."
+      },
+      {
+        "titulo": "Panel de métricas",
+        "descripcion": "Seguí tus consultas, ingresos, notificaciones y más. Datos para tomar mejores decisiones."
+      }
+    ]
+  },
+  "testimoniosProfesionales": {
+    "titulo_accent": "los profesionales",
+    "items": [
+      {
+        "nombre": "Dra. Sofía Leal",
+        "ubicacion": "Médica Clínica · Santa Cruz",
+        "texto": "En tres meses tripliqué mis consultas. Lo que más valoro es la agenda automática, ya no pierdo tiempo coordinando."
+      },
+      {
+        "nombre": "Lic. Jimena Paredes",
+        "ubicacion": "Psicóloga · Córdoba",
+        "texto": "La posibilidad de tener seguimiento de mis pacientes cambia mi práctica. El panel de métricas es increíble."
+      },
+      {
+        "nombre": "Dr. Matías Ruiz",
+        "ubicacion": "Cirujano · Tucumán",
+        "texto": "Menos tiempo en trabajo administrativo, más tiempo con mis pacientes. La integración con HIS fue sencilla."
+      }
+    ]
+  },
+  "ctaFinalProfesionales": {
+    "badge": "¿Listo para sumarte?",
+    "titulo": "Empezá",
+    "titulo_accent": "hoy,",
+    "titulo2": "sin costo",
+    "subtitulo": "Creá tu perfil en minutos y comenzá a atender pacientes de todo el país.",
+    "cta_primary": "Crear mi perfil gratuito",
+    "cta_secondary": "Hablar con el equipo"
+  },
+  "faqProfesionales": {
+    "items": [
+      {
+        "pregunta": "¿Necesito experiencia previa con telemedicina?",
+        "respuesta": "No, la plataforma es intuitiva y te guiamos en cada paso del onboarding."
+      },
+      {
+        "pregunta": "¿Cómo se gestionan los cobros?",
+        "respuesta": "Los pagos se acreditan automáticamente en tu cuenta bancaria los primeros días hábiles de cada semana."
+      },
+      {
+        "pregunta": "¿Puedo atender sin obra social?",
+        "respuesta": "Sí, podés atender pacientes particulares sin necesidad de estar afiliado a ninguna obra social."
+      },
+      {
+        "pregunta": "¿Puedo combinarlo con mi consultorio presencial?",
+        "respuesta": "Sí, la agenda inteligente te permite gestionar turnos online y presenciales desde un solo lugar."
+      },
+      {
+        "pregunta": "¿Qué pasa si hay problemas técnicos durante una consulta?",
+        "respuesta": "Contamos con soporte técnico en tiempo real y protocolo de contingencia para reprogramar sin costo."
+      }
+    ]
+  },
+  "testimoniosEmpresas": {
+    "titulo_accent": "nuestros clientes",
+    "items": [
+      {
+        "nombre": "Gonzalo M.",
+        "ubicacion": "Director de RRHH · Retail",
+        "texto": "Implementamos OnDoctor365 y en el primer trimestre redujimos el ausentismo un 28%. El equipo lo adoptó de inmediato, es muy intuitivo."
+      },
+      {
+        "nombre": "Analía F.",
+        "ubicacion": "Gerente de Beneficios · Fintech",
+        "texto": "Para nuestra empresa fue una de las mejores decisiones del año. Los empleados valoran mucho tener acceso médico sin salir de casa."
+      },
+      {
+        "nombre": "Carlos M.",
+        "ubicacion": "CEO · Logística",
+        "texto": "La integración fue sencilla y el soporte excelente. En 48hs ya estábamos operativos. Los reportes de uso son muy completos."
+      }
+    ]
+  },
+  "ctaFinalEmpresas": {
+    "badge": "SUMATE AL FUTURO",
+    "titulo": "Sumate al futuro de",
+    "titulo_accent": "la salud corporativa",
+    "titulo2": "",
+    "subtitulo": "Más de 200 empresas ya confían en OnDoctor365 para cuidar la salud de sus equipos.",
+    "cta_primary": "Solicitar tu demo",
+    "cta_secondary": "Ver productos"
+  },
+  "faqEmpresas": {
+    "badge": "PREGUNTAS FRECUENTES",
+    "titulo": "Todo lo que necesitás",
+    "titulo_accent": "saber",
+    "items": [
+      {
+        "pregunta": "¿Cómo puedo dar de alta mi empresa?",
+        "respuesta": "Completá el formulario de contacto y un especialista te guiará en el proceso de onboarding en menos de 48hs."
+      },
+      {
+        "pregunta": "¿Cuánto tiempo lleva la implementación?",
+        "respuesta": "La plataforma digital se activa en 48hs. El Tótem de Telemedicina requiere instalación física, que coordinamos con tu equipo."
+      },
+      {
+        "pregunta": "¿El servicio es compatible con las normativas ISO o HIS?",
+        "respuesta": "Sí, cumplimos con las principales normativas del sector salud y tenemos integraciones nativas con los sistemas HIS más utilizados."
+      },
+      {
+        "pregunta": "¿OnDoctor365 se integra con obras sociales o prepaga?",
+        "respuesta": "Sí, tenemos integraciones con las principales obras sociales y prepagas del país para facilitar la cobertura de consultas."
+      },
+      {
+        "pregunta": "¿Se pueden generar reportes médicos internos?",
+        "respuesta": "Sí, el panel corporativo genera reportes de uso, consultas por especialidad, ausentismo y bienestar general del equipo."
+      }
+    ]
+  },
+  "footer": {
+    "privacidad": "Política de Privacidad",
+    "nosotros": "Nosotros",
+    "contacto": "Contacto"
+  },
+  "psicologia": {
+    "hero": {
+      "badge": "Psicología · Salud Mental Online",
+      "titulo": "Psicología online,",
+      "titulo_accent": "sin barreras.",
+      "subtitulo": "Conectate con psicólogos certificados en minutos. O expandí tu práctica con herramientas diseñadas para la salud mental.",
+      "cta_paciente": "Buscar mi psicólogo",
+      "cta_profesional": "Sumarme como psicólogo/a",
+      "label_paciente": "Soy paciente",
+      "label_profesional": "Soy profesional",
+      "stats": [
+        { "value": "+500", "label": "Sesiones por semana" },
+        { "value": "4.9★", "label": "Calificación promedio" },
+        { "value": "24/7", "label": "Disponibilidad" }
+      ]
+    },
+    "beneficios": {
+      "badge": "BENEFICIOS",
+      "titulo": "Pensado para",
+      "titulo_accent": "cada rol",
+      "tab_pacientes": "Para pacientes",
+      "tab_profesionales": "Para psicólogos",
+      "pacientes": [
+        { "titulo": "Sin sala de espera", "desc": "Consultá desde cualquier lugar, en el momento que lo necesitás, sin demoras." },
+        { "titulo": "Privacidad garantizada", "desc": "Tus sesiones son confidenciales. Tu información médica está encriptada y protegida." },
+        { "titulo": "Seguimiento continuo", "desc": "Tu psicólogo conoce tu historial y evolución en cada sesión, sin empezar de cero." },
+        { "titulo": "Sin obra social", "desc": "Accedé a atención psicológica sin cobertura médica ni trámites previos." }
+      ],
+      "profesionales": [
+        { "titulo": "Agenda automática", "desc": "Los pacientes reservan y pagan solos. Vos solo aparecés a dar la sesión." },
+        { "titulo": "Notas de sesión", "desc": "Registrá diagnósticos, evolución y observaciones de cada paciente de forma organizada." },
+        { "titulo": "Cobros sin fricción", "desc": "Recibís el pago de cada sesión automáticamente, sin gestión manual ni comisiones." },
+        { "titulo": "Métricas de crecimiento", "desc": "Seguí tus consultas, ingresos y evolución de pacientes desde un panel centralizado." }
+      ]
+    },
+    "herramientas": {
+      "badge": "PLATAFORMA",
+      "titulo": "Herramientas diseñadas para",
+      "titulo_accent": "la salud mental",
+      "subtitulo": "Todo lo que necesitás para dar la mejor atención psicológica, sin fricciones administrativas.",
+      "items": [
+        { "titulo": "Videoconsulta HD privada", "desc": "Sala virtual segura con calidad de imagen y audio profesional para cada sesión." },
+        { "titulo": "Notas de sesión digitales", "desc": "Registrá evolución, diagnósticos y observaciones con estructura clínica organizada." },
+        { "titulo": "Historia clínica psicológica", "desc": "Historial completo por paciente, accesible desde cualquier dispositivo en cualquier momento." },
+        { "titulo": "Agenda inteligente", "desc": "Los pacientes reservan según tu disponibilidad. Sin coordinación manual de tu parte." },
+        { "titulo": "Cobros automáticos", "desc": "El pago se acredita en tu cuenta cada semana. Sin comisiones ni sorpresas." },
+        { "titulo": "Panel de métricas", "desc": "Consultas, ingresos, retención de pacientes y más. Datos para crecer con intención." }
+      ]
+    },
+    "testimonios": {
+      "titulo_accent": "dicen sobre la psicología online",
+      "items": [
+        { "nombre": "Valeria M.", "ubicacion": "Buenos Aires", "texto": "Empecé por necesidad y no lo cambiaría por nada. En 5 minutos estaba hablando con una psicóloga increíble. Lo recomiendo a todos." },
+        { "nombre": "Lic. Camila Reyes", "ubicacion": "Psicóloga · Mendoza", "texto": "Tripliqué mis sesiones en dos meses. La agenda automática me liberó de horas de coordinación. Ahora me enfoco solo en mis pacientes." },
+        { "nombre": "Santiago P.", "ubicacion": "Córdoba", "texto": "Tenía resistencia a la terapia online pero el espacio privado y la calidad de la videollamada me hicieron olvidar que no era presencial." }
+      ]
+    },
+    "ctaFinal": {
+      "badge": "PSICOLOGÍA ONLINE",
+      "titulo": "Tu bienestar mental,",
+      "titulo_accent": "a un clic",
+      "titulo2": "de distancia",
+      "subtitulo": "Encontrá tu psicólogo o sumáte como profesional. Todo en un solo lugar.",
+      "cta_primary": "Buscar mi psicólogo",
+      "cta_secondary": "Sumarme como profesional"
+    }
+  }
+}

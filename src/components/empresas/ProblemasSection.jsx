@@ -1,42 +1,18 @@
-import { Clock, DollarSign, MapPin, Check } from "lucide-react";
+import { Clock, DollarSign, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
+import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
-
-const PROBLEMAS = [
-  {
-    icon: Clock,
-    titulo: "Tiempo de espera",
-    texto:
-      "Los empleados pierden horas en salas de espera o coordinando turnos con especialistas.",
-  },
-  {
-    icon: DollarSign,
-    titulo: "Costos indirectos reales",
-    texto:
-      "El ausentismo y la baja productividad tienen un costo invisible pero enorme para la empresa.",
-  },
-  {
-    icon: MapPin,
-    titulo: "Especialistas fuera de alcance",
-    texto:
-      "En muchas zonas del país acceder a un especialista puede llevar semanas.",
-  },
-];
-
-const SOLUCIONES = [
-  "Control de empleados: turnos sin colas",
-  "Recetas digitales ilimitadas",
-  "Historia clínica digital integrada",
-  "Reportes digitales en tiempo real",
-  "Integración con HIS, RRHH y sistemas existentes",
-];
+const ICONS = [Clock, DollarSign, MapPin];
 
 export default function ProblemaSection() {
+  const { t } = useTranslation();
+  const problemas = t("problemas.items", { returnObjects: true });
+  const soluciones = t("problemas.solucion.items", { returnObjects: true });
+
   return (
     <section className="relative py-24 overflow-hidden bg-white">
-      {/* Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full blur-[140px]"
@@ -48,7 +24,6 @@ export default function ProblemaSection() {
         />
       </div>
 
-      {/* Dot grid */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -60,50 +35,51 @@ export default function ProblemaSection() {
 
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row gap-8 items-stretch">
-          {/* Left — problemas */}
           <AnimatedSection variant="fadeInLeft" className="flex-1">
             <h2 className="font-fraunces text-2xl md:text-3xl font-extrabold text-primary mb-8 leading-tight">
-              Los equipos pierden días por falta de{" "}
+              {t("problemas.titulo")}{" "}
               <span className="italic" style={{ color: ACCENT }}>
-                acceso médico.
+                {t("problemas.titulo_accent")}
               </span>
             </h2>
 
             <div className="flex flex-col gap-3">
-              {PROBLEMAS.map(({ icon: Icon, titulo, texto }, i) => (
-                <motion.div
-                  key={titulo}
-                  initial={{ opacity: 0, x: -14 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{
-                    delay: i * 0.08,
-                    duration: 0.38,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="flex items-start gap-4 p-5 rounded-3xl"
-                  style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}
-                >
-                  <span
-                    className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                    style={{ background: ACCENT + "15" }}
+              {problemas.map(({ titulo, texto }, i) => {
+                const Icon = ICONS[i];
+                return (
+                  <motion.div
+                    key={titulo}
+                    initial={{ opacity: 0, x: -14 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{
+                      delay: i * 0.08,
+                      duration: 0.38,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className="flex items-start gap-4 p-5 rounded-3xl"
+                    style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}
                   >
-                    <Icon size={18} style={{ color: ACCENT }} />
-                  </span>
-                  <div>
-                    <p className="text-primary font-semibold text-sm mb-0.5">
-                      {titulo}
-                    </p>
-                    <p className="text-gray-500 text-sm leading-relaxed">
-                      {texto}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+                    <span
+                      className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+                      style={{ background: ACCENT + "15" }}
+                    >
+                      <Icon size={18} style={{ color: ACCENT }} />
+                    </span>
+                    <div>
+                      <p className="text-primary font-semibold text-sm mb-0.5">
+                        {titulo}
+                      </p>
+                      <p className="text-gray-500 text-sm leading-relaxed">
+                        {texto}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </AnimatedSection>
 
-          {/* Right — solución */}
           <AnimatedSection
             variant="fadeInRight"
             className="w-full md:w-2/5 self-start"
@@ -117,7 +93,6 @@ export default function ProblemaSection() {
                 boxShadow: `0 0 60px ${ACCENT}15`,
               }}
             >
-              {/* Corner glow */}
               <div
                 className="absolute -top-10 -right-10 w-44 h-44 rounded-full blur-[60px] pointer-events-none"
                 style={{ background: ACCENT, opacity: 0.25 }}
@@ -143,15 +118,14 @@ export default function ProblemaSection() {
                       boxShadow: `0 0 6px ${ACCENT}`,
                     }}
                   />
-                  SOLUCIÓN
+                  {t("problemas.solucion.badge")}
                 </span>
 
                 <h3 className="font-fraunces text-2xl font-extrabold mt-2 mb-2">
-                  Salud sin límites
+                  {t("problemas.solucion.titulo")}
                 </h3>
                 <p className="text-white/60 text-sm mb-6">
-                  OnDoctor365 elimina las barreras de acceso médico para tu
-                  equipo, sin importar dónde estén.
+                  {t("problemas.solucion.desc")}
                 </p>
 
                 <div
@@ -162,7 +136,7 @@ export default function ProblemaSection() {
                 />
 
                 <ul className="space-y-3">
-                  {SOLUCIONES.map((s, i) => (
+                  {soluciones.map((s, i) => (
                     <motion.li
                       key={s}
                       initial={{ opacity: 0, x: -10 }}

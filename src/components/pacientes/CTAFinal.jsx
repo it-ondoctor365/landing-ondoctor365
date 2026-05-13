@@ -1,18 +1,21 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
+import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
 
-export default function CTAFinal({
-  badge = "¿Listo para sumarte?",
-  titulo = "Tu salud,",
-  tituloAccent = "a un clic",
-  titulo2 = "de distancia",
-  subtitulo = "Registrate gratis y accedé a los mejores profesionales de salud del país en minutos.",
-  ctaPrimario = "Iniciá tu turno ahora",
-  ctaSecundario = "Buscar profesional",
-}) {
+export default function CTAFinal({ badge, titulo, tituloAccent, titulo2, subtitulo, ctaPrimario, ctaSecundario }) {
+  const { t } = useTranslation();
+
+  const resolvedBadge = badge ?? t("ctaFinal.badge");
+  const resolvedTitulo = titulo ?? t("ctaFinal.titulo");
+  const resolvedTituloAccent = tituloAccent ?? t("ctaFinal.titulo_accent");
+  const resolvedTitulo2 = titulo2 ?? t("ctaFinal.titulo2");
+  const resolvedSubtitulo = subtitulo ?? t("ctaFinal.subtitulo");
+  const resolvedCtaPrimario = ctaPrimario ?? t("ctaFinal.cta_primary");
+  const resolvedCtaSecundario = ctaSecundario ?? t("ctaFinal.cta_secondary");
+
   return (
     <section className="relative py-24 overflow-hidden" style={{ background: "#2d418e" }}>
       {/* Orbs */}
@@ -55,19 +58,19 @@ export default function CTAFinal({
               className="w-1.5 h-1.5 rounded-full"
               style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
             />
-            {badge}
+            {resolvedBadge}
           </motion.span>
 
           <h2 className="text-3xl md:text-5xl font-fraunces font-extrabold text-white mt-3 mb-4 leading-tight">
-            {titulo}{" "}
+            {resolvedTitulo}{" "}
             <span className="italic" style={{ color: ACCENT }}>
-              {tituloAccent}
+              {resolvedTituloAccent}
             </span>{" "}
-            {titulo2}
+            {resolvedTitulo2}
           </h2>
 
           <p className="text-white/60 text-lg max-w-md mx-auto mb-10">
-            {subtitulo}
+            {resolvedSubtitulo}
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -81,7 +84,7 @@ export default function CTAFinal({
                 boxShadow: `0 10px 36px ${ACCENT}55`,
               }}
             >
-              {ctaPrimario}
+              {resolvedCtaPrimario}
               <ArrowRight size={15} />
             </motion.button>
 
@@ -94,7 +97,7 @@ export default function CTAFinal({
                 color: "rgba(255,255,255,0.85)",
               }}
             >
-              {ctaSecundario}
+              {resolvedCtaSecundario}
             </motion.button>
           </div>
         </AnimatedSection>

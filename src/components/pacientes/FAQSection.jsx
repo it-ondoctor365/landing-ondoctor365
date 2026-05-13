@@ -2,41 +2,9 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
+import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
-
-const FAQS_DEFAULT = [
-  {
-    id: 1,
-    pregunta: "¿Necesito descargar alguna aplicación?",
-    respuesta:
-      "No, OnDoctor365 funciona directamente desde tu navegador. Solo necesitás una conexión a internet y una cámara.",
-  },
-  {
-    id: 2,
-    pregunta: "¿Puedo usar el servicio si soy menor de edad?",
-    respuesta:
-      "Sí, los menores pueden ser atendidos con la presencia y autorización de un adulto responsable.",
-  },
-  {
-    id: 3,
-    pregunta: "¿Las recetas digitales tienen validez legal?",
-    respuesta:
-      "Sí, todas las recetas tienen firma digital certificada y validez legal en todo el territorio nacional.",
-  },
-  {
-    id: 4,
-    pregunta: "¿Qué pasa si el médico no puede atenderme al instante?",
-    respuesta:
-      "Podés reservar un turno programado o unirte a la lista de espera. Te avisamos cuando haya disponibilidad.",
-  },
-  {
-    id: 5,
-    pregunta: "¿Mis datos médicos están seguros?",
-    respuesta:
-      "Sí, toda tu información está encriptada. Solo vos y tu médico tienen acceso a tu historial.",
-  },
-];
 
 function FAQItem({ pregunta, respuesta }) {
   const [open, setOpen] = useState(false);
@@ -87,12 +55,14 @@ function FAQItem({ pregunta, respuesta }) {
   );
 }
 
-export default function FAQSection({
-  badge = "PREGUNTAS FRECUENTES",
-  titulo = "Tus dudas más",
-  tituloAccent = "comunes",
-  faqs = FAQS_DEFAULT,
-}) {
+export default function FAQSection({ badge, titulo, tituloAccent, faqs: faqsProp }) {
+  const { t } = useTranslation();
+
+  const resolvedBadge = badge ?? t("faq.badge");
+  const resolvedTitulo = titulo ?? t("faq.titulo");
+  const resolvedTituloAccent = tituloAccent ?? t("faq.titulo_accent");
+  const faqs = faqsProp ?? t("faq.items", { returnObjects: true });
+
   return (
     <section className="relative py-24 overflow-hidden bg-white">
       {/* Orbs */}
@@ -135,13 +105,13 @@ export default function FAQSection({
               className="w-1.5 h-1.5 rounded-full"
               style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
             />
-            {badge}
+            {resolvedBadge}
           </motion.span>
 
           <h2 className="text-3xl md:text-4xl font-fraunces font-extrabold text-primary mt-2">
-            {titulo}{" "}
+            {resolvedTitulo}{" "}
             <span className="italic" style={{ color: ACCENT }}>
-              {tituloAccent}
+              {resolvedTituloAccent}
             </span>
           </h2>
         </AnimatedSection>
@@ -155,8 +125,8 @@ export default function FAQSection({
               divideColor: "#e2e8f0",
             }}
           >
-            {faqs.map(({ id, pregunta, respuesta }) => (
-              <FAQItem key={id} pregunta={pregunta} respuesta={respuesta} />
+            {faqs.map(({ pregunta, respuesta }, i) => (
+              <FAQItem key={i} pregunta={pregunta} respuesta={respuesta} />
             ))}
           </div>
         </AnimatedSection>

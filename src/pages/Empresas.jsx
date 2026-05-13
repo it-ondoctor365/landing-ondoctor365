@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import EcosistemaSection from "../components/empresas/EcoSistemaSection";
 import HeroEmpresas from "../components/empresas/HeroEmpresas";
 import OrganizacionesSection from "../components/empresas/OrganizacionesSection";
@@ -7,94 +9,45 @@ import FAQSection from "../components/pacientes/FAQSection";
 import ContactoSection from "../components/empresas/ContactoSection";
 import CTAFinal from "../components/pacientes/CTAFinal";
 
-const TESTIMONIOS_EMPRESAS = [
-  {
-    id: 1,
-    nombre: "Gonzalo M.",
-    ubicacion: "Director de RRHH · Retail",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?img=15",
-    texto:
-      "Implementamos OnDoctor365 y en el primer trimestre redujimos el ausentismo un 28%. El equipo lo adoptó de inmediato, es muy intuitivo.",
-  },
-  {
-    id: 2,
-    nombre: "Analía F.",
-    ubicacion: "Gerente de Beneficios · Fintech",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?img=44",
-    texto:
-      "Para nuestra empresa fue una de las mejores decisiones del año. Los empleados valoran mucho tener acceso médico sin salir de casa.",
-  },
-  {
-    id: 3,
-    nombre: "Carlos M.",
-    ubicacion: "CEO · Logística",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?img=53",
-    texto:
-      "La integración fue sencilla y el soporte excelente. En 48hs ya estábamos operativos. Los reportes de uso son muy completos.",
-  },
-];
-
-const FAQS_EMPRESAS = [
-  {
-    id: 1,
-    pregunta: "¿Cómo puedo dar de alta mi empresa?",
-    respuesta:
-      "Completá el formulario de contacto y un especialista te guiará en el proceso de onboarding en menos de 48hs.",
-  },
-  {
-    id: 2,
-    pregunta: "¿Cuánto tiempo lleva la implementación?",
-    respuesta:
-      "La plataforma digital se activa en 48hs. El Tótem de Telemedicina requiere instalación física, que coordinamos con tu equipo.",
-  },
-  {
-    id: 3,
-    pregunta: "¿El servicio es compatible con las normativas ISO o HIS?",
-    respuesta:
-      "Sí, cumplimos con las principales normativas del sector salud y tenemos integraciones nativas con los sistemas HIS más utilizados.",
-  },
-  {
-    id: 4,
-    pregunta: "¿OnDoctor365 se integra con obras sociales o prepaga?",
-    respuesta:
-      "Sí, tenemos integraciones con las principales obras sociales y prepagas del país para facilitar la cobertura de consultas.",
-  },
-  {
-    id: 5,
-    pregunta: "¿Se pueden generar reportes médicos internos?",
-    respuesta:
-      "Sí, el panel corporativo genera reportes de uso, consultas por especialidad, ausentismo y bienestar general del equipo.",
-  },
-];
 export default function Empresas() {
+  const { t } = useTranslation();
+
+  const testimonios = t("testimoniosEmpresas.items", { returnObjects: true });
+  const faqs = t("faqEmpresas.items", { returnObjects: true });
+
   return (
     <div>
+      <Helmet>
+        <title>Salud corporativa para empresas | OnDoctor365</title>
+        <meta name="description" content="Reducí el ausentismo y mejorá el bienestar de tu equipo con telemedicina empresarial. Implementación en 48hs, integración con obras sociales y reportes de uso." />
+        <link rel="canonical" href="https://www.ondoctor365.com/empresas" />
+        <meta property="og:title" content="Salud corporativa para empresas | OnDoctor365" />
+        <meta property="og:description" content="Reducí el ausentismo y mejorá el bienestar de tu equipo con telemedicina empresarial. Implementación en 48hs." />
+        <meta property="og:url" content="https://www.ondoctor365.com/empresas" />
+      </Helmet>
       <HeroEmpresas />
       <ProblemaSection />
       <EcosistemaSection />
       <OrganizacionesSection />
       <TestimoniosSection
-        tituloAccent="nuestros clientes"
-        testimonios={TESTIMONIOS_EMPRESAS}
+        tituloAccent={t("testimoniosEmpresas.titulo_accent")}
+        testimonios={testimonios}
       />
       <FAQSection
-        badge="PREGUNTAS FRECUENTES"
-        titulo="Todo lo que necesitás"
-        tituloAccent="saber"
-        faqs={FAQS_EMPRESAS}
+        badge={t("faqEmpresas.badge")}
+        titulo={t("faqEmpresas.titulo")}
+        tituloAccent={t("faqEmpresas.titulo_accent")}
+        faqs={faqs}
       />
       <ContactoSection />
       <CTAFinal
-        badge="SUMATE AL FUTURO"
-        titulo="Sumate al futuro de"
-        tituloAccent="la salud corporativa"
-        titulo2=""
-        subtitulo="Más de 200 empresas ya confían en OnDoctor365 para cuidar la salud de sus equipos."
-        ctaPrimario="Solicitar tu demo"
-        ctaSecundario="Ver productos"
+        badge={t("ctaFinalEmpresas.badge")}
+        titulo={t("ctaFinalEmpresas.titulo")}
+        tituloAccent={t("ctaFinalEmpresas.titulo_accent")}
+        titulo2={t("ctaFinalEmpresas.titulo2")}
+        subtitulo={t("ctaFinalEmpresas.subtitulo")}
+        ctaPrimario={t("ctaFinalEmpresas.cta_primary")}
+        ctaSecundario={t("ctaFinalEmpresas.cta_secondary")}
       />
     </div>
   );

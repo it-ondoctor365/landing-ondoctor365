@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-
-const NAV_TABS = [
-  { label: "Pacientes", path: "/pacientes" },
-  { label: "Profesionales", path: "/profesionales" },
-  { label: "Empresas", path: "/empresas" },
-];
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../ui/LanguageSwitcher";
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const NAV_TABS = [
+    { label: t("navbar.pacientes"), path: "/pacientes" },
+    { label: t("navbar.profesionales"), path: "/profesionales" },
+    { label: t("navbar.empresas"), path: "/empresas" },
+  ];
 
   function handleNavClick(path) {
     setMenuOpen(false);
@@ -24,10 +27,10 @@ export default function Navbar() {
 
   const ctaLabel =
     location.pathname === "/profesionales"
-      ? "Crear mi perfil →"
+      ? t("navbar.cta_profesionales")
       : location.pathname === "/empresas"
-      ? "Solicitar demo →"
-      : "Solicitar turno →";
+      ? t("navbar.cta_empresas")
+      : t("navbar.cta_pacientes");
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
@@ -40,7 +43,7 @@ export default function Navbar() {
           }}
           className="flex items-center gap-1"
         >
-          <img src="logo.svg" />
+          <img src="/logo.svg" />
         </button>
 
         {/* Desktop Tabs */}
@@ -66,8 +69,9 @@ export default function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-3">
+          <LanguageSwitcher />
           <button className="text-sm font-medium text-gray-600 hover:text-primary transition-colors">
-            Iniciar sesión
+            {t("navbar.login")}
           </button>
           <button className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors duration-200">
             {ctaLabel}
@@ -78,7 +82,7 @@ export default function Navbar() {
         <button
           className="md:hidden p-2 text-gray-600 hover:text-primary transition-colors"
           onClick={() => setMenuOpen((o) => !o)}
-          aria-label="Menú"
+          aria-label={t("navbar.menu_aria")}
         >
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -107,8 +111,11 @@ export default function Navbar() {
             ))}
           </nav>
           <div className="flex flex-col gap-2 pt-2 border-t border-gray-100">
+            <div className="py-1">
+              <LanguageSwitcher />
+            </div>
             <button className="text-sm font-medium text-gray-600 hover:text-primary transition-colors py-2 text-left">
-              Iniciar sesión
+              {t("navbar.login")}
             </button>
             <button className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors duration-200 text-center">
               {ctaLabel}

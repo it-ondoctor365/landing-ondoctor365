@@ -1,24 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
 const EASE = [0.16, 1, 0.3, 1];
-
-const ACREDITACIONES = ["BARDA", "UCSF", "CHIME", "Health 2.0"];
-const SENSORES = [
-  "ECG",
-  "SpO2",
-  "Presión arterial",
-  "Temperatura",
-  "Otoscopio digital",
-  "Videoconsulta",
-];
-const PLATAFORMA_FEATURES = [
-  "Videoconsultas desde cualquier dispositivo",
-  "Historia clínica digital unificada",
-  "Panel de salud corporativo y ausentismo",
-  "Recetas y órdenes electrónicas",
-];
 
 function useCountUp(target, inView, duration = 1.7) {
   const [count, setCount] = useState(0);
@@ -111,6 +96,11 @@ function FadeIn({ inView, delay = 0, children, className = "" }) {
 }
 
 export default function EcosistemaSection() {
+  const { t } = useTranslation();
+  const sensores = t("ecosistema.sensores", { returnObjects: true });
+  const acreditaciones = t("ecosistema.acreditaciones", { returnObjects: true });
+  const plataformaFeatures = t("ecosistema.plataforma.features", { returnObjects: true });
+
   const headRef = useRef(null);
   const headInView = useInView(headRef, { once: true, amount: 0.4 });
 
@@ -129,7 +119,6 @@ export default function EcosistemaSection() {
 
   return (
     <section className="relative py-24 overflow-hidden bg-white">
-      {/* Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full blur-[140px]"
@@ -141,7 +130,6 @@ export default function EcosistemaSection() {
         />
       </div>
 
-      {/* Dot grid */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -169,7 +157,7 @@ export default function EcosistemaSection() {
               className="w-1.5 h-1.5 rounded-full"
               style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
             />
-            PRODUCTOS
+            {t("ecosistema.badge")}
           </motion.span>
 
           <motion.h2
@@ -178,9 +166,9 @@ export default function EcosistemaSection() {
             animate={headInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
           >
-            Un ecosistema completo de{" "}
+            {t("ecosistema.titulo")}{" "}
             <span className="italic" style={{ color: ACCENT }}>
-              salud digital
+              {t("ecosistema.titulo_accent")}
             </span>
           </motion.h2>
 
@@ -190,8 +178,7 @@ export default function EcosistemaSection() {
             animate={headInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.55, delay: 0.22, ease: EASE }}
           >
-            Desde la atención remota hasta la presencia física con tecnología.
-            Cuatro soluciones que se complementan entre sí.
+            {t("ecosistema.subtitulo")}
           </motion.p>
         </div>
 
@@ -205,7 +192,6 @@ export default function EcosistemaSection() {
             {...cardReveal(v1, 0)}
           >
             <Shimmer inView={v1} delay={0} />
-            <Watermark num="01" inView={v1} delay={0} />
 
             <div
               className="w-full h-64 flex items-end justify-center relative z-10 overflow-hidden"
@@ -226,21 +212,19 @@ export default function EcosistemaSection() {
                     background: "#2d418e12",
                   }}
                 >
-                  Presencial + IA
+                  {t("ecosistema.totem.badge")}
                 </span>
               </FadeIn>
               <FadeIn inView={v1} delay={0.38}>
                 <h3 className="font-fraunces text-xl font-extrabold text-primary mb-1">
-                  Tótem de Telemedicina
+                  {t("ecosistema.totem.titulo")}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed">
-                  Sala virtual de atención médica para instalar en tu empresa.
-                  Sensores integrados, videoconsulta en tiempo real y
-                  prescripciones electrónicas. Sin médico en el lugar.
+                  {t("ecosistema.totem.desc")}
                 </p>
               </FadeIn>
               <div className="flex flex-wrap gap-2">
-                {SENSORES.map((s, i) => (
+                {sensores.map((s, i) => (
                   <motion.span
                     key={s}
                     className="text-xs px-3 py-1 rounded-full"
@@ -282,7 +266,6 @@ export default function EcosistemaSection() {
               {...cardReveal(v2, 0.14)}
             >
               <Shimmer inView={v2} delay={0.14} light />
-              <Watermark num="02" inView={v2} delay={0.14} light />
 
               <FadeIn inView={v2} delay={0.36} className="relative z-10">
                 <span
@@ -293,7 +276,7 @@ export default function EcosistemaSection() {
                     background: ACCENT + "18",
                   }}
                 >
-                  Reconocimiento global
+                  {t("ecosistema.reconocimiento.badge")}
                 </span>
               </FadeIn>
               <FadeIn inView={v2} delay={0.46} className="relative z-10">
@@ -304,11 +287,11 @@ export default function EcosistemaSection() {
                   {count}
                 </p>
                 <p className="text-white/80 text-sm mt-1">
-                  premios y acreditaciones internacionales en innovación
+                  {t("ecosistema.reconocimiento.desc")}
                 </p>
               </FadeIn>
               <div className="flex flex-wrap gap-2 mt-1 relative z-10">
-                {ACREDITACIONES.map((a, i) => (
+                {acreditaciones.map((a, i) => (
                   <motion.span
                     key={a}
                     className="text-xs font-semibold px-3 py-1 rounded-full"
@@ -342,27 +325,28 @@ export default function EcosistemaSection() {
               {...cardReveal(v3, 0.24)}
             >
               <Shimmer inView={v3} delay={0.24} />
-              <Watermark num="03" inView={v3} delay={0.24} />
 
               <div
                 className="w-full sm:w-2/5 h-40 sm:h-full flex items-center justify-center relative z-10"
                 style={{ background: "#eef1f5" }}
               >
-                <img src="Maletin.png"></img>
+                <img
+                  src="Maletin.png"
+                  className="w-full h-full object-contain p-4"
+                />
               </div>
               <div className="flex-1 p-5 flex flex-col justify-center gap-2 relative z-10">
                 <FadeIn inView={v3} delay={0.42}>
                   <span className="inline-block bg-yellow-100 text-yellow-700 text-xs font-semibold px-3 py-1 rounded-full w-fit">
-                    Campo / Crítico
+                    {t("ecosistema.maletin.badge")}
                   </span>
                 </FadeIn>
                 <FadeIn inView={v3} delay={0.52}>
                   <h3 className="font-fraunces text-lg font-extrabold text-primary">
-                    Maletín FDA
+                    {t("ecosistema.maletin.titulo")}
                   </h3>
                   <p className="text-gray-500 text-sm leading-relaxed">
-                    Para entornos críticos: embarcaciones, aeronáutico, campo y
-                    desierto. Grado médico con conectividad 5G.
+                    {t("ecosistema.maletin.desc")}
                   </p>
                 </FadeIn>
               </div>
@@ -377,7 +361,6 @@ export default function EcosistemaSection() {
             {...cardReveal(v4, 0.08)}
           >
             <Shimmer inView={v4} delay={0.08} />
-            <Watermark num="04" inView={v4} delay={0.08} />
 
             <div className="w-full sm:w-3/5 h-48 sm:h-auto relative z-10 overflow-hidden">
               <img
@@ -395,17 +378,15 @@ export default function EcosistemaSection() {
                     background: ACCENT + "12",
                   }}
                 >
-                  Clínicas / Hospitales
+                  {t("ecosistema.guardia.badge")}
                 </span>
               </FadeIn>
               <FadeIn inView={v4} delay={0.38}>
                 <h3 className="font-fraunces text-xl font-extrabold text-primary">
-                  Guardia Inteligente
+                  {t("ecosistema.guardia.titulo")}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed">
-                  Triage con IA para admisión hospitalaria. Reduce los tiempos
-                  de espera, simplifica la admisión y mejora la precisión
-                  diagnóstica antes de la consulta médica.
+                  {t("ecosistema.guardia.desc")}
                 </p>
               </FadeIn>
             </div>
@@ -423,7 +404,6 @@ export default function EcosistemaSection() {
             {...cardReveal(v5, 0.18)}
           >
             <Shimmer inView={v5} delay={0.18} light />
-            <Watermark num="05" inView={v5} delay={0.18} light />
 
             <div className="flex-1 flex flex-col gap-3 relative z-10">
               <FadeIn inView={v5} delay={0.36}>
@@ -435,20 +415,19 @@ export default function EcosistemaSection() {
                     background: ACCENT + "18",
                   }}
                 >
-                  100% Digital
+                  {t("ecosistema.plataforma.badge")}
                 </span>
               </FadeIn>
               <FadeIn inView={v5} delay={0.46}>
                 <h3 className="font-fraunces text-xl font-extrabold">
-                  Plataforma Digital
+                  {t("ecosistema.plataforma.titulo")}
                 </h3>
                 <p className="text-white/70 text-sm leading-relaxed">
-                  App y web para consultas 24/7. Agenda inteligente, historia
-                  clínica unificada y panel corporativo de salud.
+                  {t("ecosistema.plataforma.desc")}
                 </p>
               </FadeIn>
               <div className="space-y-1.5 mt-1">
-                {PLATAFORMA_FEATURES.map((f, i) => (
+                {plataformaFeatures.map((f, i) => (
                   <motion.div
                     key={f}
                     className="flex items-start gap-2 text-white/80 text-xs"

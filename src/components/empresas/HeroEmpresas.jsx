@@ -1,13 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
-
-const STATS = [
-  { value: "30+", label: "Años de experiencia médica" },
-  { value: "-32%", label: "Reducción de ausentismo" },
-  { value: "24/7", label: "Cobertura continua" },
-];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -19,12 +14,14 @@ const fadeUp = {
 };
 
 export default function HeroEmpresas() {
+  const { t } = useTranslation();
+  const stats = t("heroEmpresas.stats", { returnObjects: true });
+
   return (
     <section
       className="relative min-h-[580px] overflow-hidden text-white"
       style={{ background: "#2d418e" }}
     >
-      {/* Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full blur-[140px]"
@@ -36,7 +33,6 @@ export default function HeroEmpresas() {
         />
       </div>
 
-      {/* Dot grid */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -47,7 +43,6 @@ export default function HeroEmpresas() {
       />
 
       <div className="max-w-7xl mx-auto px-6 h-full flex items-center">
-        {/* Left — copy */}
         <div className="relative z-10 max-w-xl py-20">
           <motion.div
             custom={0}
@@ -67,7 +62,7 @@ export default function HeroEmpresas() {
                 className="w-1.5 h-1.5 rounded-full"
                 style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
               />
-              Salud corporativa · B2B
+              {t("heroEmpresas.badge")}
             </span>
           </motion.div>
 
@@ -78,9 +73,9 @@ export default function HeroEmpresas() {
             animate="visible"
             className="text-4xl md:text-6xl font-fraunces font-bold leading-tight mb-4"
           >
-            El ecosistema de salud{" "}
+            {t("heroEmpresas.titulo")}{" "}
             <span className="font-fraunces italic" style={{ color: ACCENT }}>
-              para tu empresa.
+              {t("heroEmpresas.titulo_accent")}
             </span>
           </motion.h1>
 
@@ -91,8 +86,7 @@ export default function HeroEmpresas() {
             animate="visible"
             className="text-white/70 text-sm mb-8 max-w-full leading-relaxed"
           >
-            Telemedicina, tótems de atención presencial e IA médica integrados
-            en un solo sistema. Para empresas, prestadores y aseguradoras.
+            {t("heroEmpresas.subtitulo")}
           </motion.p>
 
           <motion.div
@@ -112,7 +106,7 @@ export default function HeroEmpresas() {
                 boxShadow: `0 10px 36px ${ACCENT}55`,
               }}
             >
-              Solicitar una demo
+              {t("heroEmpresas.cta_primary")}
               <ArrowRight size={14} />
             </motion.button>
 
@@ -122,7 +116,7 @@ export default function HeroEmpresas() {
               className="font-semibold px-6 py-3 rounded-2xl text-sm text-white/85"
               style={{ border: "1px solid rgba(255,255,255,0.25)" }}
             >
-              Ver productos
+              {t("heroEmpresas.cta_secondary")}
             </motion.button>
           </motion.div>
 
@@ -133,7 +127,7 @@ export default function HeroEmpresas() {
             animate="visible"
             className="flex flex-wrap gap-x-6 gap-y-4 mt-10"
           >
-            {STATS.map(({ value, label }) => (
+            {stats.map(({ value, label }) => (
               <div key={value}>
                 <p className="text-2xl font-fraunces font-bold text-white">
                   {value}
@@ -144,7 +138,6 @@ export default function HeroEmpresas() {
           </motion.div>
         </div>
 
-        {/* Right — image */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

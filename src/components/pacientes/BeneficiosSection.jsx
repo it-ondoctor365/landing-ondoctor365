@@ -1,37 +1,36 @@
 import { Clock, Star, Earth, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
+import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
 
-const BENEFICIOS = [
-  {
-    icon: Clock,
-    titulo: "Sin sala de espera",
-    descripcion:
-      "Tu turno es a la hora que elegiste. Sin esperar 40 minutos en un pasillo ni trasladarte.",
-  },
-  {
-    icon: Earth,
-    titulo: "Especialistas de todo el país",
-    descripcion:
-      "Accedé a profesionales que quizás no están en tu ciudad. La mejor atención sin importar dónde estés.",
-  },
-  {
-    icon: Star,
-    titulo: "Reseñas reales y verificadas",
-    descripcion:
-      "Todas las opiniones son de pacientes que realmente consultaron. Elegí con información real.",
-  },
-  {
-    icon: ShieldCheck,
-    titulo: "Total privacidad",
-    descripcion:
-      "Tu información médica está encriptada bajo los más altos estándares de seguridad.",
-  },
-];
-
 export default function BeneficiosSection() {
+  const { t } = useTranslation();
+
+  const BENEFICIOS = [
+    {
+      icon: Clock,
+      titulo: t("beneficios.items.espera_titulo"),
+      descripcion: t("beneficios.items.espera_desc"),
+    },
+    {
+      icon: Earth,
+      titulo: t("beneficios.items.especialistas_titulo"),
+      descripcion: t("beneficios.items.especialistas_desc"),
+    },
+    {
+      icon: Star,
+      titulo: t("beneficios.items.resenas_titulo"),
+      descripcion: t("beneficios.items.resenas_desc"),
+    },
+    {
+      icon: ShieldCheck,
+      titulo: t("beneficios.items.privacidad_titulo"),
+      descripcion: t("beneficios.items.privacidad_desc"),
+    },
+  ];
+
   return (
     <section className="relative py-24 overflow-hidden bg-white">
       {/* Orbs */}
@@ -94,17 +93,16 @@ export default function BeneficiosSection() {
                     boxShadow: `0 0 6px ${ACCENT}`,
                   }}
                 />
-                POR QUÉ ELEGIR ONDOCTOR365
+                {t("beneficios.badge")}
               </motion.span>
 
               <h2 className="text-3xl md:text-4xl font-fraunces italic font-extrabold text-primary mt-2 mb-3 leading-tight">
-                Atención médica{" "}
-                <span style={{ color: ACCENT }}>sin las esperas</span> de
-                siempre
+                {t("beneficios.titulo")}{" "}
+                <span style={{ color: ACCENT }}>{t("beneficios.titulo_accent")}</span>{" "}
+                {t("beneficios.titulo2")}
               </h2>
               <p className="text-gray-400 text-sm mb-8 max-w-md leading-relaxed">
-                Una nueva forma de cuidar tu salud: accesible, inmediata y sin
-                complicaciones.
+                {t("beneficios.subtitulo")}
               </p>
             </AnimatedSection>
 

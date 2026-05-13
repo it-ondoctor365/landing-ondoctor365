@@ -1,70 +1,17 @@
-import { Check, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
+import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
-
-const PLANES = [
-  {
-    id: "especial",
-    nombre: "Especial",
-    badge: null,
-    precio: "$0",
-    periodo: "gratis por siempre",
-    descripcion: "Ideal para comenzar a atender y conocer la plataforma.",
-    features: [
-      "Perfil público en OnDoctor365",
-      "Hasta 15 consultas por mes",
-      "Videoconsulta incluida",
-      "Recetas digitales",
-    ],
-    cta: "Crear cuenta gratuita",
-    highlight: false,
-  },
-  {
-    id: "pro",
-    nombre: "Pro",
-    badge: "MÁS POPULAR",
-    precio: "$9.990",
-    periodo: "por mes",
-    descripcion: "Para profesionales que quieren hacer crecer su práctica.",
-    features: [
-      "Todo lo del plan Especial",
-      "Consultas ilimitadas",
-      "Historia clínica digital",
-      "Agenda de videoconsultas",
-      "Panel de métricas avanzado",
-      "Órdenes de estudios digitales",
-      "Soporte prioritario",
-    ],
-    cta: "Probar 30 días gratis",
-    highlight: true,
-  },
-  {
-    id: "clinica",
-    nombre: "Clínica / Equipo",
-    badge: null,
-    precio: "A medida",
-    periodo: "edición corporativa",
-    descripcion:
-      "Para clínicas y equipos médicos que necesitan una solución escalable e integrada.",
-    features: [
-      "Todo lo del plan Pro",
-      "Múltiples profesionales",
-      "Sistema de atención integrado",
-      "Alta e integración con HIS",
-      "Branding personalizado",
-      "Ejecutivo de cuenta dedicado",
-    ],
-    cta: "Hablar con ventas",
-    highlight: false,
-  },
-];
+const HIGHLIGHT_ID = "pro";
 
 export default function PlanesSection() {
+  const { t } = useTranslation();
+  const planes = t("planes.items", { returnObjects: true });
+
   return (
     <section className="relative py-24 overflow-hidden bg-white">
-      {/* Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full blur-[140px]"
@@ -76,7 +23,6 @@ export default function PlanesSection() {
         />
       </div>
 
-      {/* Dot grid */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -104,37 +50,24 @@ export default function PlanesSection() {
               className="w-1.5 h-1.5 rounded-full"
               style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
             />
-            PLANES
+            {t("planes.badge")}
           </motion.span>
 
           <h2 className="font-fraunces text-3xl md:text-4xl font-extrabold text-primary mt-2">
-            Empezá gratis,{" "}
+            {t("planes.titulo")}{" "}
             <span className="italic" style={{ color: ACCENT }}>
-              crecé sin límites
+              {t("planes.titulo_accent")}
             </span>
           </h2>
           <p className="text-gray-400 mt-3 max-w-lg mx-auto text-sm">
-            Sin comisiones por consulta. Elegí el plan que mejor se adapte a tu
-            práctica.
+            {t("planes.subtitulo")}
           </p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          {PLANES.map(
-            (
-              {
-                id,
-                nombre,
-                badge,
-                precio,
-                periodo,
-                descripcion,
-                features,
-                cta,
-                highlight,
-              },
-              i,
-            ) => (
+          {planes.map(({ id, nombre, badge, precio, periodo, descripcion, features, cta }, i) => {
+            const highlight = id === HIGHLIGHT_ID;
+            return (
               <motion.div
                 key={id}
                 initial={{ opacity: 0, y: 20 }}
@@ -159,7 +92,6 @@ export default function PlanesSection() {
                     : { background: "#f8fafc", border: "1px solid #e2e8f0" }
                 }
               >
-                {/* Corner glow */}
                 {highlight && (
                   <div
                     className="absolute -top-10 -right-10 w-44 h-44 rounded-full blur-[60px] pointer-events-none"
@@ -167,7 +99,6 @@ export default function PlanesSection() {
                   />
                 )}
 
-                {/* Badge */}
                 {badge && (
                   <span
                     className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold px-4 py-1 rounded-full tracking-widest"
@@ -177,7 +108,6 @@ export default function PlanesSection() {
                   </span>
                 )}
 
-                {/* Header */}
                 <div className="relative">
                   <p
                     className="text-xs font-bold tracking-[0.18em] uppercase mb-2"
@@ -209,7 +139,6 @@ export default function PlanesSection() {
                   </p>
                 </div>
 
-                {/* Divider */}
                 <div
                   className="h-px"
                   style={{
@@ -219,7 +148,6 @@ export default function PlanesSection() {
                   }}
                 />
 
-                {/* Features */}
                 <ul className="space-y-3 flex-1 relative">
                   {features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-sm">
@@ -242,7 +170,6 @@ export default function PlanesSection() {
                   ))}
                 </ul>
 
-                {/* CTA */}
                 <motion.button
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.97 }}
@@ -265,8 +192,8 @@ export default function PlanesSection() {
                   <ArrowRight size={14} />
                 </motion.button>
               </motion.div>
-            ),
-          )}
+            );
+          })}
         </div>
       </div>
     </section>

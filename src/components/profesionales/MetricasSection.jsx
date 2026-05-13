@@ -1,36 +1,18 @@
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
+import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
 
-const METRICAS = [
-  {
-    valor: "3x",
-    titulo: "Más consultas en 60 días",
-    descripcion:
-      "Los profesionales que usan OnDoctor365 triplican su cantidad de consultas en los primeros dos meses.",
-  },
-  {
-    valor: "$0",
-    titulo: "Sin comisiones ocultas",
-    descripcion:
-      "Cobrás el 100% de cada consulta. Sin sorpresas, sin retenciones, sin letra chica.",
-  },
-  {
-    valor: "+40hs",
-    titulo: "Menos trabajo administrativo",
-    descripcion:
-      "Ahorrás tiempo en agenda, cobros y documentación al mes para dedicarle más a tus pacientes.",
-  },
-];
-
 export default function MetricasSection() {
+  const { t } = useTranslation();
+  const metricas = t("metricas.items", { returnObjects: true });
+
   return (
     <section
       className="relative py-24 overflow-hidden"
       style={{ background: "#2d418e" }}
     >
-      {/* Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full blur-[140px]"
@@ -42,7 +24,6 @@ export default function MetricasSection() {
         />
       </div>
 
-      {/* Dot grid */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -70,22 +51,22 @@ export default function MetricasSection() {
               className="w-1.5 h-1.5 rounded-full"
               style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
             />
-            IMPACTO
+            {t("metricas.badge")}
           </motion.span>
 
           <h2 className="font-fraunces text-3xl md:text-4xl font-extrabold text-white mt-2">
-            Tus números,{" "}
+            {t("metricas.titulo")}{" "}
             <span className="italic" style={{ color: ACCENT }}>
-              tu éxito
+              {t("metricas.titulo_accent")}
             </span>
           </h2>
           <p className="text-white/60 mt-3 max-w-lg mx-auto text-sm">
-            Profesionales como vos que están creciendo con OnDoctor365.
+            {t("metricas.subtitulo")}
           </p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {METRICAS.map(({ valor, titulo, descripcion }, i) => (
+          {metricas.map(({ valor, titulo, descripcion }, i) => (
             <motion.div
               key={valor}
               initial={{ opacity: 0, y: 20 }}

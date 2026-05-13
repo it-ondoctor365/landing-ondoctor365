@@ -1,13 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
-
-const STATS = [
-  { value: "+15K", label: "Pacientes atendidos" },
-  { value: "4.9★", label: "Calificación promedio" },
-  { value: "3 min", label: "Tiempo de espera" },
-];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -19,6 +14,14 @@ const fadeUp = {
 };
 
 export default function HeroPacientes() {
+  const { t } = useTranslation();
+
+  const STATS = [
+    { value: t("heroPacientes.stats.pacientes_value"), label: t("heroPacientes.stats.pacientes_label") },
+    { value: t("heroPacientes.stats.rating_value"), label: t("heroPacientes.stats.rating_label") },
+    { value: t("heroPacientes.stats.espera_value"), label: t("heroPacientes.stats.espera_label") },
+  ];
+
   return (
     <section
       className="relative min-h-[580px] overflow-hidden text-white"
@@ -67,7 +70,7 @@ export default function HeroPacientes() {
                 className="w-1.5 h-1.5 rounded-full"
                 style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
               />
-              Disponible 24/7 · 365 días
+              {t("heroPacientes.badge")}
             </span>
           </motion.div>
 
@@ -78,8 +81,8 @@ export default function HeroPacientes() {
             animate="visible"
             className="text-4xl md:text-6xl font-fraunces font-bold leading-tight mb-4"
           >
-            Atención médica online cuando{" "}
-            <span style={{ color: ACCENT }}>más lo necesitás.</span>
+            {t("heroPacientes.titulo")}{" "}
+            <span style={{ color: ACCENT }}>{t("heroPacientes.titulo_accent")}</span>
           </motion.h1>
 
           <motion.p
@@ -89,8 +92,7 @@ export default function HeroPacientes() {
             animate="visible"
             className="text-white/70 text-sm mb-8 max-w-full leading-relaxed"
           >
-            Médicos, psicólogos y especialistas disponibles en minutos. Sin
-            filas, sin traslados. Desde tu celular o computadora.
+            {t("heroPacientes.subtitulo")}
           </motion.p>
 
           <motion.div
@@ -110,7 +112,7 @@ export default function HeroPacientes() {
                 boxShadow: `0 10px 36px ${ACCENT}55`,
               }}
             >
-              Solicitar turno
+              {t("heroPacientes.cta_primary")}
               <ArrowRight size={14} />
             </motion.button>
 
@@ -120,7 +122,7 @@ export default function HeroPacientes() {
               className="font-semibold px-6 py-3 rounded-2xl text-sm text-white/85"
               style={{ border: "1px solid rgba(255,255,255,0.25)" }}
             >
-              Buscar especialista
+              {t("heroPacientes.cta_secondary")}
             </motion.button>
           </motion.div>
 
@@ -181,7 +183,7 @@ export default function HeroPacientes() {
                   className="w-1.5 h-1.5 rounded-full"
                   style={{ background: ACCENT, boxShadow: `0 0 5px ${ACCENT}` }}
                 />
-                Médico disponible ahora
+                {t("heroPacientes.card.badge")}
               </span>
             </div>
             <div className="flex items-center gap-3 mb-2">
@@ -193,10 +195,10 @@ export default function HeroPacientes() {
               </div>
               <div>
                 <p className="text-primary font-semibold text-sm">
-                  Dr. Martínez
+                  {t("heroPacientes.card.nombre")}
                 </p>
                 <p className="text-gray-400 text-xs">
-                  Médico clínico · 12 años de experiencia
+                  {t("heroPacientes.card.especialidad")}
                 </p>
               </div>
             </div>

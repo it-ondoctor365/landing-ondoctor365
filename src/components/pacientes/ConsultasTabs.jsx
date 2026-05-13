@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
+import { useTranslation } from "react-i18next";
 
 const META = {
   clinico: { Icon: Stethoscope, accent: "#32b9cc", num: "01" },
@@ -20,74 +21,75 @@ const META = {
   guardia: { Icon: ShieldCheck, accent: "#32b9cc", num: "04" },
 };
 
-const TRUST_ITEMS = [
-  "Sin obra social requerida",
-  "Disponible las 24hs",
-  "Profesionales certificados",
-];
-
-const ESPECIALIDADES = [
-  {
-    id: "clinico",
-    label: "Médico Clínico",
-    descripcion:
-      "Consultas generales, diagnósticos, seguimiento de salud y más.",
-    features: [
-      { icon: FileText, text: "Recetas digitales ilimitadas" },
-      { icon: ClipboardList, text: "Historia clínica digital" },
-      { icon: Monitor, text: "Videoconsulta HD" },
-      { icon: ShoppingBag, text: "Órdenes de estudios" },
-    ],
-    precio: "55.000",
-    moneda: "$",
-    periodo: "por consulta",
-  },
-  {
-    id: "psicologia",
-    label: "Psicología",
-    descripcion: "Atención psicológica con profesionales certificados.",
-    features: [
-      { icon: FileText, text: "Sesiones individuales" },
-      { icon: ClipboardList, text: "Seguimiento continuo" },
-      { icon: Monitor, text: "Videoconsulta HD" },
-      { icon: ShoppingBag, text: "Notas de sesión" },
-    ],
-    precio: "60.000",
-    moneda: "$",
-    periodo: "por consulta",
-  },
-  {
-    id: "nutricion",
-    label: "Nutrición",
-    descripcion: "Planes alimentarios personalizados con nutricionistas.",
-    features: [
-      { icon: FileText, text: "Plan alimentario digital" },
-      { icon: ClipboardList, text: "Seguimiento de peso" },
-      { icon: Monitor, text: "Videoconsulta HD" },
-      { icon: ShoppingBag, text: "Lista de compras" },
-    ],
-    precio: "50.000",
-    moneda: "$",
-    periodo: "por consulta",
-  },
-  {
-    id: "guardia",
-    label: "Guardia ENT",
-    descripcion: "Atención de urgencias las 24hs con médicos de guardia.",
-    features: [
-      { icon: FileText, text: "Atención inmediata" },
-      { icon: ClipboardList, text: "Derivación si es necesario" },
-      { icon: Monitor, text: "Videoconsulta HD" },
-      { icon: ShoppingBag, text: "Recetas de urgencia" },
-    ],
-    precio: "45.000",
-    moneda: "$",
-    periodo: "por consulta",
-  },
-];
-
 export default function ConsultasTabs() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("clinico");
+
+  const TRUST_ITEMS = [
+    t("consultasTabs.trust.item1"),
+    t("consultasTabs.trust.item2"),
+    t("consultasTabs.trust.item3"),
+  ];
+
+  const ESPECIALIDADES = [
+    {
+      id: "clinico",
+      label: t("consultasTabs.especialidades.clinico_label"),
+      descripcion: t("consultasTabs.especialidades.clinico_desc"),
+      features: [
+        { icon: FileText, text: t("consultasTabs.especialidades.clinico_f1") },
+        { icon: ClipboardList, text: t("consultasTabs.especialidades.clinico_f2") },
+        { icon: Monitor, text: t("consultasTabs.especialidades.clinico_f3") },
+        { icon: ShoppingBag, text: t("consultasTabs.especialidades.clinico_f4") },
+      ],
+      precio: "55.000",
+      moneda: "$",
+      periodo: t("consultasTabs.periodo"),
+    },
+    {
+      id: "psicologia",
+      label: t("consultasTabs.especialidades.psicologia_label"),
+      descripcion: t("consultasTabs.especialidades.psicologia_desc"),
+      features: [
+        { icon: FileText, text: t("consultasTabs.especialidades.psicologia_f1") },
+        { icon: ClipboardList, text: t("consultasTabs.especialidades.psicologia_f2") },
+        { icon: Monitor, text: t("consultasTabs.especialidades.psicologia_f3") },
+        { icon: ShoppingBag, text: t("consultasTabs.especialidades.psicologia_f4") },
+      ],
+      precio: "60.000",
+      moneda: "$",
+      periodo: t("consultasTabs.periodo"),
+    },
+    {
+      id: "nutricion",
+      label: t("consultasTabs.especialidades.nutricion_label"),
+      descripcion: t("consultasTabs.especialidades.nutricion_desc"),
+      features: [
+        { icon: FileText, text: t("consultasTabs.especialidades.nutricion_f1") },
+        { icon: ClipboardList, text: t("consultasTabs.especialidades.nutricion_f2") },
+        { icon: Monitor, text: t("consultasTabs.especialidades.nutricion_f3") },
+        { icon: ShoppingBag, text: t("consultasTabs.especialidades.nutricion_f4") },
+      ],
+      precio: "50.000",
+      moneda: "$",
+      periodo: t("consultasTabs.periodo"),
+    },
+    {
+      id: "guardia",
+      label: t("consultasTabs.especialidades.guardia_label"),
+      descripcion: t("consultasTabs.especialidades.guardia_desc"),
+      features: [
+        { icon: FileText, text: t("consultasTabs.especialidades.guardia_f1") },
+        { icon: ClipboardList, text: t("consultasTabs.especialidades.guardia_f2") },
+        { icon: Monitor, text: t("consultasTabs.especialidades.guardia_f3") },
+        { icon: ShoppingBag, text: t("consultasTabs.especialidades.guardia_f4") },
+      ],
+      precio: "45.000",
+      moneda: "$",
+      periodo: t("consultasTabs.periodo"),
+    },
+  ];
+
   const active = ESPECIALIDADES.find((e) => e.id === activeTab);
   const { Icon: SpecIcon, accent, num } = META[activeTab];
 
@@ -143,11 +145,11 @@ export default function ConsultasTabs() {
               className="w-1.5 h-1.5 rounded-full"
               style={{ background: accent, boxShadow: `0 0 6px ${accent}` }}
             />
-            ESPECIALIDADES — {num}
+            {t("consultasTabs.badge")} — {num}
           </motion.span>
 
           <h2 className="text-4xl md:text-5xl font-fraunces italic font-extrabold text-primary leading-tight">
-            ¿Qué tipo de consulta{" "}
+            {t("consultasTabs.titulo")}{" "}
             <motion.span
               key={activeTab + "-h"}
               initial={{ opacity: 0.4 }}
@@ -155,12 +157,11 @@ export default function ConsultasTabs() {
               transition={{ duration: 0.5 }}
               style={{ color: accent }}
             >
-              necesitás?
+              {t("consultasTabs.titulo_accent")}
             </motion.span>
           </h2>
           <p className="text-gray-400 mt-4 max-w-md mx-auto text-sm leading-relaxed">
-            Elegí tu especialidad y encontrá profesionales disponibles en
-            minutos.
+            {t("consultasTabs.subtitulo")}
           </p>
         </AnimatedSection>
 
@@ -300,7 +301,7 @@ export default function ConsultasTabs() {
 
                 <div className="relative">
                   <p className="text-black/60 text-[11px] font-bold tracking-[0.16em] uppercase mb-4">
-                    Precio por consulta
+                    {t("consultasTabs.precio_label")}
                   </p>
 
                   <motion.p
@@ -361,7 +362,7 @@ export default function ConsultasTabs() {
                     boxShadow: `0 10px 36px ${accent}55`,
                   }}
                 >
-                  Reservar turno
+                  {t("consultasTabs.reservar")}
                   <ArrowRight size={15} />
                 </motion.button>
               </motion.div>
