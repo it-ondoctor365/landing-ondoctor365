@@ -4,15 +4,18 @@
     "profesionales": "Professionals",
     "empresas": "Companies",
     "login": "Log in",
+    "blog": "Blog",
     "cta_pacientes": "Book appointment →",
     "cta_profesionales": "Create my profile →",
     "cta_empresas": "Request demo →",
-    "menu_aria": "Menu"
+    "menu_aria": "Menu",
+    "especialidades_label": "Specialties",
+    "psicologia": "Psychology"
   },
   "heroPacientes": {
     "badge": "Available 24/7 · 365 days",
-    "titulo": "Online medical care when",
-    "titulo_accent": "you need it most.",
+    "titulo": "See a doctor today.",
+    "titulo_accent": "No waiting weeks.",
     "subtitulo": "Doctors, psychologists and specialists available in minutes. No queues, no travel. From your phone or computer.",
     "cta_primary": "Book appointment",
     "cta_secondary": "Find a specialist",
@@ -92,7 +95,7 @@
       "nutricion_f2": "Weight tracking",
       "nutricion_f3": "HD video consultation",
       "nutricion_f4": "Shopping list",
-      "guardia_label": "Emergency ENT",
+      "guardia_label": "Emergency 24/7",
       "guardia_desc": "24/7 emergency care with on-call doctors.",
       "guardia_f1": "Immediate attention",
       "guardia_f2": "Referral if necessary",
@@ -304,7 +307,14 @@
     "titulo": "A complete ecosystem of",
     "titulo_accent": "digital health",
     "subtitulo": "From remote care to physical presence with technology. Four solutions that complement each other.",
-    "sensores": ["ECG", "SpO2", "Blood pressure", "Temperature", "Digital otoscope", "Video consultation"],
+    "sensores": [
+      "ECG",
+      "SpO2",
+      "Blood pressure",
+      "Temperature",
+      "Digital otoscope",
+      "Video consultation"
+    ],
     "acreditaciones": ["BARDA", "UCSF", "CHIME", "Health 2.0"],
     "totem": {
       "badge": "On-site + AI",
@@ -620,16 +630,40 @@
       "tab_pacientes": "For patients",
       "tab_profesionales": "For psychologists",
       "pacientes": [
-        { "titulo": "No waiting room", "desc": "Consult from anywhere, whenever you need it, without delays." },
-        { "titulo": "Guaranteed privacy", "desc": "Your sessions are confidential. Your medical information is encrypted and protected." },
-        { "titulo": "Continuous follow-up", "desc": "Your psychologist knows your history in every session, without starting over." },
-        { "titulo": "No health insurance required", "desc": "Access psychological care without medical coverage or prior paperwork." }
+        {
+          "titulo": "No waiting room",
+          "desc": "Consult from anywhere, whenever you need it, without delays."
+        },
+        {
+          "titulo": "Guaranteed privacy",
+          "desc": "Your sessions are confidential. Your medical information is encrypted and protected."
+        },
+        {
+          "titulo": "Continuous follow-up",
+          "desc": "Your psychologist knows your history in every session, without starting over."
+        },
+        {
+          "titulo": "No health insurance required",
+          "desc": "Access psychological care without medical coverage or prior paperwork."
+        }
       ],
       "profesionales": [
-        { "titulo": "Automatic scheduling", "desc": "Patients book and pay on their own. You just show up to deliver the session." },
-        { "titulo": "Session notes", "desc": "Record diagnoses, progress and observations for each patient in an organized way." },
-        { "titulo": "Frictionless payments", "desc": "Receive payment for each session automatically, with no manual management or commissions." },
-        { "titulo": "Growth metrics", "desc": "Track your consultations, income and patient progress from a centralized dashboard." }
+        {
+          "titulo": "Automatic scheduling",
+          "desc": "Patients book and pay on their own. You just show up to deliver the session."
+        },
+        {
+          "titulo": "Session notes",
+          "desc": "Record diagnoses, progress and observations for each patient in an organized way."
+        },
+        {
+          "titulo": "Frictionless payments",
+          "desc": "Receive payment for each session automatically, with no manual management or commissions."
+        },
+        {
+          "titulo": "Growth metrics",
+          "desc": "Track your consultations, income and patient progress from a centralized dashboard."
+        }
       ]
     },
     "herramientas": {
@@ -638,20 +672,50 @@
       "titulo_accent": "mental health",
       "subtitulo": "Everything you need to provide the best psychological care, without administrative friction.",
       "items": [
-        { "titulo": "Private HD video consultation", "desc": "Secure virtual room with professional image and audio quality for every session." },
-        { "titulo": "Digital session notes", "desc": "Record progress, diagnoses and observations with organized clinical structure." },
-        { "titulo": "Psychological medical records", "desc": "Complete patient history, accessible from any device at any time." },
-        { "titulo": "Smart scheduling", "desc": "Patients book according to your availability. No manual coordination needed." },
-        { "titulo": "Automatic payments", "desc": "Payment is credited to your account every week. No commissions, no surprises." },
-        { "titulo": "Metrics dashboard", "desc": "Consultations, income, patient retention and more. Data to grow intentionally." }
+        {
+          "titulo": "Private HD video consultation",
+          "desc": "Secure virtual room with professional image and audio quality for every session."
+        },
+        {
+          "titulo": "Digital session notes",
+          "desc": "Record progress, diagnoses and observations with organized clinical structure."
+        },
+        {
+          "titulo": "Psychological medical records",
+          "desc": "Complete patient history, accessible from any device at any time."
+        },
+        {
+          "titulo": "Smart scheduling",
+          "desc": "Patients book according to your availability. No manual coordination needed."
+        },
+        {
+          "titulo": "Automatic payments",
+          "desc": "Payment is credited to your account every week. No commissions, no surprises."
+        },
+        {
+          "titulo": "Metrics dashboard",
+          "desc": "Consultations, income, patient retention and more. Data to grow intentionally."
+        }
       ]
     },
     "testimonios": {
       "titulo_accent": "say about online psychology",
       "items": [
-        { "nombre": "Valeria M.", "ubicacion": "Buenos Aires", "texto": "I started out of necessity and wouldn't trade it for anything. In 5 minutes I was talking to an incredible psychologist. I recommend it to everyone." },
-        { "nombre": "Lic. Camila Reyes", "ubicacion": "Psychologist · Mendoza", "texto": "I tripled my sessions in two months. Automatic scheduling freed me from hours of coordination. Now I focus only on my patients." },
-        { "nombre": "Santiago P.", "ubicacion": "Córdoba", "texto": "I was hesitant about online therapy but the private space and video quality made me forget it wasn't in person." }
+        {
+          "nombre": "Valeria M.",
+          "ubicacion": "Buenos Aires",
+          "texto": "I started out of necessity and wouldn't trade it for anything. In 5 minutes I was talking to an incredible psychologist. I recommend it to everyone."
+        },
+        {
+          "nombre": "Lic. Camila Reyes",
+          "ubicacion": "Psychologist · Mendoza",
+          "texto": "I tripled my sessions in two months. Automatic scheduling freed me from hours of coordination. Now I focus only on my patients."
+        },
+        {
+          "nombre": "Santiago P.",
+          "ubicacion": "Córdoba",
+          "texto": "I was hesitant about online therapy but the private space and video quality made me forget it wasn't in person."
+        }
       ]
     },
     "ctaFinal": {

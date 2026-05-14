@@ -18,7 +18,7 @@ const META = {
   clinico: { Icon: Stethoscope, accent: "#32b9cc", num: "01" },
   psicologia: { Icon: Brain, accent: "#32b9cc", num: "02" },
   nutricion: { Icon: Apple, accent: "#32b9cc", num: "03" },
-  guardia: { Icon: ShieldCheck, accent: "#32b9cc", num: "04" },
+  guardia: { Icon: ShieldCheck, accent: "#EF4444", num: "04" },
 };
 
 export default function ConsultasTabs() {
@@ -38,9 +38,15 @@ export default function ConsultasTabs() {
       descripcion: t("consultasTabs.especialidades.clinico_desc"),
       features: [
         { icon: FileText, text: t("consultasTabs.especialidades.clinico_f1") },
-        { icon: ClipboardList, text: t("consultasTabs.especialidades.clinico_f2") },
+        {
+          icon: ClipboardList,
+          text: t("consultasTabs.especialidades.clinico_f2"),
+        },
         { icon: Monitor, text: t("consultasTabs.especialidades.clinico_f3") },
-        { icon: ShoppingBag, text: t("consultasTabs.especialidades.clinico_f4") },
+        {
+          icon: ShoppingBag,
+          text: t("consultasTabs.especialidades.clinico_f4"),
+        },
       ],
       precio: "55.000",
       moneda: "$",
@@ -51,10 +57,22 @@ export default function ConsultasTabs() {
       label: t("consultasTabs.especialidades.psicologia_label"),
       descripcion: t("consultasTabs.especialidades.psicologia_desc"),
       features: [
-        { icon: FileText, text: t("consultasTabs.especialidades.psicologia_f1") },
-        { icon: ClipboardList, text: t("consultasTabs.especialidades.psicologia_f2") },
-        { icon: Monitor, text: t("consultasTabs.especialidades.psicologia_f3") },
-        { icon: ShoppingBag, text: t("consultasTabs.especialidades.psicologia_f4") },
+        {
+          icon: FileText,
+          text: t("consultasTabs.especialidades.psicologia_f1"),
+        },
+        {
+          icon: ClipboardList,
+          text: t("consultasTabs.especialidades.psicologia_f2"),
+        },
+        {
+          icon: Monitor,
+          text: t("consultasTabs.especialidades.psicologia_f3"),
+        },
+        {
+          icon: ShoppingBag,
+          text: t("consultasTabs.especialidades.psicologia_f4"),
+        },
       ],
       precio: "60.000",
       moneda: "$",
@@ -65,10 +83,19 @@ export default function ConsultasTabs() {
       label: t("consultasTabs.especialidades.nutricion_label"),
       descripcion: t("consultasTabs.especialidades.nutricion_desc"),
       features: [
-        { icon: FileText, text: t("consultasTabs.especialidades.nutricion_f1") },
-        { icon: ClipboardList, text: t("consultasTabs.especialidades.nutricion_f2") },
+        {
+          icon: FileText,
+          text: t("consultasTabs.especialidades.nutricion_f1"),
+        },
+        {
+          icon: ClipboardList,
+          text: t("consultasTabs.especialidades.nutricion_f2"),
+        },
         { icon: Monitor, text: t("consultasTabs.especialidades.nutricion_f3") },
-        { icon: ShoppingBag, text: t("consultasTabs.especialidades.nutricion_f4") },
+        {
+          icon: ShoppingBag,
+          text: t("consultasTabs.especialidades.nutricion_f4"),
+        },
       ],
       precio: "50.000",
       moneda: "$",
@@ -80,9 +107,15 @@ export default function ConsultasTabs() {
       descripcion: t("consultasTabs.especialidades.guardia_desc"),
       features: [
         { icon: FileText, text: t("consultasTabs.especialidades.guardia_f1") },
-        { icon: ClipboardList, text: t("consultasTabs.especialidades.guardia_f2") },
+        {
+          icon: ClipboardList,
+          text: t("consultasTabs.especialidades.guardia_f2"),
+        },
         { icon: Monitor, text: t("consultasTabs.especialidades.guardia_f3") },
-        { icon: ShoppingBag, text: t("consultasTabs.especialidades.guardia_f4") },
+        {
+          icon: ShoppingBag,
+          text: t("consultasTabs.especialidades.guardia_f4"),
+        },
       ],
       precio: "45.000",
       moneda: "$",

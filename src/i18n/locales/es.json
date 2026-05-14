@@ -4,15 +4,18 @@
     "profesionales": "Profesionales",
     "empresas": "Empresas",
     "login": "Iniciar sesión",
+    "blog": "Blog",
     "cta_pacientes": "Solicitar turno →",
     "cta_profesionales": "Crear mi perfil →",
     "cta_empresas": "Solicitar demo →",
-    "menu_aria": "Menú"
+    "menu_aria": "Menú",
+    "especialidades_label": "Especialidades",
+    "psicologia": "Psicología"
   },
   "heroPacientes": {
     "badge": "Disponible 24/7 · 365 días",
-    "titulo": "Atención médica online cuando",
-    "titulo_accent": "más lo necesitás.",
+    "titulo": "Consultá con un medico hoy.",
+    "titulo_accent": "Sin esperar semanas.",
     "subtitulo": "Médicos, psicólogos y especialistas disponibles en minutos. Sin filas, sin traslados. Desde tu celular o computadora.",
     "cta_primary": "Solicitar turno",
     "cta_secondary": "Buscar especialista",
@@ -92,7 +95,7 @@
       "nutricion_f2": "Seguimiento de peso",
       "nutricion_f3": "Videoconsulta HD",
       "nutricion_f4": "Lista de compras",
-      "guardia_label": "Guardia ENT",
+      "guardia_label": "Guardia 24/7",
       "guardia_desc": "Atención de urgencias las 24hs con médicos de guardia.",
       "guardia_f1": "Atención inmediata",
       "guardia_f2": "Derivación si es necesario",
@@ -304,7 +307,14 @@
     "titulo": "Un ecosistema completo de",
     "titulo_accent": "salud digital",
     "subtitulo": "Desde la atención remota hasta la presencia física con tecnología. Cuatro soluciones que se complementan entre sí.",
-    "sensores": ["ECG", "SpO2", "Presión arterial", "Temperatura", "Otoscopio digital", "Videoconsulta"],
+    "sensores": [
+      "ECG",
+      "SpO2",
+      "Presión arterial",
+      "Temperatura",
+      "Otoscopio digital",
+      "Videoconsulta"
+    ],
     "acreditaciones": ["BARDA", "UCSF", "CHIME", "Health 2.0"],
     "totem": {
       "badge": "Presencial + IA",
@@ -620,16 +630,40 @@
       "tab_pacientes": "Para pacientes",
       "tab_profesionales": "Para psicólogos",
       "pacientes": [
-        { "titulo": "Sin sala de espera", "desc": "Consultá desde cualquier lugar, en el momento que lo necesitás, sin demoras." },
-        { "titulo": "Privacidad garantizada", "desc": "Tus sesiones son confidenciales. Tu información médica está encriptada y protegida." },
-        { "titulo": "Seguimiento continuo", "desc": "Tu psicólogo conoce tu historial y evolución en cada sesión, sin empezar de cero." },
-        { "titulo": "Sin obra social", "desc": "Accedé a atención psicológica sin cobertura médica ni trámites previos." }
+        {
+          "titulo": "Sin sala de espera",
+          "desc": "Consultá desde cualquier lugar, en el momento que lo necesitás, sin demoras."
+        },
+        {
+          "titulo": "Privacidad garantizada",
+          "desc": "Tus sesiones son confidenciales. Tu información médica está encriptada y protegida."
+        },
+        {
+          "titulo": "Seguimiento continuo",
+          "desc": "Tu psicólogo conoce tu historial y evolución en cada sesión, sin empezar de cero."
+        },
+        {
+          "titulo": "Sin obra social",
+          "desc": "Accedé a atención psicológica sin cobertura médica ni trámites previos."
+        }
       ],
       "profesionales": [
-        { "titulo": "Agenda automática", "desc": "Los pacientes reservan y pagan solos. Vos solo aparecés a dar la sesión." },
-        { "titulo": "Notas de sesión", "desc": "Registrá diagnósticos, evolución y observaciones de cada paciente de forma organizada." },
-        { "titulo": "Cobros sin fricción", "desc": "Recibís el pago de cada sesión automáticamente, sin gestión manual ni comisiones." },
-        { "titulo": "Métricas de crecimiento", "desc": "Seguí tus consultas, ingresos y evolución de pacientes desde un panel centralizado." }
+        {
+          "titulo": "Agenda automática",
+          "desc": "Los pacientes reservan y pagan solos. Vos solo aparecés a dar la sesión."
+        },
+        {
+          "titulo": "Notas de sesión",
+          "desc": "Registrá diagnósticos, evolución y observaciones de cada paciente de forma organizada."
+        },
+        {
+          "titulo": "Cobros sin fricción",
+          "desc": "Recibís el pago de cada sesión automáticamente, sin gestión manual ni comisiones."
+        },
+        {
+          "titulo": "Métricas de crecimiento",
+          "desc": "Seguí tus consultas, ingresos y evolución de pacientes desde un panel centralizado."
+        }
       ]
     },
     "herramientas": {
@@ -638,20 +672,50 @@
       "titulo_accent": "la salud mental",
       "subtitulo": "Todo lo que necesitás para dar la mejor atención psicológica, sin fricciones administrativas.",
       "items": [
-        { "titulo": "Videoconsulta HD privada", "desc": "Sala virtual segura con calidad de imagen y audio profesional para cada sesión." },
-        { "titulo": "Notas de sesión digitales", "desc": "Registrá evolución, diagnósticos y observaciones con estructura clínica organizada." },
-        { "titulo": "Historia clínica psicológica", "desc": "Historial completo por paciente, accesible desde cualquier dispositivo en cualquier momento." },
-        { "titulo": "Agenda inteligente", "desc": "Los pacientes reservan según tu disponibilidad. Sin coordinación manual de tu parte." },
-        { "titulo": "Cobros automáticos", "desc": "El pago se acredita en tu cuenta cada semana. Sin comisiones ni sorpresas." },
-        { "titulo": "Panel de métricas", "desc": "Consultas, ingresos, retención de pacientes y más. Datos para crecer con intención." }
+        {
+          "titulo": "Videoconsulta HD privada",
+          "desc": "Sala virtual segura con calidad de imagen y audio profesional para cada sesión."
+        },
+        {
+          "titulo": "Notas de sesión digitales",
+          "desc": "Registrá evolución, diagnósticos y observaciones con estructura clínica organizada."
+        },
+        {
+          "titulo": "Historia clínica psicológica",
+          "desc": "Historial completo por paciente, accesible desde cualquier dispositivo en cualquier momento."
+        },
+        {
+          "titulo": "Agenda inteligente",
+          "desc": "Los pacientes reservan según tu disponibilidad. Sin coordinación manual de tu parte."
+        },
+        {
+          "titulo": "Cobros automáticos",
+          "desc": "El pago se acredita en tu cuenta cada semana. Sin comisiones ni sorpresas."
+        },
+        {
+          "titulo": "Panel de métricas",
+          "desc": "Consultas, ingresos, retención de pacientes y más. Datos para crecer con intención."
+        }
       ]
     },
     "testimonios": {
       "titulo_accent": "dicen sobre la psicología online",
       "items": [
-        { "nombre": "Valeria M.", "ubicacion": "Buenos Aires", "texto": "Empecé por necesidad y no lo cambiaría por nada. En 5 minutos estaba hablando con una psicóloga increíble. Lo recomiendo a todos." },
-        { "nombre": "Lic. Camila Reyes", "ubicacion": "Psicóloga · Mendoza", "texto": "Tripliqué mis sesiones en dos meses. La agenda automática me liberó de horas de coordinación. Ahora me enfoco solo en mis pacientes." },
-        { "nombre": "Santiago P.", "ubicacion": "Córdoba", "texto": "Tenía resistencia a la terapia online pero el espacio privado y la calidad de la videollamada me hicieron olvidar que no era presencial." }
+        {
+          "nombre": "Valeria M.",
+          "ubicacion": "Buenos Aires",
+          "texto": "Empecé por necesidad y no lo cambiaría por nada. En 5 minutos estaba hablando con una psicóloga increíble. Lo recomiendo a todos."
+        },
+        {
+          "nombre": "Lic. Camila Reyes",
+          "ubicacion": "Psicóloga · Mendoza",
+          "texto": "Tripliqué mis sesiones en dos meses. La agenda automática me liberó de horas de coordinación. Ahora me enfoco solo en mis pacientes."
+        },
+        {
+          "nombre": "Santiago P.",
+          "ubicacion": "Córdoba",
+          "texto": "Tenía resistencia a la terapia online pero el espacio privado y la calidad de la videollamada me hicieron olvidar que no era presencial."
+        }
       ]
     },
     "ctaFinal": {
