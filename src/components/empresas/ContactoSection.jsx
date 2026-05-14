@@ -24,7 +24,7 @@ export default function ContactoSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section id="contacto" className="relative py-24 overflow-hidden bg-white">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full blur-[140px]"

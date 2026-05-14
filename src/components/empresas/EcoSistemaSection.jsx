@@ -118,7 +118,7 @@ export default function EcosistemaSection() {
   const count = useCountUp(27, v2);
 
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section id="plataforma" className="relative py-24 overflow-hidden bg-white">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full blur-[140px]"

@@ -12,7 +12,7 @@ export default function OrganizacionesSection() {
   const org = organizaciones.find((o) => o.id === activeId) ?? organizaciones[0];
 
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section id="organizaciones" className="relative py-24 overflow-hidden bg-white">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full blur-[140px]"

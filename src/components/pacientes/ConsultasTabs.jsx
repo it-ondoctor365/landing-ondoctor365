@@ -127,7 +127,7 @@ export default function ConsultasTabs() {
   const { Icon: SpecIcon, accent, num } = META[activeTab];
 
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section id="tipos-consulta" className="relative py-24 overflow-hidden bg-white">
       {/* Animated background orbs — shift with tab */}
       <AnimatePresence>
         <motion.div

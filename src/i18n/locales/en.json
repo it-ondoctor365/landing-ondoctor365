@@ -10,7 +10,21 @@
     "cta_empresas": "Request demo →",
     "menu_aria": "Menu",
     "especialidades_label": "Specialties",
-    "psicologia": "Psychology"
+    "psicologia": "Psychology",
+    "tipos_consulta": "Types of consultation",
+    "como_funciona": "How it works",
+    "beneficios": "Benefits",
+    "testimonios": "Testimonials",
+    "especialistas": "Specialists",
+    "preguntas_frecuentes": "FAQs",
+    "como_unirse": "How to join",
+    "herramientas": "Tools",
+    "metricas": "Metrics",
+    "planes_precios": "Plans & pricing",
+    "el_problema": "The problem",
+    "organizaciones": "Company types",
+    "la_plataforma": "The platform",
+    "contacto": "Contact"
   },
   "heroPacientes": {
     "badge": "Available 24/7 · 365 days",
@@ -603,9 +617,29 @@
     ]
   },
   "footer": {
-    "privacidad": "Privacy Policy",
-    "nosotros": "About Us",
-    "contacto": "Contact"
+    "tagline": "Telemedicine and digital health. Doctors, psychologists and nutritionists available online, 365 days a year.",
+    "col_pacientes": "FOR PATIENTS",
+    "col_profesionales": "FOR PROFESSIONALS",
+    "col_empresas": "FOR COMPANIES",
+    "col_contacto": "CONTACT",
+    "tipos_consulta": "Types of consultation",
+    "como_funciona": "How it works",
+    "beneficios": "Benefits",
+    "testimonios": "Testimonials",
+    "preguntas_frecuentes": "FAQs",
+    "como_unirse": "How to join",
+    "herramientas": "Tools",
+    "planes_precios": "Plans & pricing",
+    "psicologia": "Psychology",
+    "la_plataforma": "The platform",
+    "tipos_organizacion": "Organization types",
+    "solicitar_demo": "Request demo",
+    "blog": "Blog",
+    "email": "info@ondoctor365.com",
+    "telefono": "+54 9 11 3991-1073",
+    "derechos": "All rights reserved. · Mar del Plata, Argentina",
+    "terminos": "Terms & conditions",
+    "privacidad": "Privacy policy"
   },
   "psicologia": {
     "hero": {

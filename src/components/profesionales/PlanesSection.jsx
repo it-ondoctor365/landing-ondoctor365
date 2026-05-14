@@ -11,7 +11,7 @@ export default function PlanesSection() {
   const planes = t("planes.items", { returnObjects: true });
 
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section id="planes" className="relative py-24 overflow-hidden bg-white">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full blur-[140px]"

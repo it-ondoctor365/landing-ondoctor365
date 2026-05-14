@@ -10,7 +10,21 @@
     "cta_empresas": "Solicitar demo →",
     "menu_aria": "Menú",
     "especialidades_label": "Especialidades",
-    "psicologia": "Psicología"
+    "psicologia": "Psicología",
+    "tipos_consulta": "Tipos de consulta",
+    "como_funciona": "Cómo funciona",
+    "beneficios": "Beneficios",
+    "testimonios": "Testimonios",
+    "especialistas": "Especialistas",
+    "preguntas_frecuentes": "Preguntas frecuentes",
+    "como_unirse": "Cómo unirse",
+    "herramientas": "Herramientas",
+    "metricas": "Métricas",
+    "planes_precios": "Planes y precios",
+    "el_problema": "El problema",
+    "organizaciones": "Tipos de empresa",
+    "la_plataforma": "La plataforma",
+    "contacto": "Contacto"
   },
   "heroPacientes": {
     "badge": "Disponible 24/7 · 365 días",
@@ -603,9 +617,29 @@
     ]
   },
   "footer": {
-    "privacidad": "Política de Privacidad",
-    "nosotros": "Nosotros",
-    "contacto": "Contacto"
+    "tagline": "Telemedicina y salud digital. Médicos, psicólogos y nutricionistas disponibles online, los 365 días del año.",
+    "col_pacientes": "PARA PACIENTES",
+    "col_profesionales": "PARA PROFESIONALES",
+    "col_empresas": "PARA EMPRESAS",
+    "col_contacto": "CONTACTO",
+    "tipos_consulta": "Tipos de consulta",
+    "como_funciona": "Cómo funciona",
+    "beneficios": "Beneficios",
+    "testimonios": "Testimonios",
+    "preguntas_frecuentes": "Preguntas frecuentes",
+    "como_unirse": "Cómo unirse",
+    "herramientas": "Herramientas",
+    "planes_precios": "Planes y precios",
+    "psicologia": "Psicología",
+    "la_plataforma": "La plataforma",
+    "tipos_organizacion": "Tipos de organización",
+    "solicitar_demo": "Solicitar demo",
+    "blog": "Blog",
+    "email": "info@ondoctor365.com",
+    "telefono": "+54 9 11 3991-1073",
+    "derechos": "Todos los derechos reservados. · Mar del Plata, Argentina",
+    "terminos": "Términos y condiciones",
+    "privacidad": "Política de privacidad"
   },
   "psicologia": {
     "hero": {

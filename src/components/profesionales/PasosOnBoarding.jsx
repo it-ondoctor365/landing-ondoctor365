@@ -11,7 +11,7 @@ export default function PasosOnboarding() {
   const pasos = t("pasosOnboarding.items", { returnObjects: true });
 
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section id="como-unirse" className="relative py-24 overflow-hidden bg-white">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full blur-[140px]"

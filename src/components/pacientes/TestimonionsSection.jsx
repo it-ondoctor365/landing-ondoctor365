@@ -36,7 +36,7 @@ export default function TestimoniosSection({ badge, titulo, tituloAccent, testim
   const testimonios = testimoniosProp ?? t("testimonios.items", { returnObjects: true });
 
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section id="testimonios" className="relative py-24 overflow-hidden bg-white">
       {/* Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div

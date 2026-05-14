@@ -30,7 +30,7 @@ export default function PasosSection() {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section id="como-funciona" className="relative py-24 overflow-hidden bg-white">
       {/* Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div

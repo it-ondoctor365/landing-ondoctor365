@@ -12,7 +12,7 @@ export default function ProblemaSection() {
   const soluciones = t("problemas.solucion.items", { returnObjects: true });
 
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section id="problema" className="relative py-24 overflow-hidden bg-white">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full blur-[140px]"

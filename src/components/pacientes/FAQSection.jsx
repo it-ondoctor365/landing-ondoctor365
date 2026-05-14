@@ -64,7 +64,7 @@ export default function FAQSection({ badge, titulo, tituloAccent, faqs: faqsProp
   const faqs = faqsProp ?? t("faq.items", { returnObjects: true });
 
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section id="faq" className="relative py-24 overflow-hidden bg-white">
       {/* Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div

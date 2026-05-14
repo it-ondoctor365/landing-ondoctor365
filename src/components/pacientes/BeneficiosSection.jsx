@@ -32,7 +32,7 @@ export default function BeneficiosSection() {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section id="beneficios" className="relative py-24 overflow-hidden bg-white">
       {/* Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div

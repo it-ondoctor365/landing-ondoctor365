@@ -10,13 +10,25 @@ export default function Navbar() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [mobileAccordion, setMobileAccordion] = useState(null);
 
   const NAV_ITEMS = [
     {
       key: "pacientes",
       label: t("navbar.pacientes"),
       path: "/pacientes",
-      dropdown: [],
+      dropdown: [
+        {
+          section: "",
+          links: [
+            { label: t("navbar.tipos_consulta"), path: "/pacientes#tipos-consulta" },
+            { label: t("navbar.como_funciona"), path: "/pacientes#como-funciona" },
+            { label: t("navbar.beneficios"), path: "/pacientes#beneficios" },
+            { label: t("navbar.testimonios"), path: "/pacientes#testimonios" },
+            { label: t("navbar.preguntas_frecuentes"), path: "/pacientes#faq" },
+          ],
+        },
+      ],
     },
     {
       key: "profesionales",
@@ -24,9 +36,23 @@ export default function Navbar() {
       path: "/profesionales",
       dropdown: [
         {
+          section: "",
+          links: [
+            { label: t("navbar.como_unirse"), path: "/profesionales#como-unirse" },
+            { label: t("navbar.herramientas"), path: "/profesionales#herramientas" },
+            { label: t("navbar.metricas"), path: "/profesionales#metricas" },
+            { label: t("navbar.planes_precios"), path: "/profesionales#planes" },
+            { label: t("navbar.testimonios"), path: "/profesionales#testimonios" },
+            { label: t("navbar.preguntas_frecuentes"), path: "/profesionales#faq" },
+          ],
+        },
+        {
           section: t("navbar.especialidades_label"),
           links: [
-            { label: t("navbar.psicologia"), path: "/especialidades/psicologia" },
+            {
+              label: t("navbar.psicologia"),
+              path: "/especialidades/psicologia",
+            },
           ],
         },
       ],
@@ -35,13 +61,26 @@ export default function Navbar() {
       key: "empresas",
       label: t("navbar.empresas"),
       path: "/empresas",
-      dropdown: [],
+      dropdown: [
+        {
+          section: "",
+          links: [
+            { label: t("navbar.el_problema"), path: "/empresas#problema" },
+            { label: t("navbar.la_plataforma"), path: "/empresas#plataforma" },
+            { label: t("navbar.organizaciones"), path: "/empresas#organizaciones" },
+            { label: t("navbar.testimonios"), path: "/empresas#testimonios" },
+            { label: t("navbar.preguntas_frecuentes"), path: "/empresas#faq" },
+            { label: t("navbar.contacto"), path: "/empresas#contacto" },
+          ],
+        },
+      ],
     },
   ];
 
   function handleNavClick(path) {
     setMenuOpen(false);
     setOpenDropdown(null);
+    setMobileAccordion(null);
     if (location.pathname === path) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
@@ -49,12 +88,19 @@ export default function Navbar() {
     }
   }
 
+  function handleAnchorClick(e, path) {
+    e.preventDefault();
+    setMenuOpen(false);
+    setOpenDropdown(null);
+    navigate(path);
+  }
+
   const ctaLabel =
     location.pathname === "/profesionales"
       ? t("navbar.cta_profesionales")
       : location.pathname === "/empresas"
-      ? t("navbar.cta_empresas")
-      : t("navbar.cta_pacientes");
+        ? t("navbar.cta_empresas")
+        : t("navbar.cta_pacientes");
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
@@ -81,9 +127,7 @@ export default function Navbar() {
               <div
                 key={key}
                 className="relative"
-                onMouseEnter={() =>
-                  setOpenDropdown(hasDropdown ? key : null)
-                }
+                onMouseEnter={() => setOpenDropdown(hasDropdown ? key : null)}
               >
                 <NavLink
                   to={path}
@@ -108,25 +152,20 @@ export default function Navbar() {
                   <div className="absolute top-full left-0 mt-1 bg-white rounded-xl shadow-lg border border-gray-100 py-3 min-w-[180px]">
                     {dropdown.map(({ section, links }) => (
                       <div key={section}>
-                        <p className="px-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                          {section}
-                        </p>
+                        {section && (
+                          <p className="px-4 pt-2 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                            {section}
+                          </p>
+                        )}
                         {links.map(({ label: linkLabel, path: linkPath }) => (
-                          <NavLink
+                          <a
                             key={linkPath}
-                            to={linkPath}
-                            onClick={() => handleNavClick(linkPath)}
-                            className={({ isActive }) =>
-                              `block px-4 py-2 text-sm transition-colors duration-150
-                              ${
-                                isActive
-                                  ? "text-primary font-medium"
-                                  : "text-gray-700 hover:text-primary hover:bg-gray-50"
-                              }`
-                            }
+                            href={linkPath}
+                            onClick={(e) => handleAnchorClick(e, linkPath)}
+                            className="block px-4 py-2 text-sm transition-colors duration-150 text-gray-700 hover:text-primary hover:bg-gray-50"
                           >
                             {linkLabel}
-                          </NavLink>
+                          </a>
                         ))}
                       </div>
                     ))}
@@ -142,7 +181,7 @@ export default function Navbar() {
           <LanguageSwitcher />
           <Link
             to="/blog"
-            className="text-sm font-medium text-gray-500 hover:text-primary transition-colors"
+            className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
           >
             {t("navbar.blog")}
           </Link>
@@ -168,52 +207,60 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-3">
           <nav className="flex flex-col gap-1">
-            {NAV_ITEMS.map(({ key, label, path, dropdown }) => (
-              <div key={key}>
-                <NavLink
-                  to={path}
-                  onClick={() => handleNavClick(path)}
-                  className={({ isActive }) =>
-                    `block px-4 py-3 rounded-xl text-sm font-medium transition-colors duration-200
-                    ${
-                      isActive
-                        ? "bg-primary/10 text-primary"
-                        : "text-gray-600 hover:bg-gray-100"
-                    }`
-                  }
-                >
-                  {label}
-                </NavLink>
-                {dropdown.length > 0 && (
-                  <div className="ml-4 mt-1 flex flex-col gap-1">
-                    {dropdown.map(({ section, links }) => (
-                      <div key={section}>
-                        <p className="px-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                          {section}
-                        </p>
-                        {links.map(({ label: linkLabel, path: linkPath }) => (
-                          <NavLink
-                            key={linkPath}
-                            to={linkPath}
-                            onClick={() => handleNavClick(linkPath)}
-                            className={({ isActive }) =>
-                              `block px-4 py-2 text-sm rounded-lg transition-colors duration-150
-                              ${
-                                isActive
-                                  ? "text-primary font-medium"
-                                  : "text-gray-600 hover:bg-gray-100"
-                              }`
-                            }
-                          >
-                            {linkLabel}
-                          </NavLink>
-                        ))}
-                      </div>
-                    ))}
+            {NAV_ITEMS.map(({ key, label, path, dropdown }) => {
+              const isOpen = mobileAccordion === key;
+              return (
+                <div key={key}>
+                  <div className="flex items-center gap-1">
+                    <NavLink
+                      to={path}
+                      onClick={() => handleNavClick(path)}
+                      className={({ isActive }) =>
+                        `flex-1 px-4 py-3 rounded-xl text-sm font-medium transition-colors duration-200
+                        ${isActive ? "bg-primary/10 text-primary" : "text-gray-600 hover:bg-gray-100"}`
+                      }
+                    >
+                      {label}
+                    </NavLink>
+                    {dropdown.length > 0 && (
+                      <button
+                        onClick={() => setMobileAccordion(isOpen ? null : key)}
+                        className="p-2 rounded-xl text-gray-400 hover:text-primary hover:bg-gray-100 transition-colors"
+                        aria-label="Expandir"
+                      >
+                        <ChevronDown
+                          size={16}
+                          className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                        />
+                      </button>
+                    )}
                   </div>
-                )}
-              </div>
-            ))}
+                  {dropdown.length > 0 && isOpen && (
+                    <div className="ml-4 mt-1 flex flex-col gap-1">
+                      {dropdown.map(({ section, links }) => (
+                        <div key={section}>
+                          {section && (
+                            <p className="px-4 pt-2 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                              {section}
+                            </p>
+                          )}
+                          {links.map(({ label: linkLabel, path: linkPath }) => (
+                            <a
+                              key={linkPath}
+                              href={linkPath}
+                              onClick={(e) => handleAnchorClick(e, linkPath)}
+                              className="block px-4 py-2 text-sm rounded-lg transition-colors duration-150 text-gray-600 hover:bg-gray-100"
+                            >
+                              {linkLabel}
+                            </a>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </nav>
           <div className="flex flex-col gap-2 pt-2 border-t border-gray-100">
             <div className="py-1">

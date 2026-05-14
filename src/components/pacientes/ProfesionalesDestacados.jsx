@@ -35,7 +35,7 @@ export default function ProfesionalesDestacados() {
   const profesionales = t("profesionalesDestacados.items", { returnObjects: true });
 
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section id="especialistas" className="relative py-24 overflow-hidden bg-white">
       {/* Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div

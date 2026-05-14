@@ -10,6 +10,7 @@ export default function MetricasSection() {
 
   return (
     <section
+      id="metricas"
       className="relative py-24 overflow-hidden"
       style={{ background: "#2d418e" }}
     >
