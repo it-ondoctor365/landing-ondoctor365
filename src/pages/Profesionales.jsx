@@ -18,11 +18,11 @@ export default function Profesionales() {
   return (
     <div>
       <Helmet>
-        <title>Atendé pacientes online | OnDoctor365 para profesionales</title>
-        <meta name="description" content="Sumá pacientes de todo el país sin trabajo administrativo. Agenda automática, cobros seguros y seguimiento clínico en una sola plataforma." />
+        <title>{t("pageTitles.profesionales.title")}</title>
+        <meta name="description" content={t("pageTitles.profesionales.description")} />
         <link rel="canonical" href="https://www.ondoctor365.com/profesionales" />
-        <meta property="og:title" content="Atendé pacientes online | OnDoctor365 para profesionales" />
-        <meta property="og:description" content="Sumá pacientes de todo el país sin trabajo administrativo. Agenda automática, cobros seguros y seguimiento clínico." />
+        <meta property="og:title" content={t("pageTitles.profesionales.og_title")} />
+        <meta property="og:description" content={t("pageTitles.profesionales.og_description")} />
         <meta property="og:url" content="https://www.ondoctor365.com/profesionales" />
       </Helmet>
       <HeroProfesionales />

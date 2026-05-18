@@ -1,31 +1,38 @@
-import { Search, Calendar, Video } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
 import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
+const PRIMARY = "#2d418e";
+
+const CARD_IMAGES = [
+  "/CardLogin-.png",
+  "/CardMediktor.png",
+  "/CardLlamada.png",
+];
 
 export default function PasosSection() {
   const { t } = useTranslation();
 
   const PASOS = [
     {
-      numero: "01",
-      icon: Search,
+      numero: 1,
       titulo: t("pasos.items.paso1_titulo"),
       descripcion: t("pasos.items.paso1_desc"),
+      img: CARD_IMAGES[0],
     },
     {
-      numero: "02",
-      icon: Calendar,
+      numero: 2,
       titulo: t("pasos.items.paso2_titulo"),
       descripcion: t("pasos.items.paso2_desc"),
+      img: CARD_IMAGES[1],
+      imgMaxHeight: "340px",
     },
     {
-      numero: "03",
-      icon: Video,
+      numero: 3,
       titulo: t("pasos.items.paso3_titulo"),
       descripcion: t("pasos.items.paso3_desc"),
+      img: CARD_IMAGES[2],
     },
   ];
 
@@ -39,7 +46,7 @@ export default function PasosSection() {
         />
         <div
           className="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full blur-[120px]"
-          style={{ background: "#2d418e", opacity: 0.06 }}
+          style={{ background: PRIMARY, opacity: 0.06 }}
         />
       </div>
 
@@ -47,8 +54,7 @@ export default function PasosSection() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage:
-            "radial-gradient(circle, #2d418e18 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, #2d418e18 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }}
       />
@@ -80,47 +86,44 @@ export default function PasosSection() {
           </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 relative">
-          {/* Connector line */}
-          <div
-            className="hidden md:block absolute top-[4.5rem] left-[22%] right-[22%] h-px z-0"
-            style={{
-              background: `linear-gradient(90deg, transparent, ${ACCENT}50, transparent)`,
-            }}
-          />
-
-          {PASOS.map(({ numero, icon: Icon, titulo, descripcion }, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {PASOS.map(({ numero, titulo, descripcion, img, imgMaxHeight }, i) => (
             <motion.div
               key={numero}
-              initial={{ opacity: 0, y: 22 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{
-                delay: i * 0.1,
-                duration: 0.42,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="relative z-10 rounded-3xl p-8 text-center"
-              style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}
+              transition={{ delay: i * 0.1, duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
+              className="relative rounded-3xl overflow-hidden flex flex-col"
+              style={{ background: PRIMARY }}
             >
-              <div className="flex flex-col items-center mb-4">
-                <span
-                  className="font-mono text-[10px] font-bold tracking-[0.16em] mb-2"
-                  style={{ color: ACCENT + "80" }}
-                >
-                  {numero}
-                </span>
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center"
-                  style={{ background: "#2d418e" }}
-                >
-                  <Icon size={24} style={{ color: ACCENT }} />
-                </div>
+              {/* Card image */}
+              <div className="w-full overflow-hidden" style={{ background: PRIMARY }}>
+                <img
+                  src={img}
+                  alt={titulo}
+                  className="w-full object-cover object-top"
+                  style={{ maxHeight: imgMaxHeight ?? "260px" }}
+                />
               </div>
-              <h3 className="text-primary font-bold text-lg mb-2">{titulo}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                {descripcion}
-              </p>
+
+              {/* Card content */}
+              <div className="flex flex-col flex-1 px-6 py-5 gap-2">
+                <div className="flex items-center gap-3">
+                  <span
+                    className="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
+                    style={{ background: ACCENT }}
+                  >
+                    {numero}
+                  </span>
+                  <h3 className="font-bold text-base" style={{ color: ACCENT }}>
+                    {titulo}
+                  </h3>
+                </div>
+                <p className="text-sm leading-relaxed text-blue-100/80 pl-10">
+                  {descripcion}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

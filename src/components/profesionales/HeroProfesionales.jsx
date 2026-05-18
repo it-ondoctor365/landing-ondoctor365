@@ -94,6 +94,15 @@ export default function HeroProfesionales() {
             <motion.button
               whileHover={{ scale: 1.03, y: -2 }}
               whileTap={{ scale: 0.97 }}
+              className="font-semibold px-6 py-3 rounded-2xl text-sm text-white/85"
+              style={{ border: "1px solid rgba(255,255,255,0.25)" }}
+            >
+              {t("heroProfesionales.cta_secondary")}
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.97 }}
               className="flex items-center gap-2 font-bold px-6 py-3 rounded-2xl text-sm"
               style={{
                 background: ACCENT,
@@ -103,15 +112,6 @@ export default function HeroProfesionales() {
             >
               {t("heroProfesionales.cta_primary")}
               <ArrowRight size={14} />
-            </motion.button>
-
-            <motion.button
-              whileHover={{ scale: 1.03, y: -2 }}
-              whileTap={{ scale: 0.97 }}
-              className="font-semibold px-6 py-3 rounded-2xl text-sm text-white/85"
-              style={{ border: "1px solid rgba(255,255,255,0.25)" }}
-            >
-              {t("heroProfesionales.cta_secondary")}
             </motion.button>
           </motion.div>
 

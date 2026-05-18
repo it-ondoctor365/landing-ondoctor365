@@ -69,12 +69,12 @@
     "titulo": "De la búsqueda a la consulta",
     "titulo_accent": "en 3 pasos",
     "items": {
-      "paso1_titulo": "Elegí tu especialidad",
-      "paso1_desc": "Encontrá el especialista que necesitás. Filtrá por especialidad, disponibilidad y calificaciones.",
-      "paso2_titulo": "Reservá tu turno",
-      "paso2_desc": "Seleccioná el horario que mejor te quede, confirmá tu turno y realizá el pago de forma segura.",
-      "paso3_titulo": "Consultá y seguí",
-      "paso3_desc": "Conectate con tu médico por videollamada. Recibí tu receta o diagnóstico al instante."
+      "paso1_titulo": "Ingresá a la plataforma",
+      "paso1_desc": "Creá tu cuenta o iniciá sesión desde cualquier dispositivo. Sin descargas, sin instalaciones, todo funciona desde el navegador.",
+      "paso2_titulo": "Completá el triage",
+      "paso2_desc": "Nuestro sistema de inteligencia artificial te hace preguntas rápidas sobre tus síntomas. Así el médico llega con contexto y aprovechás mejor el tiempo.",
+      "paso3_titulo": "Videollamada con tu médico",
+      "paso3_desc": "A la hora acordada, tu profesional se conecta. Recibís diagnóstico, indicaciones y receta digital con validez nacional."
     }
   },
   "consultasTabs": {
@@ -760,6 +760,45 @@
       "subtitulo": "Encontrá tu psicólogo o sumáte como profesional. Todo en un solo lugar.",
       "cta_primary": "Buscar mi psicólogo",
       "cta_secondary": "Sumarme como profesional"
+    }
+  },
+  "blog": {
+    "hero_badge": "Blog de salud digital",
+    "hero_titulo": "Información que",
+    "hero_titulo_accent": "cuida tu salud",
+    "hero_subtitulo": "Artículos sobre telemedicina, bienestar y salud digital escritos por el equipo de OnDoctor365.",
+    "read_more": "Leer artículo",
+    "back": "Volver al blog",
+    "min_read": "min de lectura",
+    "written_by": "Escrito por",
+    "empty": "Próximamente nuevos artículos."
+  },
+  "pageTitles": {
+    "pacientes": {
+      "title": "Consultas médicas online | OnDoctor365",
+      "description": "Consultá con un médico desde tu casa, en minutos y sin turnos. Especialistas verificados disponibles las 24hs. Probá OnDoctor365 gratis.",
+      "og_title": "Consultas médicas online | OnDoctor365",
+      "og_description": "Consultá con un médico desde tu casa, en minutos y sin turnos. Especialistas verificados disponibles las 24hs."
+    },
+    "profesionales": {
+      "title": "Atendé pacientes online | OnDoctor365 para profesionales",
+      "description": "Sumá pacientes de todo el país sin trabajo administrativo. Agenda automática, cobros seguros y seguimiento clínico en una sola plataforma.",
+      "og_title": "Atendé pacientes online | OnDoctor365 para profesionales",
+      "og_description": "Sumá pacientes de todo el país sin trabajo administrativo. Agenda automática, cobros seguros y seguimiento clínico."
+    },
+    "empresas": {
+      "title": "Salud corporativa para empresas | OnDoctor365",
+      "description": "Reducí el ausentismo y mejorá el bienestar de tu equipo con telemedicina empresarial. Implementación en 48hs, integración con obras sociales y reportes de uso.",
+      "og_title": "Salud corporativa para empresas | OnDoctor365",
+      "og_description": "Reducí el ausentismo y mejorá el bienestar de tu equipo con telemedicina empresarial. Implementación en 48hs."
+    },
+    "psicologia": {
+      "title": "Psicología Online | OnDoctor365",
+      "description": "Consultá con psicólogos certificados en minutos, sin filas ni traslados. También para psicólogos que quieren expandir su práctica online."
+    },
+    "blog": {
+      "title": "Blog de salud digital | OnDoctor365",
+      "description": "Artículos sobre telemedicina, bienestar y salud digital escritos por el equipo de OnDoctor365."
     }
   }
 }

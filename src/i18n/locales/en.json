@@ -69,12 +69,12 @@
     "titulo": "From search to consultation",
     "titulo_accent": "in 3 steps",
     "items": {
-      "paso1_titulo": "Choose your specialty",
-      "paso1_desc": "Find the specialist you need. Filter by specialty, availability and ratings.",
-      "paso2_titulo": "Book your appointment",
-      "paso2_desc": "Select the time that works best for you, confirm your appointment and pay securely.",
-      "paso3_titulo": "Consult and follow up",
-      "paso3_desc": "Connect with your doctor via video call. Receive your prescription or diagnosis instantly."
+      "paso1_titulo": "Log in to the platform",
+      "paso1_desc": "Create your account or log in from any device. No downloads, no installations — everything works from the browser.",
+      "paso2_titulo": "Complete the triage",
+      "paso2_desc": "Our AI system asks you quick questions about your symptoms so your doctor arrives prepared and you make the most of the session.",
+      "paso3_titulo": "Video call with your doctor",
+      "paso3_desc": "At the agreed time, your professional connects. You receive a diagnosis, instructions, and a digital prescription valid nationwide."
     }
   },
   "consultasTabs": {
@@ -760,6 +760,45 @@
       "subtitulo": "Find your psychologist or join as a professional. All in one place.",
       "cta_primary": "Find my psychologist",
       "cta_secondary": "Join as a professional"
+    }
+  },
+  "blog": {
+    "hero_badge": "Digital health blog",
+    "hero_titulo": "Information that",
+    "hero_titulo_accent": "cares for your health",
+    "hero_subtitulo": "Articles on telemedicine, wellness, and digital health written by the OnDoctor365 team.",
+    "read_more": "Read article",
+    "back": "Back to blog",
+    "min_read": "min read",
+    "written_by": "Written by",
+    "empty": "New articles coming soon."
+  },
+  "pageTitles": {
+    "pacientes": {
+      "title": "Online Medical Consultations | OnDoctor365",
+      "description": "Consult a doctor from home in minutes, no appointment needed. Verified specialists available 24/7. Try OnDoctor365 for free.",
+      "og_title": "Online Medical Consultations | OnDoctor365",
+      "og_description": "Consult a doctor from home in minutes, no appointment needed. Verified specialists available 24/7."
+    },
+    "profesionales": {
+      "title": "Treat patients online | OnDoctor365 for professionals",
+      "description": "Gain patients from across the country with zero admin work. Automatic scheduling, secure payments, and clinical tracking in one platform.",
+      "og_title": "Treat patients online | OnDoctor365 for professionals",
+      "og_description": "Gain patients from across the country with zero admin work. Automatic scheduling, secure payments, and clinical tracking."
+    },
+    "empresas": {
+      "title": "Corporate health for companies | OnDoctor365",
+      "description": "Reduce absenteeism and improve your team's well-being with corporate telemedicine. Live in 48hs, integrated with health plans and usage reports.",
+      "og_title": "Corporate health for companies | OnDoctor365",
+      "og_description": "Reduce absenteeism and improve your team's well-being with corporate telemedicine. Live in 48hs."
+    },
+    "psicologia": {
+      "title": "Online Psychology | OnDoctor365",
+      "description": "Consult certified psychologists in minutes, no queues or travel. Also for psychologists looking to expand their online practice."
+    },
+    "blog": {
+      "title": "Digital Health Blog | OnDoctor365",
+      "description": "Articles on telemedicine, wellness, and digital health written by the OnDoctor365 team."
     }
   }
 }

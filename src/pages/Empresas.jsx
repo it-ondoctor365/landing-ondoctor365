@@ -18,11 +18,11 @@ export default function Empresas() {
   return (
     <div>
       <Helmet>
-        <title>Salud corporativa para empresas | OnDoctor365</title>
-        <meta name="description" content="Reducí el ausentismo y mejorá el bienestar de tu equipo con telemedicina empresarial. Implementación en 48hs, integración con obras sociales y reportes de uso." />
+        <title>{t("pageTitles.empresas.title")}</title>
+        <meta name="description" content={t("pageTitles.empresas.description")} />
         <link rel="canonical" href="https://www.ondoctor365.com/empresas" />
-        <meta property="og:title" content="Salud corporativa para empresas | OnDoctor365" />
-        <meta property="og:description" content="Reducí el ausentismo y mejorá el bienestar de tu equipo con telemedicina empresarial. Implementación en 48hs." />
+        <meta property="og:title" content={t("pageTitles.empresas.og_title")} />
+        <meta property="og:description" content={t("pageTitles.empresas.og_description")} />
         <meta property="og:url" content="https://www.ondoctor365.com/empresas" />
       </Helmet>
       <HeroEmpresas />

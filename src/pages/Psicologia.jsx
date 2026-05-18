@@ -14,8 +14,8 @@ export default function Psicologia() {
   return (
     <div>
       <Helmet>
-        <title>Psicología Online | OnDoctor365</title>
-        <meta name="description" content="Consultá con psicólogos certificados en minutos, sin filas ni traslados. También para psicólogos que quieren expandir su práctica online." />
+        <title>{t("pageTitles.psicologia.title")}</title>
+        <meta name="description" content={t("pageTitles.psicologia.description")} />
         <link rel="canonical" href="https://www.ondoctor365.com/especialidades/psicologia" />
       </Helmet>
       <HeroPsicologia />

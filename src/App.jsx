@@ -7,6 +7,8 @@ import Pacientes from "./pages/Pacientes";
 import Profesionales from "./pages/Profesionales";
 import Empresas from "./pages/Empresas";
 import Psicologia from "./pages/Psicologia";
+import Blog from "./pages/Blog";
+import BlogPostPage from "./pages/BlogPostPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -50,6 +52,8 @@ export default function App() {
             <Route path="/profesionales" element={<Profesionales />} />
             <Route path="/empresas" element={<Empresas />} />
             <Route path="/especialidades/psicologia" element={<Psicologia />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
           </Routes>
         </main>
         <Footer />
