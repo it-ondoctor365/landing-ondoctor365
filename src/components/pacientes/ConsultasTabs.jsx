@@ -16,8 +16,8 @@ import { useTranslation } from "react-i18next";
 
 const META = {
   clinico: { Icon: Stethoscope, accent: "#32b9cc", num: "01" },
-  psicologia: { Icon: Brain, accent: "#32b9cc", num: "02" },
-  nutricion: { Icon: Apple, accent: "#32b9cc", num: "03" },
+  psicologia: { Icon: Brain, accent: "#a78bfa", num: "02" },
+  nutricion: { Icon: Apple, accent: "#4ade80", num: "03" },
   guardia: { Icon: ShieldCheck, accent: "#EF4444", num: "04" },
 };
 
@@ -127,7 +127,10 @@ export default function ConsultasTabs() {
   const { Icon: SpecIcon, accent, num } = META[activeTab];
 
   return (
-    <section id="tipos-consulta" className="relative py-24 overflow-hidden bg-white">
+    <section
+      id="tipos-consulta"
+      className="relative py-24 overflow-hidden bg-white"
+    >
       {/* Animated background orbs — shift with tab */}
       <AnimatePresence>
         <motion.div

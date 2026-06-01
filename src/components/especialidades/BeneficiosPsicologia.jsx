@@ -3,7 +3,7 @@ import { Clock, Shield, Heart, FileCheck, Calendar, FileText, Banknote, BarChart
 import { useTranslation } from "react-i18next";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "../ui/AnimatedSection";
 
-const ACCENT = "#32b9cc";
+const ACCENT = "#a78bfa";
 const PRIMARY = "#2d418e";
 
 const PATIENT_ICONS = [Clock, Shield, Heart, FileCheck];

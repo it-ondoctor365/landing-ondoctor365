@@ -3,7 +3,7 @@ import { Video, FileText, BookOpen, Calendar, Banknote, BarChart2 } from "lucide
 import { useTranslation } from "react-i18next";
 import { AnimatedSection } from "../ui/AnimatedSection";
 
-const ACCENT = "#32b9cc";
+const ACCENT = "#a78bfa";
 const PRIMARY = "#2d418e";
 
 const ICONS = [Video, FileText, BookOpen, Calendar, Banknote, BarChart2];

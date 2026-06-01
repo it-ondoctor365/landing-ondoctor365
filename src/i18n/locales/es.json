@@ -34,8 +34,8 @@
     "cta_primary": "Solicitar turno",
     "cta_secondary": "Buscar especialista",
     "stats": {
-      "pacientes_value": "+15K",
-      "pacientes_label": "Pacientes atendidos",
+      "pacientes_value": "30+",
+      "pacientes_label": "Años de experiencia en atención médica",
       "rating_value": "4.9★",
       "rating_label": "Calificación promedio",
       "espera_value": "3 min",
@@ -363,16 +363,28 @@
   },
   "heroProfesionales": {
     "badge": "Para profesionales de la salud",
-    "titulo": "Expandí tu práctica",
-    "titulo_accent": "sin límites.",
-    "subtitulo": "Sumáte a la plataforma de telemedicina líder. Agenda online, historia clínica digital, videoconsultas y cobros automáticos. Todo en un lugar.",
-    "cta_primary": "Crear mi perfil",
+    "titulo": "Tu práctica,",
+    "titulo_accent": "sin fronteras.",
+    "subtitulo": "Sumáte a la plataforma donde psicólogos, nutricionistas y médicos clínicos atienden online, gestionan su agenda y cobran automáticamente — sin depender de un consultorio.",
+    "cta_primary": "Crear mi perfil gratis",
     "cta_secondary": "Ver cómo funciona",
-    "stats": [
-      { "value": "+15K", "label": "Pacientes atendidos" },
-      { "value": "4.9★", "label": "Calificación promedio" },
-      { "value": "3 min", "label": "Tiempo de espera" }
-    ]
+    "bullets": [
+      "+30 años de experiencia médica en el equipo",
+      "Plataforma testeada y lista para operar",
+      "Sin comisiones durante el lanzamiento",
+      "Primeros en sumarse, máxima visibilidad"
+    ],
+    "statsCard": {
+      "titulo": "TU PRÁCTICA EN NÚMEROS",
+      "promo_label": "Promoción de lanzamiento:",
+      "promo_body": "sin comisiones hasta superar los 1.000 profesionales activos. Llegaste antes.",
+      "items": [
+        { "value": "24hs", "label": "Para estar activo y recibir pacientes" },
+        { "value": "0%", "label": "Comisión durante el lanzamiento" },
+        { "value": "10%", "label": "Comisión una vez que escale la plataforma" },
+        { "value": "5días", "label": "Acreditación de cobros hábiles" }
+      ]
+    }
   },
   "metricas": {
     "badge": "IMPACTO",
@@ -401,27 +413,27 @@
     "badge": "ONBOARDING",
     "titulo": "Empezás a atender",
     "titulo_accent": "en 24 horas",
-    "subtitulo": "Proceso de alta simple y guiado para que nada te frene.",
+    "subtitulo": "Proceso de alta simple y guiado. Sin burocracia, sin demoras.",
     "items": [
       {
-        "num": "01",
+        "num": "1",
         "titulo": "Creá tu perfil",
-        "descripcion": "Completá tu información profesional, especialidades, formación académica y horarios disponibles."
+        "descripcion": "Completá tu información profesional, especialidad y horarios disponibles. Solo necesitás tu matrícula y 10 minutos."
       },
       {
-        "num": "02",
+        "num": "2",
         "titulo": "Verificación en 24hs",
-        "descripcion": "Nuestro equipo valida tu matrícula y activa tu perfil público en la plataforma."
+        "descripcion": "Nuestro equipo verifica tus credenciales y activa tu perfil público en el marketplace. Te avisamos por mail cuando estés listo."
       },
       {
-        "num": "03",
+        "num": "3",
         "titulo": "Recibís pacientes",
-        "descripcion": "Tu perfil aparece en los resultados de búsqueda. Los pacientes reservan y pagan online."
+        "descripcion": "Los pacientes te encuentran, reservan y pagan. Vos solo te concentrás en atender — nosotros manejamos el resto."
       },
       {
-        "num": "04",
+        "num": "4",
         "titulo": "Cobros automáticos",
-        "descripcion": "Recibís el pago de cada consulta en los primeros días hábiles de cada semana. Sin comisiones."
+        "descripcion": "El pago de cada consulta se acredita en tu cuenta dentro de los 5 días hábiles. Sin perseguir a nadie, sin efectivo."
       }
     ]
   },
@@ -733,7 +745,7 @@
       ]
     },
     "testimonios": {
-      "titulo_accent": "dicen sobre la psicología online",
+      "titulo_accent": "sobre la psicología online",
       "items": [
         {
           "nombre": "Valeria M.",

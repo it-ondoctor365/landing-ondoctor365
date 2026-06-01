@@ -134,7 +134,7 @@ export default function HeroPacientes() {
             className="flex flex-wrap gap-x-6 gap-y-4 mt-10"
           >
             {STATS.map(({ value, label }) => (
-              <div key={value}>
+              <div key={value} className="max-w-[120px]">
                 <p className="text-2xl font-fraunces font-bold text-white">
                   {value}
                 </p>

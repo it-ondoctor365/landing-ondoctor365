@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
@@ -15,13 +14,15 @@ const fadeUp = {
 
 export default function HeroProfesionales() {
   const { t } = useTranslation();
-  const stats = t("heroProfesionales.stats", { returnObjects: true });
+  const bullets = t("heroProfesionales.bullets", { returnObjects: true });
+  const statsCard = t("heroProfesionales.statsCard", { returnObjects: true });
 
   return (
     <section
       className="relative min-h-[580px] overflow-hidden text-white"
       style={{ background: "#2d418e" }}
     >
+      {/* Background blobs */}
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full blur-[140px]"
@@ -33,6 +34,7 @@ export default function HeroProfesionales() {
         />
       </div>
 
+      {/* Dot grid */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -42,109 +44,161 @@ export default function HeroProfesionales() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 h-full flex items-center">
-        <div className="relative z-10 max-w-xl py-20">
-          <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible">
-            <span
-              className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.18em] uppercase px-4 py-1.5 rounded-full border mb-6"
-              style={{
-                color: ACCENT,
-                borderColor: ACCENT + "50",
-                background: ACCENT + "18",
-              }}
-            >
+      {/* Doctor image */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.9, delay: 0.15 }}
+        className="absolute right-0 top-0 h-full w-[100%] hidden md:block"
+      >
+        <img
+          src="/ProfesionalesHero.png"
+          alt="Hero"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </motion.div>
+
+      <div className="max-w-7xl mx-auto px-6 h-full relative z-10">
+        <div className="flex flex-col md:flex-row items-center gap-10 py-16">
+
+          {/* LEFT — text content */}
+          <div className="flex-1 max-w-xl">
+            <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible">
               <span
-                className="w-1.5 h-1.5 rounded-full"
-                style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
-              />
-              {t("heroProfesionales.badge")}
-            </span>
-          </motion.div>
+                className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.18em] uppercase px-4 py-1.5 rounded-full border mb-6"
+                style={{
+                  color: ACCENT,
+                  borderColor: ACCENT + "50",
+                  background: ACCENT + "18",
+                }}
+              >
+                <span
+                  className="w-1.5 h-1.5 rounded-full"
+                  style={{ background: ACCENT, boxShadow: `0 0 6px ${ACCENT}` }}
+                />
+                {t("heroProfesionales.badge")}
+              </span>
+            </motion.div>
 
-          <motion.h1
-            custom={1}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className="text-4xl md:text-6xl font-fraunces font-bold leading-tight mb-4"
-          >
-            {t("heroProfesionales.titulo")}{" "}
-            <span className="font-fraunces italic" style={{ color: ACCENT }}>
-              {t("heroProfesionales.titulo_accent")}
-            </span>
-          </motion.h1>
+            <motion.h1
+              custom={1}
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="text-4xl md:text-6xl font-fraunces font-bold leading-tight mb-4"
+            >
+              {t("heroProfesionales.titulo")}{" "}
+              <br />
+              <span className="font-fraunces italic" style={{ color: ACCENT }}>
+                {t("heroProfesionales.titulo_accent")}
+              </span>
+            </motion.h1>
 
-          <motion.p
+            <motion.p
+              custom={2}
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="text-white/70 text-sm mb-6 leading-relaxed"
+            >
+              {t("heroProfesionales.subtitulo")}
+            </motion.p>
+
+            <motion.ul
+              custom={3}
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="flex flex-col gap-2 mb-8"
+            >
+              {bullets.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-2 text-sm text-white/80"
+                >
+                  <span
+                    className="w-1.5 h-1.5 rounded-full shrink-0"
+                    style={{ background: ACCENT }}
+                  />
+                  {item}
+                </li>
+              ))}
+            </motion.ul>
+
+            <motion.div
+              custom={4}
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="flex flex-wrap gap-3"
+            >
+              <motion.button
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                className="font-semibold px-6 py-3 rounded-2xl text-sm text-white/85"
+                style={{ border: "1px solid rgba(255,255,255,0.25)" }}
+              >
+                {t("heroProfesionales.cta_secondary")}
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                className="font-bold px-6 py-3 rounded-2xl text-sm"
+                style={{
+                  background: ACCENT,
+                  color: "#07111f",
+                  boxShadow: `0 10px 36px ${ACCENT}55`,
+                }}
+              >
+                {t("heroProfesionales.cta_primary")}
+              </motion.button>
+            </motion.div>
+          </div>
+
+          {/* RIGHT — stats card */}
+          <motion.div
             custom={2}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="text-white/70 text-sm mb-8 max-w-full leading-relaxed"
+            className="flex-shrink-0 w-full md:w-[380px] rounded-2xl p-6"
+            style={{ background: "rgba(13,24,68,0.72)", backdropFilter: "blur(16px)", border: "1px solid rgba(255,255,255,0.1)" }}
           >
-            {t("heroProfesionales.subtitulo")}
-          </motion.p>
-
-          <motion.div
-            custom={3}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className="flex flex-wrap gap-3"
-          >
-            <motion.button
-              whileHover={{ scale: 1.03, y: -2 }}
-              whileTap={{ scale: 0.97 }}
-              className="font-semibold px-6 py-3 rounded-2xl text-sm text-white/85"
-              style={{ border: "1px solid rgba(255,255,255,0.25)" }}
+            <p
+              className="text-[11px] font-bold tracking-[0.16em] uppercase mb-4"
+              style={{ color: ACCENT }}
             >
-              {t("heroProfesionales.cta_secondary")}
-            </motion.button>
+              {statsCard.titulo}
+            </p>
 
-            <motion.button
-              whileHover={{ scale: 1.03, y: -2 }}
-              whileTap={{ scale: 0.97 }}
-              className="flex items-center gap-2 font-bold px-6 py-3 rounded-2xl text-sm"
-              style={{
-                background: ACCENT,
-                color: "#07111f",
-                boxShadow: `0 10px 36px ${ACCENT}55`,
-              }}
+            <div className="grid grid-cols-2 gap-3 mb-4">
+              {statsCard.items.map(({ value, label }) => (
+                <div
+                  key={value}
+                  className="rounded-xl p-4"
+                  style={{ background: "rgba(255,255,255,0.06)" }}
+                >
+                  <p className="text-2xl font-fraunces font-bold" style={{ color: ACCENT }}>
+                    {value}
+                  </p>
+                  <p className="text-white/60 text-xs mt-1 leading-snug">{label}</p>
+                </div>
+              ))}
+            </div>
+
+            <div
+              className="rounded-xl p-4 text-sm leading-relaxed"
+              style={{ background: ACCENT + "18", border: `1px solid ${ACCENT}40` }}
             >
-              {t("heroProfesionales.cta_primary")}
-              <ArrowRight size={14} />
-            </motion.button>
+              <span className="font-bold" style={{ color: ACCENT }}>
+                {statsCard.promo_label}{" "}
+              </span>
+              <span className="text-white/80">{statsCard.promo_body}</span>
+            </div>
           </motion.div>
 
-          <motion.div
-            custom={4}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className="flex flex-wrap gap-x-6 gap-y-4 mt-10"
-          >
-            {stats.map(({ value, label }) => (
-              <div key={value}>
-                <p className="text-2xl font-fraunces font-bold text-white">
-                  {value}
-                </p>
-                <p className="text-white/60 text-xs mt-0.5">{label}</p>
-              </div>
-            ))}
-          </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.9, delay: 0.15 }}
-          className="absolute right-0 top-0 h-full w-[100%] hidden md:block"
-        >
-          <img
-            src="/ProfesionalesHero.png"
-            alt="Hero"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </motion.div>
       </div>
     </section>
   );

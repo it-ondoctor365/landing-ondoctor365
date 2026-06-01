@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { AnimatedSection } from "../ui/AnimatedSection";
 
-const ACCENT = "#32b9cc";
+const ACCENT = "#a78bfa";
 const PRIMARY = "#2d418e";
 
 export default function HeroPsicologia() {

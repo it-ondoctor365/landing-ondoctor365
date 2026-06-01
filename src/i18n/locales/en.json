@@ -34,8 +34,8 @@
     "cta_primary": "Book appointment",
     "cta_secondary": "Find a specialist",
     "stats": {
-      "pacientes_value": "+15K",
-      "pacientes_label": "Patients served",
+      "pacientes_value": "30+",
+      "pacientes_label": "Years of experience in healthcare",
       "rating_value": "4.9★",
       "rating_label": "Average rating",
       "espera_value": "3 min",
@@ -363,16 +363,28 @@
   },
   "heroProfesionales": {
     "badge": "For healthcare professionals",
-    "titulo": "Expand your practice",
-    "titulo_accent": "without limits.",
-    "subtitulo": "Join the leading telemedicine platform. Online scheduling, digital medical records, video consultations and automatic payments. All in one place.",
-    "cta_primary": "Create my profile",
+    "titulo": "Your practice,",
+    "titulo_accent": "without borders.",
+    "subtitulo": "Join the platform where psychologists, nutritionists and general practitioners see patients online, manage their schedule and get paid automatically — without depending on a physical office.",
+    "cta_primary": "Create my free profile",
     "cta_secondary": "See how it works",
-    "stats": [
-      { "value": "+15K", "label": "Patients served" },
-      { "value": "4.9★", "label": "Average rating" },
-      { "value": "3 min", "label": "Wait time" }
-    ]
+    "bullets": [
+      "+30 years of medical experience in the team",
+      "Tested platform ready to operate",
+      "No commissions during launch",
+      "First to join, maximum visibility"
+    ],
+    "statsCard": {
+      "titulo": "YOUR PRACTICE IN NUMBERS",
+      "promo_label": "Launch promotion:",
+      "promo_body": "no commissions until surpassing 1,000 active professionals. You arrived early.",
+      "items": [
+        { "value": "24hs", "label": "To be active and receive patients" },
+        { "value": "0%", "label": "Commission during launch" },
+        { "value": "10%", "label": "Commission once the platform scales" },
+        { "value": "5days", "label": "Payment settlement business days" }
+      ]
+    }
   },
   "metricas": {
     "badge": "IMPACT",
@@ -401,27 +413,27 @@
     "badge": "ONBOARDING",
     "titulo": "Start seeing patients",
     "titulo_accent": "in 24 hours",
-    "subtitulo": "Simple, guided activation process so nothing holds you back.",
+    "subtitulo": "Simple, guided process. No bureaucracy, no delays.",
     "items": [
       {
-        "num": "01",
+        "num": "1",
         "titulo": "Create your profile",
-        "descripcion": "Complete your professional information, specialties, academic background and available hours."
+        "descripcion": "Fill in your professional information, specialty and available hours. All you need is your license and 10 minutes."
       },
       {
-        "num": "02",
+        "num": "2",
         "titulo": "Verification in 24hrs",
-        "descripcion": "Our team validates your license and activates your public profile on the platform."
+        "descripcion": "Our team verifies your credentials and activates your public profile on the marketplace. We'll notify you by email when you're ready."
       },
       {
-        "num": "03",
+        "num": "3",
         "titulo": "Receive patients",
-        "descripcion": "Your profile appears in search results. Patients book and pay online."
+        "descripcion": "Patients find you, book and pay. You just focus on the consultation — we handle the rest."
       },
       {
-        "num": "04",
+        "num": "4",
         "titulo": "Automatic payments",
-        "descripcion": "You receive payment for each consultation in the first business days of each week. No commissions."
+        "descripcion": "Each consultation payment is credited to your account within 5 business days. No chasing anyone, no cash."
       }
     ]
   },

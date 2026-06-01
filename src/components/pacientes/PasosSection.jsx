@@ -5,11 +5,7 @@ import { useTranslation } from "react-i18next";
 const ACCENT = "#32b9cc";
 const PRIMARY = "#2d418e";
 
-const CARD_IMAGES = [
-  "/CardLogin-.png",
-  "/CardMediktor.png",
-  "/CardLlamada.png",
-];
+const CARD_IMAGES = ["/Card-Login-.png", "/CardMediktor.png", "/Card-1-3.png"];
 
 export default function PasosSection() {
   const { t } = useTranslation();
@@ -37,7 +33,10 @@ export default function PasosSection() {
   ];
 
   return (
-    <section id="como-funciona" className="relative py-24 overflow-hidden bg-white">
+    <section
+      id="como-funciona"
+      className="relative py-24 overflow-hidden bg-white"
+    >
       {/* Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div
@@ -54,7 +53,8 @@ export default function PasosSection() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "radial-gradient(circle, #2d418e18 1px, transparent 1px)",
+          backgroundImage:
+            "radial-gradient(circle, #2d418e18 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }}
       />
@@ -87,45 +87,57 @@ export default function PasosSection() {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {PASOS.map(({ numero, titulo, descripcion, img, imgMaxHeight }, i) => (
-            <motion.div
-              key={numero}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: i * 0.1, duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
-              className="relative rounded-3xl overflow-hidden flex flex-col"
-              style={{ background: PRIMARY }}
-            >
-              {/* Card image */}
-              <div className="w-full overflow-hidden" style={{ background: PRIMARY }}>
-                <img
-                  src={img}
-                  alt={titulo}
-                  className="w-full object-cover object-top"
-                  style={{ maxHeight: imgMaxHeight ?? "260px" }}
-                />
-              </div>
-
-              {/* Card content */}
-              <div className="flex flex-col flex-1 px-6 py-5 gap-2">
-                <div className="flex items-center gap-3">
-                  <span
-                    className="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
-                    style={{ background: ACCENT }}
-                  >
-                    {numero}
-                  </span>
-                  <h3 className="font-bold text-base" style={{ color: ACCENT }}>
-                    {titulo}
-                  </h3>
+          {PASOS.map(
+            ({ numero, titulo, descripcion, img, imgMaxHeight }, i) => (
+              <motion.div
+                key={numero}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{
+                  delay: i * 0.1,
+                  duration: 0.42,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="relative rounded-3xl overflow-hidden flex flex-col"
+                style={{ background: PRIMARY }}
+              >
+                {/* Card image */}
+                <div
+                  className="w-full overflow-hidden"
+                  style={{ background: PRIMARY }}
+                >
+                  <img
+                    src={img}
+                    alt={titulo}
+                    className="w-full object-cover object-top"
+                    style={{ maxHeight: imgMaxHeight ?? "260px" }}
+                  />
                 </div>
-                <p className="text-sm leading-relaxed text-blue-100/80 pl-10">
-                  {descripcion}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+
+                {/* Card content */}
+                <div className="flex flex-col flex-1 px-6 py-5 gap-2">
+                  <div className="flex items-center gap-3">
+                    <span
+                      className="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
+                      style={{ background: ACCENT }}
+                    >
+                      {numero}
+                    </span>
+                    <h3
+                      className="font-bold text-base"
+                      style={{ color: ACCENT }}
+                    >
+                      {titulo}
+                    </h3>
+                  </div>
+                  <p className="text-sm leading-relaxed text-blue-100/80 pl-10">
+                    {descripcion}
+                  </p>
+                </div>
+              </motion.div>
+            ),
+          )}
         </div>
       </div>
     </section>
