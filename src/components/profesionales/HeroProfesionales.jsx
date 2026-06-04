@@ -12,7 +12,7 @@ const fadeUp = {
   }),
 };
 
-export default function HeroProfesionales() {
+export default function HeroProfesionales({ onCtaPrimario, onCtaSecundario }) {
   const { t } = useTranslation();
   const bullets = t("heroProfesionales.bullets", { returnObjects: true });
   const statsCard = t("heroProfesionales.statsCard", { returnObjects: true });
@@ -135,6 +135,7 @@ export default function HeroProfesionales() {
               <motion.button
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.97 }}
+                onClick={onCtaSecundario}
                 className="font-semibold px-6 py-3 rounded-2xl text-sm text-white/85"
                 style={{ border: "1px solid rgba(255,255,255,0.25)" }}
               >
@@ -144,6 +145,7 @@ export default function HeroProfesionales() {
               <motion.button
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.97 }}
+                onClick={onCtaPrimario}
                 className="font-bold px-6 py-3 rounded-2xl text-sm"
                 style={{
                   background: ACCENT,

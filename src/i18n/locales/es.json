@@ -548,6 +548,48 @@
     "cta_primary": "Crear mi perfil gratuito",
     "cta_secondary": "Hablar con el equipo"
   },
+  "registroModal": {
+    "badge": "Para profesionales",
+    "titulo": "Creá tu perfil",
+    "titulo_accent": "gratis",
+    "subtitulo": "Te contactamos en menos de 24 hs.",
+    "nombre": "Nombre",
+    "apellido": "Apellido",
+    "documento": "Número de documento",
+    "email": "Correo electrónico",
+    "telefono": "Teléfono",
+    "fechaNacimiento": "Fecha de nacimiento",
+    "genero": "Género",
+    "tipoMatricula": "Tipo de matrícula",
+    "numeroMatricula": "Número de matrícula",
+    "especialidad": "Especialidades médicas",
+    "selectPlaceholder": "Seleccione una opción",
+    "placeholderNombre": "Juan",
+    "placeholderApellido": "García",
+    "placeholderDocumento": "12345678",
+    "placeholderEmail": "juan@ejemplo.com",
+    "placeholderTelefono": "+54 9 11 1234-5678",
+    "placeholderMatricula": "12345",
+    "enviar": "Enviar solicitud",
+    "whatsappMsg": "Hola! Quiero crear mi perfil profesional en ONDOCTOR365.",
+    "msgNombre": "Nombre",
+    "msgDNI": "DNI",
+    "msgEmail": "Email",
+    "msgTelefono": "Teléfono",
+    "msgFecha": "Fecha de nacimiento",
+    "msgGenero": "Género",
+    "msgTipoMatricula": "Tipo de matrícula",
+    "msgNumeroMatricula": "Número de matrícula",
+    "msgEspecialidad": "Especialidad",
+    "tiposMatricula": ["Nacional", "Provincial", "Municipal"],
+    "generos": ["Femenino", "Masculino", "No binario", "Prefiero no decir"],
+    "especialidades": [
+      "Cardiología", "Clínica médica", "Dermatología", "Endocrinología",
+      "Gastroenterología", "Ginecología", "Neurología", "Nutrición",
+      "Oftalmología", "Pediatría", "Psicología", "Psiquiatría",
+      "Traumatología", "Urología", "Otra"
+    ]
+  },
   "faqProfesionales": {
     "items": [
       {
@@ -597,7 +639,7 @@
     "titulo": "Sumate al futuro de",
     "titulo_accent": "la salud corporativa",
     "titulo2": "",
-    "subtitulo": "Más de 200 empresas ya confían en OnDoctor365 para cuidar la salud de sus equipos.",
+    "subtitulo": "Más de 30 años de experiencia médica, ahora integrados en un ecosistema digital para tu organización.",
     "cta_primary": "Solicitar tu demo",
     "cta_secondary": "Ver productos"
   },
@@ -648,7 +690,7 @@
     "solicitar_demo": "Solicitar demo",
     "blog": "Blog",
     "email": "info@ondoctor365.com",
-    "telefono": "+54 9 11 3991-1073",
+    "telefono": "+54 9 2233 40-4021",
     "derechos": "Todos los derechos reservados. · Mar del Plata, Argentina",
     "terminos": "Términos y condiciones",
     "privacidad": "Política de privacidad"

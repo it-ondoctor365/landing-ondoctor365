@@ -41,13 +41,13 @@ export default function Footer() {
         { label: t("footer.blog"), href: "/blog" },
         { label: t("footer.preguntas_frecuentes"), href: "/pacientes#faq" },
         { label: t("footer.email"), href: "mailto:info@ondoctor365.com" },
-        { label: t("footer.telefono"), href: "tel:+5491139911073" },
+        { label: t("footer.telefono"), href: "https://wa.me/5492233404021?text=Hola!%20quiero%20recibir%20mas%20informacion%20acerca%20de%20ONDOCTOR365." },
       ],
     },
   ];
 
   function handleLink(e, href) {
-    if (href.startsWith("mailto:") || href.startsWith("tel:")) return;
+    if (href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("https://") || href.startsWith("http://")) return;
     e.preventDefault();
     navigate(href);
     window.scrollTo(0, 0);

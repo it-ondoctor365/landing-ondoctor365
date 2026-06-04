@@ -3,6 +3,7 @@ import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../ui/LanguageSwitcher";
+import RegistroModal from "../profesionales/RegistroModal";
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -102,7 +103,23 @@ export default function Navbar() {
         ? t("navbar.cta_empresas")
         : t("navbar.cta_pacientes");
 
+  const isEmpresas = location.pathname === "/empresas";
+  const isProfesionales = location.pathname === "/profesionales";
+  const [registroOpen, setRegistroOpen] = useState(false);
+
+  function handleEmpresasCta(e) {
+    e.preventDefault();
+    setMenuOpen(false);
+    if (isEmpresas) {
+      const el = document.getElementById("contacto");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/empresas#contacto");
+    }
+  }
+
   return (
+    <>
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
@@ -185,12 +202,48 @@ export default function Navbar() {
           >
             {t("navbar.blog")}
           </Link>
-          <button className="text-sm font-medium text-gray-600 hover:text-primary transition-colors">
-            {t("navbar.login")}
-          </button>
-          <button className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors duration-200">
-            {ctaLabel}
-          </button>
+          {isEmpresas ? (
+            <a
+              href="https://portal.ondoctor365.com/portal/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+            >
+              {t("navbar.login")}
+            </a>
+          ) : isProfesionales ? (
+            <a
+              href="https://salud.ondoctor365.com/login?redirect=%2Flogin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+            >
+              {t("navbar.login")}
+            </a>
+          ) : (
+            <button className="text-sm font-medium text-gray-600 hover:text-primary transition-colors">
+              {t("navbar.login")}
+            </button>
+          )}
+          {isEmpresas ? (
+            <button
+              onClick={handleEmpresasCta}
+              className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors duration-200"
+            >
+              {ctaLabel}
+            </button>
+          ) : isProfesionales ? (
+            <button
+              onClick={() => setRegistroOpen(true)}
+              className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors duration-200"
+            >
+              {ctaLabel}
+            </button>
+          ) : (
+            <button className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors duration-200">
+              {ctaLabel}
+            </button>
+          )}
         </div>
 
         {/* Mobile hamburger */}
@@ -273,15 +326,54 @@ export default function Navbar() {
             >
               {t("navbar.blog")}
             </Link>
-            <button className="text-sm font-medium text-gray-600 hover:text-primary transition-colors py-2 text-left">
-              {t("navbar.login")}
-            </button>
-            <button className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors duration-200 text-center">
-              {ctaLabel}
-            </button>
+            {isEmpresas ? (
+              <a
+                href="https://portal.ondoctor365.com/portal/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors py-2"
+              >
+                {t("navbar.login")}
+              </a>
+            ) : isProfesionales ? (
+              <a
+                href="https://salud.ondoctor365.com/login?redirect=%2Flogin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors py-2"
+              >
+                {t("navbar.login")}
+              </a>
+            ) : (
+              <button className="text-sm font-medium text-gray-600 hover:text-primary transition-colors py-2 text-left">
+                {t("navbar.login")}
+              </button>
+            )}
+            {isEmpresas ? (
+              <button
+                onClick={handleEmpresasCta}
+                className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors duration-200 text-center"
+              >
+                {ctaLabel}
+              </button>
+            ) : isProfesionales ? (
+              <button
+                onClick={() => { setMenuOpen(false); setRegistroOpen(true); }}
+                className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors duration-200 text-center"
+              >
+                {ctaLabel}
+              </button>
+            ) : (
+              <button className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors duration-200 text-center">
+                {ctaLabel}
+              </button>
+            )}
           </div>
         </div>
       )}
     </header>
+
+    <RegistroModal isOpen={registroOpen} onClose={() => setRegistroOpen(false)} />
+    </>
   );
 }

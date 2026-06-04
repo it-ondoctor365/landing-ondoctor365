@@ -1,14 +1,27 @@
+import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import RegistroModal from "./RegistroModal";
 
 const ACCENT = "#32b9cc";
 const HIGHLIGHT_ID = "pro";
 
 export default function PlanesSection() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const [modalOpen, setModalOpen] = useState(false);
   const planes = t("planes.items", { returnObjects: true });
+
+  function handleCta(id) {
+    if (id === "clinica") {
+      navigate("/empresas#contacto");
+    } else {
+      setModalOpen(true);
+    }
+  }
 
   return (
     <section id="planes" className="relative py-24 overflow-hidden bg-white">
@@ -64,8 +77,11 @@ export default function PlanesSection() {
           </p>
         </AnimatedSection>
 
+        <RegistroModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {planes.map(({ id, nombre, badge, precio, periodo, descripcion, features, cta }, i) => {
+
             const highlight = id === HIGHLIGHT_ID;
             return (
               <motion.div
@@ -171,6 +187,7 @@ export default function PlanesSection() {
                 </ul>
 
                 <motion.button
+                  onClick={() => handleCta(id)}
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.97 }}
                   className="w-full font-bold py-3.5 rounded-2xl text-sm flex items-center justify-center gap-2 relative"

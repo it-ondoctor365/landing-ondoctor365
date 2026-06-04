@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../ui/AnimatedSection";
@@ -5,9 +6,11 @@ import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
 
+const WA_LINK = "https://wa.me/5492233404021?text=Hola!%20quiero%20recibir%20mas%20informacion%20acerca%20de%20ONDOCTOR365.";
+
 const CONTACTO_INFO = [
-  { icon: Phone, texto: "+54 11 0000-0000" },
-  { icon: Mail, texto: "info@ondoctor365.com" },
+  { icon: Phone, texto: "+54 9 2233 40-4021", href: WA_LINK },
+  { icon: Mail, texto: "info@ondoctor365.com", href: "mailto:info@ondoctor365.com" },
   { icon: MapPin, texto: "Mar del Plata, Buenos Aires, Argentina" },
 ];
 
@@ -20,8 +23,29 @@ const CAMPOS = [
   { key: "telefono", type: "tel" },
 ];
 
+const EMPTY = { nombre: "", apellido: "", empresa: "", cargo: "", email: "", telefono: "", mensaje: "" };
+
 export default function ContactoSection() {
   const { t } = useTranslation();
+  const [fields, setFields] = useState(EMPTY);
+
+  function handleChange(key, value) {
+    setFields((prev) => ({ ...prev, [key]: value }));
+  }
+
+  function handleEnviar() {
+    const msg = [
+      "Hola! Me comunico desde el formulario de ONDOCTOR365.",
+      fields.nombre && `Nombre: ${fields.nombre} ${fields.apellido}`,
+      fields.empresa && `Empresa: ${fields.empresa}`,
+      fields.cargo && `Cargo: ${fields.cargo}`,
+      fields.email && `Email: ${fields.email}`,
+      fields.telefono && `Teléfono: ${fields.telefono}`,
+      fields.mensaje && `Mensaje: ${fields.mensaje}`,
+    ].filter(Boolean).join("\n");
+
+    window.open(`https://wa.me/5492233404021?text=${encodeURIComponent(msg)}`, "_blank");
+  }
 
   return (
     <section id="contacto" className="relative py-24 overflow-hidden bg-white">
@@ -81,7 +105,7 @@ export default function ContactoSection() {
             </p>
 
             <ul className="space-y-3">
-              {CONTACTO_INFO.map(({ icon: Icon, texto }, i) => (
+              {CONTACTO_INFO.map(({ icon: Icon, texto, href }, i) => (
                 <motion.li
                   key={texto}
                   initial={{ opacity: 0, x: -10 }}
@@ -96,7 +120,11 @@ export default function ContactoSection() {
                   >
                     <Icon size={16} style={{ color: ACCENT }} />
                   </span>
-                  {texto}
+                  {href ? (
+                    <a href={href} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                      {texto}
+                    </a>
+                  ) : texto}
                 </motion.li>
               ))}
             </ul>
@@ -123,6 +151,8 @@ export default function ContactoSection() {
                   </label>
                   <input
                     type={type}
+                    value={fields[key]}
+                    onChange={(e) => handleChange(key, e.target.value)}
                     placeholder={t(`contacto.campos.${key}_placeholder`)}
                     className="bg-white border border-[#e2e8f0] rounded-2xl px-4 py-3 text-sm text-gray-700 outline-none focus:border-accent transition-colors"
                   />
@@ -134,6 +164,8 @@ export default function ContactoSection() {
                   {t("contacto.campos.mensaje_label")}
                 </label>
                 <textarea
+                  value={fields.mensaje}
+                  onChange={(e) => handleChange("mensaje", e.target.value)}
                   placeholder={t("contacto.campos.mensaje_placeholder")}
                   rows={3}
                   className="bg-white border border-[#e2e8f0] rounded-2xl px-4 py-3 text-sm text-gray-700 outline-none focus:border-accent transition-colors resize-none"
@@ -142,6 +174,7 @@ export default function ContactoSection() {
             </div>
 
             <motion.button
+              onClick={handleEnviar}
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.97 }}
               className="mt-6 w-full font-bold py-3.5 rounded-2xl text-sm flex items-center justify-center gap-2 relative"

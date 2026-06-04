@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 const ACCENT = "#32b9cc";
 
-export default function CTAFinal({ badge, titulo, tituloAccent, titulo2, subtitulo, ctaPrimario, ctaSecundario }) {
+export default function CTAFinal({ badge, titulo, tituloAccent, titulo2, subtitulo, ctaPrimario, ctaSecundario, onClickPrimario, onClickSecundario }) {
   const { t } = useTranslation();
 
   const resolvedBadge = badge ?? t("ctaFinal.badge");
@@ -77,6 +77,7 @@ export default function CTAFinal({ badge, titulo, tituloAccent, titulo2, subtitu
             <motion.button
               whileHover={{ scale: 1.03, y: -2 }}
               whileTap={{ scale: 0.97 }}
+              onClick={onClickPrimario}
               className="flex items-center gap-2 font-bold px-8 py-3.5 rounded-2xl text-sm transition-colors duration-200"
               style={{
                 background: ACCENT,
@@ -88,17 +89,20 @@ export default function CTAFinal({ badge, titulo, tituloAccent, titulo2, subtitu
               <ArrowRight size={15} />
             </motion.button>
 
-            <motion.button
-              whileHover={{ scale: 1.03, y: -2 }}
-              whileTap={{ scale: 0.97 }}
-              className="font-semibold px-8 py-3.5 rounded-2xl text-sm transition-colors duration-200"
-              style={{
-                border: "1px solid rgba(255,255,255,0.25)",
-                color: "rgba(255,255,255,0.85)",
-              }}
-            >
-              {resolvedCtaSecundario}
-            </motion.button>
+            {ctaSecundario !== false && (
+              <motion.button
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={onClickSecundario}
+                className="font-semibold px-8 py-3.5 rounded-2xl text-sm transition-colors duration-200"
+                style={{
+                  border: "1px solid rgba(255,255,255,0.25)",
+                  color: "rgba(255,255,255,0.85)",
+                }}
+              >
+                {resolvedCtaSecundario}
+              </motion.button>
+            )}
           </div>
         </AnimatedSection>
       </div>

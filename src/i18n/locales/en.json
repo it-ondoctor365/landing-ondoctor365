@@ -548,6 +548,48 @@
     "cta_primary": "Create my free profile",
     "cta_secondary": "Talk to the team"
   },
+  "registroModal": {
+    "badge": "For professionals",
+    "titulo": "Create your profile",
+    "titulo_accent": "for free",
+    "subtitulo": "We'll reach out within 24 hours.",
+    "nombre": "First name",
+    "apellido": "Last name",
+    "documento": "ID number",
+    "email": "Email address",
+    "telefono": "Phone",
+    "fechaNacimiento": "Date of birth",
+    "genero": "Gender",
+    "tipoMatricula": "License type",
+    "numeroMatricula": "License number",
+    "especialidad": "Medical specialties",
+    "selectPlaceholder": "Select an option",
+    "placeholderNombre": "John",
+    "placeholderApellido": "Smith",
+    "placeholderDocumento": "12345678",
+    "placeholderEmail": "john@example.com",
+    "placeholderTelefono": "+1 555 123-4567",
+    "placeholderMatricula": "12345",
+    "enviar": "Submit request",
+    "whatsappMsg": "Hi! I'd like to create my professional profile on ONDOCTOR365.",
+    "msgNombre": "Name",
+    "msgDNI": "ID",
+    "msgEmail": "Email",
+    "msgTelefono": "Phone",
+    "msgFecha": "Date of birth",
+    "msgGenero": "Gender",
+    "msgTipoMatricula": "License type",
+    "msgNumeroMatricula": "License number",
+    "msgEspecialidad": "Specialty",
+    "tiposMatricula": ["National", "Provincial", "Municipal"],
+    "generos": ["Female", "Male", "Non-binary", "Prefer not to say"],
+    "especialidades": [
+      "Cardiology", "Internal medicine", "Dermatology", "Endocrinology",
+      "Gastroenterology", "Gynecology", "Neurology", "Nutrition",
+      "Ophthalmology", "Pediatrics", "Psychology", "Psychiatry",
+      "Orthopedics", "Urology", "Other"
+    ]
+  },
   "faqProfesionales": {
     "items": [
       {
@@ -597,7 +639,7 @@
     "titulo": "Join the future of",
     "titulo_accent": "corporate health",
     "titulo2": "",
-    "subtitulo": "Over 200 companies already trust OnDoctor365 to take care of their teams' health.",
+    "subtitulo": "Over 30 years of medical experience, now integrated into a digital ecosystem for your organization.",
     "cta_primary": "Request your demo",
     "cta_secondary": "View products"
   },
@@ -648,7 +690,7 @@
     "solicitar_demo": "Request demo",
     "blog": "Blog",
     "email": "info@ondoctor365.com",
-    "telefono": "+54 9 11 3991-1073",
+    "telefono": "+54 9 2233 40-4021",
     "derechos": "All rights reserved. · Mar del Plata, Argentina",
     "terminos": "Terms & conditions",
     "privacidad": "Privacy policy"

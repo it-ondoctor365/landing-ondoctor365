@@ -8,6 +8,7 @@ const EMPRESAS = [
   { id: "osak", logo: "/logo-osak.svg", alt: "OSAK" },
   { id: "samak", logo: "/logo-samak.svg", alt: "SAMAK" },
   { id: "apresma", logo: "/a2-logo-apresma.svg", alt: "APresMA" },
+  { id: "sanmiguel", logo: "/smlogo.svg", alt: "San Miguel" },
 ];
 
 export default function EmpresasConfianza() {

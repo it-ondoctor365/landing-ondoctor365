@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import FeaturesSection from "../components/profesionales/FeaturesSection";
@@ -8,9 +9,15 @@ import PlanesSection from "../components/profesionales/PlanesSection";
 import TestimoniosSection from "../components/pacientes/TestimonionsSection";
 import FAQSection from "../components/pacientes/FAQSection";
 import CTAFinal from "../components/pacientes/CTAFinal";
+import RegistroModal from "../components/profesionales/RegistroModal";
 
 export default function Profesionales() {
   const { t } = useTranslation();
+  const [registroOpen, setRegistroOpen] = useState(false);
+
+  function scrollToOnboarding() {
+    document.getElementById("como-unirse")?.scrollIntoView({ behavior: "smooth" });
+  }
 
   const testimonios = t("testimoniosProfesionales.items", { returnObjects: true });
   const faqs = t("faqProfesionales.items", { returnObjects: true });
@@ -25,7 +32,10 @@ export default function Profesionales() {
         <meta property="og:description" content={t("pageTitles.profesionales.og_description")} />
         <meta property="og:url" content="https://www.ondoctor365.com/profesionales" />
       </Helmet>
-      <HeroProfesionales />
+      <HeroProfesionales
+        onCtaPrimario={() => setRegistroOpen(true)}
+        onCtaSecundario={scrollToOnboarding}
+      />
       <PasosOnboarding />
       <FeaturesSection />
       <MetricasSection />
@@ -42,8 +52,11 @@ export default function Profesionales() {
         titulo2={t("ctaFinalProfesionales.titulo2")}
         subtitulo={t("ctaFinalProfesionales.subtitulo")}
         ctaPrimario={t("ctaFinalProfesionales.cta_primary")}
-        ctaSecundario={t("ctaFinalProfesionales.cta_secondary")}
+        ctaSecundario={false}
+        onClickPrimario={() => setRegistroOpen(true)}
+        onClickSecundario={scrollToOnboarding}
       />
+      <RegistroModal isOpen={registroOpen} onClose={() => setRegistroOpen(false)} />
     </div>
   );
 }

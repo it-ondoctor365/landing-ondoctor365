@@ -19,16 +19,24 @@ export default function Empresas() {
     <div>
       <Helmet>
         <title>{t("pageTitles.empresas.title")}</title>
-        <meta name="description" content={t("pageTitles.empresas.description")} />
+        <meta
+          name="description"
+          content={t("pageTitles.empresas.description")}
+        />
         <link rel="canonical" href="https://www.ondoctor365.com/empresas" />
         <meta property="og:title" content={t("pageTitles.empresas.og_title")} />
-        <meta property="og:description" content={t("pageTitles.empresas.og_description")} />
-        <meta property="og:url" content="https://www.ondoctor365.com/empresas" />
+        <meta
+          property="og:description"
+          content={t("pageTitles.empresas.og_description")}
+        />
+        <meta
+          property="og:url"
+          content="https://www.ondoctor365.com/empresas"
+        />
       </Helmet>
       <HeroEmpresas />
       <ProblemaSection />
       <EcosistemaSection />
-      <OrganizacionesSection />
       <TestimoniosSection
         tituloAccent={t("testimoniosEmpresas.titulo_accent")}
         testimonios={testimonios}
@@ -48,6 +56,8 @@ export default function Empresas() {
         subtitulo={t("ctaFinalEmpresas.subtitulo")}
         ctaPrimario={t("ctaFinalEmpresas.cta_primary")}
         ctaSecundario={t("ctaFinalEmpresas.cta_secondary")}
+        onClickPrimario={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })}
+        onClickSecundario={() => document.getElementById("plataforma")?.scrollIntoView({ behavior: "smooth" })}
       />
     </div>
   );
