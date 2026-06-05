@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import ConsultaModal from "../components/ui/ConsultaModal";
 import ConsultasTabs from "../components/pacientes/ConsultasTabs";
 import HeroPacientes from "../components/pacientes/HeroPacientes";
 import PasosSection from "../components/pacientes/PasosSection";
@@ -12,6 +14,7 @@ import FAQSection from "../components/pacientes/FAQSection";
 
 export default function Pacientes() {
   const { t } = useTranslation();
+  const [consultaOpen, setConsultaOpen] = useState(false);
 
   return (
     <div>
@@ -31,7 +34,11 @@ export default function Pacientes() {
       <ProfesionalesDestacados />
       <TestimoniosSection />
       <FAQSection />
-      <CTAFinal />
+      <CTAFinal
+        onClickPrimario={() => setConsultaOpen(true)}
+        ctaSecundario={false}
+      />
+      <ConsultaModal isOpen={consultaOpen} onClose={() => setConsultaOpen(false)} />
     </div>
   );
 }

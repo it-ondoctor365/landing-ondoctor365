@@ -5,7 +5,7 @@
     "empresas": "Companies",
     "login": "Log in",
     "blog": "Blog",
-    "cta_pacientes": "Book appointment →",
+    "cta_pacientes": "Book your first appointment",
     "cta_profesionales": "Create my profile →",
     "cta_empresas": "Request demo →",
     "menu_aria": "Menu",
@@ -589,6 +589,21 @@
       "Ophthalmology", "Pediatrics", "Psychology", "Psychiatry",
       "Orthopedics", "Urology", "Other"
     ]
+  },
+  "consultaModal": {
+    "badge": "BOOK APPOINTMENT",
+    "titulo": "What type of consultation do you need?",
+    "subtitulo": "Select the type of professional you need",
+    "medico": {
+      "titulo": "Doctor / Specialist",
+      "subtitulo": "Specialized medical care",
+      "tags": ["Cardiologist", "Neurologist", "GP", "Pediatrician", "Orthopedist"]
+    },
+    "especialista": {
+      "titulo": "Wellness Specialist",
+      "subtitulo": "Holistic wellbeing",
+      "tags": ["Nutritionist", "Psychologist", "Physiotherapist", "Dermatologist", "Other"]
+    }
   },
   "faqProfesionales": {
     "items": [

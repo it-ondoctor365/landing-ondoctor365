@@ -5,7 +5,7 @@
     "empresas": "Empresas",
     "login": "Iniciar sesión",
     "blog": "Blog",
-    "cta_pacientes": "Solicitar turno →",
+    "cta_pacientes": "Solicita tu primer turno",
     "cta_profesionales": "Crear mi perfil →",
     "cta_empresas": "Solicitar demo →",
     "menu_aria": "Menú",
@@ -589,6 +589,21 @@
       "Oftalmología", "Pediatría", "Psicología", "Psiquiatría",
       "Traumatología", "Urología", "Otra"
     ]
+  },
+  "consultaModal": {
+    "badge": "RESERVAR TURNO",
+    "titulo": "¿Qué tipo de consulta buscás?",
+    "subtitulo": "Elegí el profesional que necesitás",
+    "medico": {
+      "titulo": "Médico / Profesional",
+      "subtitulo": "Atención médica especializada",
+      "tags": ["Cardiólogo", "Neurólogo", "Clínico", "Pediatra", "Traumatólogo"]
+    },
+    "especialista": {
+      "titulo": "Especialista",
+      "subtitulo": "Bienestar integral",
+      "tags": ["Nutricionista", "Psicólogo", "Kinesiólogo", "Fonoaudiólogo", "Dermatólogo"]
+    }
   },
   "faqProfesionales": {
     "items": [

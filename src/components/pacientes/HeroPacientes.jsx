@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import ConsultaModal from "../ui/ConsultaModal";
 
 const ACCENT = "#32b9cc";
 
@@ -15,6 +17,7 @@ const fadeUp = {
 
 export default function HeroPacientes() {
   const { t } = useTranslation();
+  const [consultaOpen, setConsultaOpen] = useState(false);
 
   const STATS = [
     { value: t("heroPacientes.stats.pacientes_value"), label: t("heroPacientes.stats.pacientes_label") },
@@ -23,6 +26,7 @@ export default function HeroPacientes() {
   ];
 
   return (
+    <>
     <section
       className="relative min-h-[580px] overflow-hidden text-white"
       style={{ background: "#2d418e" }}
@@ -105,6 +109,7 @@ export default function HeroPacientes() {
             <motion.button
               whileHover={{ scale: 1.03, y: -2 }}
               whileTap={{ scale: 0.97 }}
+              onClick={() => document.getElementById("tipos-consulta")?.scrollIntoView({ behavior: "smooth" })}
               className="font-semibold px-6 py-3 rounded-2xl text-sm text-white/85"
               style={{ border: "1px solid rgba(255,255,255,0.25)" }}
             >
@@ -112,6 +117,7 @@ export default function HeroPacientes() {
             </motion.button>
 
             <motion.button
+              onClick={() => setConsultaOpen(true)}
               whileHover={{ scale: 1.03, y: -2 }}
               whileTap={{ scale: 0.97 }}
               className="flex items-center gap-2 font-bold px-6 py-3 rounded-2xl text-sm"
@@ -206,5 +212,8 @@ export default function HeroPacientes() {
         </motion.div>
       </div>
     </section>
+
+    <ConsultaModal isOpen={consultaOpen} onClose={() => setConsultaOpen(false)} />
+    </>
   );
 }

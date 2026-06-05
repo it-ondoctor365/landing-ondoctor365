@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../ui/LanguageSwitcher";
 import RegistroModal from "../profesionales/RegistroModal";
+import ConsultaModal from "../ui/ConsultaModal";
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -106,6 +107,7 @@ export default function Navbar() {
   const isEmpresas = location.pathname === "/empresas";
   const isProfesionales = location.pathname === "/profesionales";
   const [registroOpen, setRegistroOpen] = useState(false);
+  const [consultaOpen, setConsultaOpen] = useState(false);
 
   function handleEmpresasCta(e) {
     e.preventDefault();
@@ -221,7 +223,10 @@ export default function Navbar() {
               {t("navbar.login")}
             </a>
           ) : (
-            <button className="text-sm font-medium text-gray-600 hover:text-primary transition-colors">
+            <button
+              onClick={() => setConsultaOpen(true)}
+              className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+            >
               {t("navbar.login")}
             </button>
           )}
@@ -240,7 +245,10 @@ export default function Navbar() {
               {ctaLabel}
             </button>
           ) : (
-            <button className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors duration-200">
+            <button
+              onClick={() => setConsultaOpen(true)}
+              className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors duration-200"
+            >
               {ctaLabel}
             </button>
           )}
@@ -345,7 +353,10 @@ export default function Navbar() {
                 {t("navbar.login")}
               </a>
             ) : (
-              <button className="text-sm font-medium text-gray-600 hover:text-primary transition-colors py-2 text-left">
+              <button
+                onClick={() => { setMenuOpen(false); setConsultaOpen(true); }}
+                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors py-2 text-left"
+              >
                 {t("navbar.login")}
               </button>
             )}
@@ -364,7 +375,10 @@ export default function Navbar() {
                 {ctaLabel}
               </button>
             ) : (
-              <button className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors duration-200 text-center">
+              <button
+                onClick={() => { setMenuOpen(false); setConsultaOpen(true); }}
+                className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors duration-200 text-center"
+              >
                 {ctaLabel}
               </button>
             )}
@@ -374,6 +388,7 @@ export default function Navbar() {
     </header>
 
     <RegistroModal isOpen={registroOpen} onClose={() => setRegistroOpen(false)} />
+    <ConsultaModal isOpen={consultaOpen} onClose={() => setConsultaOpen(false)} />
     </>
   );
 }
