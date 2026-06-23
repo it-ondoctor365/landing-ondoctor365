@@ -8,6 +8,7 @@ import PasosSection from "../components/pacientes/PasosSection";
 import BeneficiosSection from "../components/pacientes/BeneficiosSection";
 import EmpresasConfianza from "../components/pacientes/EmpresasConfianza";
 import ProfesionalesDestacados from "../components/pacientes/ProfesionalesDestacados";
+import BuscarEspecialista from "../components/pacientes/BuscarEspecialista";
 import TestimoniosSection from "../components/pacientes/TestimonionsSection";
 import CTAFinal from "../components/pacientes/CTAFinal";
 import FAQSection from "../components/pacientes/FAQSection";
@@ -32,6 +33,7 @@ export default function Pacientes() {
       <BeneficiosSection />
       <EmpresasConfianza />
       <ProfesionalesDestacados />
+      <BuscarEspecialista />
       <TestimoniosSection />
       <FAQSection />
       <CTAFinal

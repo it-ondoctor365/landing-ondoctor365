@@ -5,7 +5,7 @@
     "empresas": "Empresas",
     "login": "Iniciar sesión",
     "blog": "Blog",
-    "cta_pacientes": "Solicita tu primer turno",
+    "cta_pacientes": "Registrarme",
     "cta_profesionales": "Crear mi perfil →",
     "cta_empresas": "Solicitar demo →",
     "menu_aria": "Menú",
@@ -84,6 +84,11 @@
     "subtitulo": "Elegí tu especialidad y encontrá profesionales disponibles en minutos.",
     "precio_label": "Precio por consulta",
     "periodo": "por consulta",
+    "stats_label": "En números",
+    "stat1": "Médicos activos",
+    "stat2": "Consultas realizadas",
+    "stat3": "Disponibilidad",
+    "stat4": "Online y seguro",
     "reservar": "Reservar turno",
     "trust": {
       "item1": "Sin obra social requerida",
@@ -205,6 +210,149 @@
       }
     ]
   },
+  "buscarEspecialista": {
+    "badge": "NUESTROS ESPECIALISTAS",
+    "titulo": "Encontrá al especialista",
+    "titulo_accent": "ideal para vos",
+    "subtitulo": "Más de 100 profesionales de salud disponibles para atenderte hoy. Filtrá por especialidad y reservá tu turno en minutos.",
+    "buscar_placeholder": "Buscar por nombre o especialidad...",
+    "cta": "Reservar turno",
+    "resenas": "reseñas",
+    "disponible": "Disponible",
+    "sin_resultados": "No se encontraron especialistas. Intentá con otro filtro.",
+    "filtros": [
+      { "key": "todos", "label": "Todos" },
+      { "key": "clinico", "label": "Médico Clínico" },
+      { "key": "psicologia", "label": "Psicología" },
+      { "key": "nutricion", "label": "Nutrición" },
+      { "key": "pediatria", "label": "Pediatría" },
+      { "key": "cardiologia", "label": "Cardiología" },
+      { "key": "dermatologia", "label": "Dermatología" },
+      { "key": "ginecologia", "label": "Ginecología" }
+    ],
+    "items": [
+      {
+        "nombre": "Dr. Martín López",
+        "especialidad": "Médico Clínico",
+        "ubicacion": "Buenos Aires",
+        "descripcion": "Atención cálida y rigurosa. Más de 10 años de experiencia en medicina familiar y clínica general.",
+        "rating": 5,
+        "resenas": 128,
+        "categoria": "clinico",
+        "disponible": true
+      },
+      {
+        "nombre": "Lic. Sofía Ramírez",
+        "especialidad": "Psicóloga",
+        "ubicacion": "Córdoba",
+        "descripcion": "Especialista en terapia cognitivo-conductual y manejo del estrés. Sesiones en un ambiente de total confianza.",
+        "rating": 5,
+        "resenas": 94,
+        "categoria": "psicologia",
+        "disponible": true
+      },
+      {
+        "nombre": "Lic. Valeria Torres",
+        "especialidad": "Nutricionista",
+        "ubicacion": "Rosario",
+        "descripcion": "Planes alimentarios personalizados basados en tus objetivos y estilo de vida. Sin dietas imposibles.",
+        "rating": 4,
+        "resenas": 76,
+        "categoria": "nutricion",
+        "disponible": false
+      },
+      {
+        "nombre": "Dr. Alejandro Sosa",
+        "especialidad": "Pediatra",
+        "ubicacion": "Mendoza",
+        "descripcion": "Atención pediátrica integral desde recién nacidos hasta adolescentes. Consultas tranquilas para toda la familia.",
+        "rating": 5,
+        "resenas": 112,
+        "categoria": "pediatria",
+        "disponible": true
+      },
+      {
+        "nombre": "Dr. Carlos Herrera",
+        "especialidad": "Cardiólogo",
+        "ubicacion": "Buenos Aires",
+        "descripcion": "Diagnóstico y seguimiento de enfermedades cardiovasculares. Interpretación de ECG y ecocardiogramas en línea.",
+        "rating": 5,
+        "resenas": 89,
+        "categoria": "cardiologia",
+        "disponible": false
+      },
+      {
+        "nombre": "Dra. Laura Vega",
+        "especialidad": "Dermatóloga",
+        "ubicacion": "Santa Fe",
+        "descripcion": "Diagnóstico de lesiones cutáneas, acné, rosácea y más. Evaluación con fotos de alta resolución desde tu celular.",
+        "rating": 5,
+        "resenas": 103,
+        "categoria": "dermatologia",
+        "disponible": true
+      },
+      {
+        "nombre": "Dra. Mariana Díaz",
+        "especialidad": "Ginecóloga",
+        "ubicacion": "Buenos Aires",
+        "descripcion": "Salud femenina integral: anticonceptivos, fertilidad, seguimiento del embarazo y controles preventivos.",
+        "rating": 4,
+        "resenas": 67,
+        "categoria": "ginecologia",
+        "disponible": true
+      },
+      {
+        "nombre": "Lic. Pablo Ibáñez",
+        "especialidad": "Psicólogo",
+        "ubicacion": "Tucumán",
+        "descripcion": "Acompañamiento en ansiedad, depresión y crisis vitales. Enfoque humanista e integrador adaptado a cada persona.",
+        "rating": 5,
+        "resenas": 81,
+        "categoria": "psicologia",
+        "disponible": false
+      },
+      {
+        "nombre": "Dra. Cecilia Moreno",
+        "especialidad": "Médica Clínica",
+        "ubicacion": "Córdoba",
+        "descripcion": "Consultas de urgencias y certificados. Respuesta rápida y diagnóstico claro para que sigas con tu día.",
+        "rating": 4,
+        "resenas": 58,
+        "categoria": "clinico",
+        "disponible": true
+      },
+      {
+        "nombre": "Lic. Romina Paz",
+        "especialidad": "Nutricionista",
+        "ubicacion": "Buenos Aires",
+        "descripcion": "Especialista en nutrición deportiva y pérdida de peso saludable. Seguimiento semanal y ajuste de planes.",
+        "rating": 5,
+        "resenas": 144,
+        "categoria": "nutricion",
+        "disponible": true
+      },
+      {
+        "nombre": "Dr. Federico Ruiz",
+        "especialidad": "Pediatra",
+        "ubicacion": "La Plata",
+        "descripcion": "Vacunación, control de crecimiento y consultas de urgencia pediátrica. Respuestas claras para padres primerizos.",
+        "rating": 5,
+        "resenas": 97,
+        "categoria": "pediatria",
+        "disponible": false
+      },
+      {
+        "nombre": "Dra. Natalia Gómez",
+        "especialidad": "Dermatóloga",
+        "ubicacion": "Rosario",
+        "descripcion": "Tratamientos para psoriasis, eczema y dermatitis. Control de manchas y lesiones con seguimiento fotográfico.",
+        "rating": 4,
+        "resenas": 62,
+        "categoria": "dermatologia",
+        "disponible": true
+      }
+    ]
+  },
   "heroEmpresas": {
     "badge": "Salud corporativa · B2B",
     "titulo": "El ecosistema de salud",
@@ -219,32 +367,32 @@
     ]
   },
   "problemas": {
-    "titulo": "Los equipos pierden días por falta de",
-    "titulo_accent": "acceso médico.",
+    "titulo": "Los sistemas de salud enfrentan una crisis de",
+    "titulo_accent": "acceso y capacidad.",
     "items": [
       {
-        "titulo": "Tiempo de espera",
-        "texto": "Los empleados pierden horas en salas de espera o coordinando turnos con especialistas."
+        "titulo": "Listas de espera desbordadas",
+        "texto": "Los sistemas públicos y privados no dan abasto. Los pacientes esperan semanas o meses para una consulta con especialista."
       },
       {
-        "titulo": "Costos indirectos reales",
-        "texto": "El ausentismo y la baja productividad tienen un costo invisible pero enorme para la empresa."
+        "titulo": "Costos operativos insostenibles",
+        "texto": "Mantener infraestructura presencial es cada vez más caro y difícil de escalar sin comprometer la calidad de atención."
       },
       {
-        "titulo": "Especialistas fuera de alcance",
-        "texto": "En muchas zonas del país acceder a un especialista puede llevar semanas."
+        "titulo": "Brechas de cobertura geográfica",
+        "texto": "Las zonas rurales y periféricas quedan sin acceso a especialistas. La distancia sigue siendo la principal barrera de salud."
       }
     ],
     "solucion": {
-      "badge": "SOLUCIÓN",
-      "titulo": "Salud sin límites",
-      "desc": "OnDoctor365 elimina las barreras de acceso médico para tu equipo, sin importar dónde estén.",
+      "badge": "NUESTRA PLATAFORMA",
+      "titulo": "La solución tecnológica lista para desplegar",
+      "desc": "OnDoctor365 provee el ecosistema completo para que municipios, hospitales y prestadoras brinden atención médica digital a su población.",
       "items": [
-        "Control de empleados: turnos sin colas",
-        "Recetas digitales ilimitadas",
-        "Historia clínica digital integrada",
-        "Reportes digitales en tiempo real",
-        "Integración con HIS, RRHH y sistemas existentes"
+        "Plataforma white-label personalizable con tu marca",
+        "IA médica para triage y derivación automática",
+        "Tótems de atención presencial integrados",
+        "Historia clínica digital centralizada",
+        "Panel de métricas y salud poblacional en tiempo real"
       ]
     }
   },

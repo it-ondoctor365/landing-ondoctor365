@@ -337,25 +337,28 @@ export default function ConsultasTabs() {
 
                 <div className="relative">
                   <p className="text-black/60 text-[11px] font-bold tracking-[0.16em] uppercase mb-4">
-                    {t("consultasTabs.precio_label")}
+                    {t("consultasTabs.stats_label")}
                   </p>
-
-                  <motion.p
-                    key={activeTab + "-price"}
-                    initial={{ scale: 0.75, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 320,
-                      damping: 22,
-                    }}
-                    className="text-5xl font-extrabold tracking-tight leading-none"
-                    style={{ color: accent }}
-                  >
-                    {active.moneda}
-                    {active.precio}
-                  </motion.p>
-                  <p className="text-black/50 text-xs mt-2">{active.periodo}</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {[
+                      { num: "+500", label: t("consultasTabs.stat1") },
+                      { num: "+10K", label: t("consultasTabs.stat2") },
+                      { num: "24/7", label: t("consultasTabs.stat3") },
+                      { num: "100%", label: t("consultasTabs.stat4") },
+                    ].map(({ num, label }, i) => (
+                      <motion.div
+                        key={num}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.06, duration: 0.35 }}
+                        className="rounded-2xl p-3"
+                        style={{ background: accent + "18", border: `1px solid ${accent}30` }}
+                      >
+                        <p className="text-xl font-extrabold leading-none" style={{ color: accent }}>{num}</p>
+                        <p className="text-black/60 text-[10px] mt-1 leading-tight">{label}</p>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
 
                 <div
@@ -406,6 +409,7 @@ export default function ConsultasTabs() {
           </AnimatePresence>
         </AnimatedSection>
       </div>
+
     </section>
   );
 }

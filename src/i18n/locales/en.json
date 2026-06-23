@@ -5,7 +5,7 @@
     "empresas": "Companies",
     "login": "Log in",
     "blog": "Blog",
-    "cta_pacientes": "Book your first appointment",
+    "cta_pacientes": "Sign up",
     "cta_profesionales": "Create my profile →",
     "cta_empresas": "Request demo →",
     "menu_aria": "Menu",
@@ -84,6 +84,11 @@
     "subtitulo": "Choose your specialty and find professionals available in minutes.",
     "precio_label": "Price per consultation",
     "periodo": "per consultation",
+    "stats_label": "By the numbers",
+    "stat1": "Active doctors",
+    "stat2": "Consultations done",
+    "stat3": "Availability",
+    "stat4": "Online & secure",
     "reservar": "Book appointment",
     "trust": {
       "item1": "No health insurance required",
@@ -205,6 +210,149 @@
       }
     ]
   },
+  "buscarEspecialista": {
+    "badge": "OUR SPECIALISTS",
+    "titulo": "Find the specialist",
+    "titulo_accent": "right for you",
+    "subtitulo": "Over 100 healthcare professionals available today. Filter by specialty and book your appointment in minutes.",
+    "buscar_placeholder": "Search by name or specialty...",
+    "cta": "Book appointment",
+    "resenas": "reviews",
+    "disponible": "Available",
+    "sin_resultados": "No specialists found. Try a different filter.",
+    "filtros": [
+      { "key": "todos", "label": "All" },
+      { "key": "clinico", "label": "General Practice" },
+      { "key": "psicologia", "label": "Psychology" },
+      { "key": "nutricion", "label": "Nutrition" },
+      { "key": "pediatria", "label": "Pediatrics" },
+      { "key": "cardiologia", "label": "Cardiology" },
+      { "key": "dermatologia", "label": "Dermatology" },
+      { "key": "ginecologia", "label": "Gynecology" }
+    ],
+    "items": [
+      {
+        "nombre": "Dr. Martín López",
+        "especialidad": "General Practitioner",
+        "ubicacion": "Buenos Aires",
+        "descripcion": "Warm and thorough care. Over 10 years of experience in family and general medicine.",
+        "rating": 5,
+        "resenas": 128,
+        "categoria": "clinico",
+        "disponible": true
+      },
+      {
+        "nombre": "Lic. Sofía Ramírez",
+        "especialidad": "Psychologist",
+        "ubicacion": "Córdoba",
+        "descripcion": "Specialist in cognitive-behavioral therapy and stress management. Sessions in a fully confidential environment.",
+        "rating": 5,
+        "resenas": 94,
+        "categoria": "psicologia",
+        "disponible": true
+      },
+      {
+        "nombre": "Lic. Valeria Torres",
+        "especialidad": "Nutritionist",
+        "ubicacion": "Rosario",
+        "descripcion": "Personalized meal plans based on your goals and lifestyle. No impossible diets.",
+        "rating": 4,
+        "resenas": 76,
+        "categoria": "nutricion",
+        "disponible": false
+      },
+      {
+        "nombre": "Dr. Alejandro Sosa",
+        "especialidad": "Pediatrician",
+        "ubicacion": "Mendoza",
+        "descripcion": "Comprehensive pediatric care from newborns to teens. Calm consultations for the whole family.",
+        "rating": 5,
+        "resenas": 112,
+        "categoria": "pediatria",
+        "disponible": true
+      },
+      {
+        "nombre": "Dr. Carlos Herrera",
+        "especialidad": "Cardiologist",
+        "ubicacion": "Buenos Aires",
+        "descripcion": "Diagnosis and follow-up of cardiovascular conditions. ECG and echocardiogram interpretation online.",
+        "rating": 5,
+        "resenas": 89,
+        "categoria": "cardiologia",
+        "disponible": false
+      },
+      {
+        "nombre": "Dra. Laura Vega",
+        "especialidad": "Dermatologist",
+        "ubicacion": "Santa Fe",
+        "descripcion": "Diagnosis of skin lesions, acne, rosacea and more. High-resolution photo evaluation from your phone.",
+        "rating": 5,
+        "resenas": 103,
+        "categoria": "dermatologia",
+        "disponible": true
+      },
+      {
+        "nombre": "Dra. Mariana Díaz",
+        "especialidad": "Gynecologist",
+        "ubicacion": "Buenos Aires",
+        "descripcion": "Comprehensive women's health: contraception, fertility, pregnancy follow-up and preventive check-ups.",
+        "rating": 4,
+        "resenas": 67,
+        "categoria": "ginecologia",
+        "disponible": true
+      },
+      {
+        "nombre": "Lic. Pablo Ibáñez",
+        "especialidad": "Psychologist",
+        "ubicacion": "Tucumán",
+        "descripcion": "Support for anxiety, depression and life crises. Humanistic and integrative approach tailored to each person.",
+        "rating": 5,
+        "resenas": 81,
+        "categoria": "psicologia",
+        "disponible": false
+      },
+      {
+        "nombre": "Dra. Cecilia Moreno",
+        "especialidad": "General Practitioner",
+        "ubicacion": "Córdoba",
+        "descripcion": "Urgent consultations and certificates. Fast response and clear diagnosis so you can get on with your day.",
+        "rating": 4,
+        "resenas": 58,
+        "categoria": "clinico",
+        "disponible": true
+      },
+      {
+        "nombre": "Lic. Romina Paz",
+        "especialidad": "Nutritionist",
+        "ubicacion": "Buenos Aires",
+        "descripcion": "Specialist in sports nutrition and healthy weight loss. Weekly follow-up and plan adjustments.",
+        "rating": 5,
+        "resenas": 144,
+        "categoria": "nutricion",
+        "disponible": true
+      },
+      {
+        "nombre": "Dr. Federico Ruiz",
+        "especialidad": "Pediatrician",
+        "ubicacion": "La Plata",
+        "descripcion": "Vaccinations, growth monitoring and pediatric urgent care. Clear answers for first-time parents.",
+        "rating": 5,
+        "resenas": 97,
+        "categoria": "pediatria",
+        "disponible": false
+      },
+      {
+        "nombre": "Dra. Natalia Gómez",
+        "especialidad": "Dermatologist",
+        "ubicacion": "Rosario",
+        "descripcion": "Treatments for psoriasis, eczema and dermatitis. Spot and lesion monitoring with photo tracking.",
+        "rating": 4,
+        "resenas": 62,
+        "categoria": "dermatologia",
+        "disponible": true
+      }
+    ]
+  },
   "heroEmpresas": {
     "badge": "Corporate Health · B2B",
     "titulo": "The health ecosystem",
@@ -219,32 +367,32 @@
     ]
   },
   "problemas": {
-    "titulo": "Teams lose days due to lack of",
-    "titulo_accent": "medical access.",
+    "titulo": "Health systems face a crisis of",
+    "titulo_accent": "access and capacity.",
     "items": [
       {
-        "titulo": "Wait times",
-        "texto": "Employees lose hours in waiting rooms or coordinating appointments with specialists."
+        "titulo": "Overwhelmed wait lists",
+        "texto": "Public and private systems can't keep up with demand. Patients wait weeks or months to see a specialist."
       },
       {
-        "titulo": "Real indirect costs",
-        "texto": "Absenteeism and low productivity have an invisible but enormous cost for the company."
+        "titulo": "Unsustainable operational costs",
+        "texto": "Maintaining in-person infrastructure is increasingly costly and hard to scale without compromising care quality."
       },
       {
-        "titulo": "Out-of-reach specialists",
-        "texto": "In many areas, accessing a specialist can take weeks."
+        "titulo": "Geographic coverage gaps",
+        "texto": "Rural and peripheral communities remain without specialist access. Distance is still the main barrier to healthcare."
       }
     ],
     "solucion": {
-      "badge": "SOLUTION",
-      "titulo": "Health without limits",
-      "desc": "OnDoctor365 eliminates medical access barriers for your team, no matter where they are.",
+      "badge": "OUR PLATFORM",
+      "titulo": "A complete technology solution ready to deploy",
+      "desc": "OnDoctor365 provides the full ecosystem for municipalities, hospitals and providers to deliver digital healthcare to their population.",
       "items": [
-        "Employee management: no more queues",
-        "Unlimited digital prescriptions",
-        "Integrated digital medical records",
-        "Real-time digital reports",
-        "Integration with HIS, HR and existing systems"
+        "White-label platform customizable with your brand",
+        "Medical AI for triage and automatic referrals",
+        "Integrated on-site care kiosks",
+        "Centralized digital medical records",
+        "Real-time metrics and population health dashboard"
       ]
     }
   },
