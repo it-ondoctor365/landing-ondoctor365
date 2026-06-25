@@ -15,7 +15,6 @@ const fadeUp = {
 export default function HeroProfesionales({ onCtaPrimario, onCtaSecundario }) {
   const { t } = useTranslation();
   const bullets = t("heroProfesionales.bullets", { returnObjects: true });
-  const statsCard = t("heroProfesionales.statsCard", { returnObjects: true });
 
   return (
     <section
@@ -157,48 +156,6 @@ export default function HeroProfesionales({ onCtaPrimario, onCtaSecundario }) {
               </motion.button>
             </motion.div>
           </div>
-
-          {/* RIGHT — stats card */}
-          <motion.div
-            custom={2}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className="flex-shrink-0 w-full md:w-[380px] rounded-2xl p-6"
-            style={{ background: "rgba(13,24,68,0.72)", backdropFilter: "blur(16px)", border: "1px solid rgba(255,255,255,0.1)" }}
-          >
-            <p
-              className="text-[11px] font-bold tracking-[0.16em] uppercase mb-4"
-              style={{ color: ACCENT }}
-            >
-              {statsCard.titulo}
-            </p>
-
-            <div className="grid grid-cols-2 gap-3 mb-4">
-              {statsCard.items.map(({ value, label }) => (
-                <div
-                  key={value}
-                  className="rounded-xl p-4"
-                  style={{ background: "rgba(255,255,255,0.06)" }}
-                >
-                  <p className="text-2xl font-fraunces font-bold" style={{ color: ACCENT }}>
-                    {value}
-                  </p>
-                  <p className="text-white/60 text-xs mt-1 leading-snug">{label}</p>
-                </div>
-              ))}
-            </div>
-
-            <div
-              className="rounded-xl p-4 text-sm leading-relaxed"
-              style={{ background: ACCENT + "18", border: `1px solid ${ACCENT}40` }}
-            >
-              <span className="font-bold" style={{ color: ACCENT }}>
-                {statsCard.promo_label}{" "}
-              </span>
-              <span className="text-white/80">{statsCard.promo_body}</span>
-            </div>
-          </motion.div>
 
         </div>
       </div>

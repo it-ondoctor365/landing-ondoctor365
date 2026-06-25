@@ -165,50 +165,6 @@ export default function HeroPacientes() {
             />
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: -12, x: 16 }}
-            animate={{ opacity: 1, y: 0, x: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: 0.65,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="top-[10%] absolute left-[70%] rounded-3xl shadow-xl p-4 w-70"
-            style={{
-              background: "rgba(255,255,255,0.92)",
-              border: "1px solid rgba(255,255,255,0.6)",
-              backdropFilter: "blur(12px)",
-            }}
-          >
-            <div>
-              <span
-                className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-widest uppercase px-3 mb-2"
-                style={{ color: ACCENT }}
-              >
-                <span
-                  className="w-1.5 h-1.5 rounded-full"
-                  style={{ background: ACCENT, boxShadow: `0 0 5px ${ACCENT}` }}
-                />
-                {t("heroPacientes.card.badge")}
-              </span>
-            </div>
-            <div className="flex items-center gap-3 mb-2">
-              <div
-                className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm"
-                style={{ background: ACCENT + "20", color: ACCENT }}
-              >
-                Dr
-              </div>
-              <div>
-                <p className="text-primary font-semibold text-sm">
-                  {t("heroPacientes.card.nombre")}
-                </p>
-                <p className="text-gray-400 text-xs">
-                  {t("heroPacientes.card.especialidad")}
-                </p>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
