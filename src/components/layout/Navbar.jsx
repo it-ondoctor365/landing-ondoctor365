@@ -108,6 +108,12 @@ export default function Navbar() {
   const isProfesionales = location.pathname === "/profesionales";
   const [registroOpen, setRegistroOpen] = useState(false);
   const [consultaOpen, setConsultaOpen] = useState(false);
+  const [consultaMode, setConsultaMode] = useState(undefined);
+
+  function openConsulta(mode) {
+    setConsultaMode(mode);
+    setConsultaOpen(true);
+  }
 
   function handleEmpresasCta(e) {
     e.preventDefault();
@@ -224,7 +230,7 @@ export default function Navbar() {
             </a>
           ) : (
             <button
-              onClick={() => setConsultaOpen(true)}
+              onClick={() => openConsulta("login")}
               className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
             >
               {t("navbar.login")}
@@ -246,7 +252,7 @@ export default function Navbar() {
             </button>
           ) : (
             <button
-              onClick={() => setConsultaOpen(true)}
+              onClick={() => openConsulta("registro")}
               className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors duration-200"
             >
               {ctaLabel}
@@ -354,7 +360,7 @@ export default function Navbar() {
               </a>
             ) : (
               <button
-                onClick={() => { setMenuOpen(false); setConsultaOpen(true); }}
+                onClick={() => { setMenuOpen(false); openConsulta("login"); }}
                 className="text-sm font-medium text-gray-600 hover:text-primary transition-colors py-2 text-left"
               >
                 {t("navbar.login")}
@@ -376,7 +382,7 @@ export default function Navbar() {
               </button>
             ) : (
               <button
-                onClick={() => { setMenuOpen(false); setConsultaOpen(true); }}
+                onClick={() => { setMenuOpen(false); openConsulta("registro"); }}
                 className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors duration-200 text-center"
               >
                 {ctaLabel}
@@ -388,7 +394,7 @@ export default function Navbar() {
     </header>
 
     <RegistroModal isOpen={registroOpen} onClose={() => setRegistroOpen(false)} />
-    <ConsultaModal isOpen={consultaOpen} onClose={() => setConsultaOpen(false)} />
+    <ConsultaModal isOpen={consultaOpen} onClose={() => setConsultaOpen(false)} mode={consultaMode} />
     </>
   );
 }

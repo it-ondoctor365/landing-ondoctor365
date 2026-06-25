@@ -16,6 +16,7 @@ import FAQSection from "../components/pacientes/FAQSection";
 export default function Pacientes() {
   const { t } = useTranslation();
   const [consultaOpen, setConsultaOpen] = useState(false);
+  const [consultaMode, setConsultaMode] = useState(undefined);
 
   return (
     <div>
@@ -37,10 +38,10 @@ export default function Pacientes() {
       <TestimoniosSection />
       <FAQSection />
       <CTAFinal
-        onClickPrimario={() => setConsultaOpen(true)}
+        onClickPrimario={() => { setConsultaMode("registro"); setConsultaOpen(true); }}
         ctaSecundario={false}
       />
-      <ConsultaModal isOpen={consultaOpen} onClose={() => setConsultaOpen(false)} />
+      <ConsultaModal isOpen={consultaOpen} onClose={() => setConsultaOpen(false)} mode={consultaMode} />
     </div>
   );
 }

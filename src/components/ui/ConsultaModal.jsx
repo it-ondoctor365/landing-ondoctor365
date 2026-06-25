@@ -5,15 +5,32 @@ import { useTranslation } from "react-i18next";
 const ACCENT = "#32b9cc";
 const PRIMARY = "#2d418e";
 const PLATFORM_URL = "https://salud.ondoctor365.com";
+const MEDICO_REGISTRO_URL = "https://consultas.ondoctor365.com/od365-medicos/registro";
+const MEDICO_LOGIN_URL = "https://consultas.ondoctor365.com/od365-medicos/login";
+const ESPECIALISTA_REGISTRO_URL = "https://consultas.ondoctor365.com/od365-especialistas/registro";
+const ESPECIALISTA_LOGIN_URL = "https://consultas.ondoctor365.com/od365-especialistas/login";
 
-export default function ConsultaModal({ isOpen, onClose }) {
+export default function ConsultaModal({ isOpen, onClose, mode }) {
   const { t } = useTranslation();
 
   const medicoTags = t("consultaModal.medico.tags", { returnObjects: true });
   const especialistaTags = t("consultaModal.especialista.tags", { returnObjects: true });
 
-  function handleSelect() {
-    window.open(PLATFORM_URL, "_blank", "noopener,noreferrer");
+  function handleSelectMedico() {
+    const url =
+      mode === "registro" ? MEDICO_REGISTRO_URL :
+      mode === "login"    ? MEDICO_LOGIN_URL :
+                            PLATFORM_URL;
+    window.open(url, "_blank", "noopener,noreferrer");
+    onClose();
+  }
+
+  function handleSelectEspecialista() {
+    const url =
+      mode === "registro" ? ESPECIALISTA_REGISTRO_URL :
+      mode === "login"    ? ESPECIALISTA_LOGIN_URL :
+                            PLATFORM_URL;
+    window.open(url, "_blank", "noopener,noreferrer");
     onClose();
   }
 
@@ -70,14 +87,14 @@ export default function ConsultaModal({ isOpen, onClose }) {
                 titulo={t("consultaModal.medico.titulo")}
                 subtitulo={t("consultaModal.medico.subtitulo")}
                 tags={medicoTags}
-                onClick={handleSelect}
+                onClick={handleSelectMedico}
               />
               <OptionCard
                 icon={<Brain size={22} style={{ color: ACCENT }} />}
                 titulo={t("consultaModal.especialista.titulo")}
                 subtitulo={t("consultaModal.especialista.subtitulo")}
                 tags={especialistaTags}
-                onClick={handleSelect}
+                onClick={handleSelectEspecialista}
               />
             </div>
           </motion.div>

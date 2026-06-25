@@ -169,7 +169,7 @@ export default function HeroPacientes() {
       </div>
     </section>
 
-    <ConsultaModal isOpen={consultaOpen} onClose={() => setConsultaOpen(false)} />
+    <ConsultaModal isOpen={consultaOpen} onClose={() => setConsultaOpen(false)} mode="registro" />
     </>
   );
 }
